@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-04",
+  "source_analysis_commit": "30c87e16809fa0c270359cc20e55612b7dec1a12",
+  "business_modules": 26,
+  "tested_page_states": 89,
+  "checks_passed": 144,
+  "files": {
+    "index.html": "143b9c42ed1b58c1386865f10a323168642badd7d10a095713a3fae6c26151ad",
+    "styles.css": "25768c3a265077fd2e957a4f0a01c68e903addbacac36ff1b10067512da9c25e",
+    "data.js": "6b3e800c36f19e206c6cbdc4c544cbb07382131a92d2e53196c507ffd01769dc",
+    "app.js": "9fe725bb04de0bf14e2c0fd7b8401dfcaec3c4d44021e65b1af55cff715166d0",
+    "README.md": "27958993eca63cc998d424b658285715326a2c839f46e517ceeafae6e8490024",
+    "BUSINESS-COVERAGE.md": "7305cfff491e28227f2ecae16f0b10d6ffa17212891239978830914eb500454e",
+    "VALIDATION.md": "e156deea7b8263b08cf4bf047e2f39a6209fd0501a2554121c9cc8bdd9456527"
+  },
+  "standalone": {
+    "name": "crm-redesign-demo.html",
+    "sha256": "946648c488a2137947f002e592f9ee35bf9408011bc914087eefd1733bb984e6"
+  },
+  "release_smoke_route_checks": 62,
+  "release_smoke_passed": true
+}

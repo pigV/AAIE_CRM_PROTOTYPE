@@ -1,0 +1,5 @@
+node_modules/
+qa/browser-temp/
+qa/students-export.csv
+.DS_Store
+._*

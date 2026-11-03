@@ -1,0 +1,67 @@
+{
+  "checks": 15,
+  "passed": 15,
+  "errors": [],
+  "results": [
+    {
+      "name": "student material review syncs file center",
+      "passed": true
+    },
+    {
+      "name": "file center updates authoritative material state",
+      "passed": true
+    },
+    {
+      "name": "parent partial selection shown on admin side",
+      "passed": true
+    },
+    {
+      "name": "parent note shown in admin plan",
+      "passed": true
+    },
+    {
+      "name": "plan school selection can add school and resets confirmation",
+      "passed": true
+    },
+    {
+      "name": "document template stays in correct category",
+      "passed": true
+    },
+    {
+      "name": "document save does not create contract template",
+      "passed": true
+    },
+    {
+      "name": "previewed document draft can publish",
+      "passed": true
+    },
+    {
+      "name": "cancel template preview leaves published body unchanged",
+      "passed": true
+    },
+    {
+      "name": "old published template body remains immutable after new draft",
+      "passed": true
+    },
+    {
+      "name": "published template revision preserves immutable version",
+      "passed": true
+    },
+    {
+      "name": "student contract summary reflects center updates",
+      "passed": true
+    },
+    {
+      "name": "student history filters unrelated student events",
+      "passed": true
+    },
+    {
+      "name": "global system audit includes all demo operations",
+      "passed": true
+    },
+    {
+      "name": "review scenarios have zero script errors",
+      "passed": true
+    }
+  ]
+}

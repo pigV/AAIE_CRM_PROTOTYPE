@@ -1,0 +1,10 @@
+{
+  "entrypoints": [
+    "index.html",
+    "crm-redesign-demo.html"
+  ],
+  "routeChecks": 62,
+  "scriptErrors": [],
+  "remoteRequests": [],
+  "passed": true
+}
