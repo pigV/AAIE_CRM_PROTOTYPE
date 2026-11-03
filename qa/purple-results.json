@@ -1,0 +1,2107 @@
+{
+  "version": 2,
+  "date": "2026-11-04",
+  "method": "CUA in-app browser over read-only localhost HTTP preview",
+  "pageStates": 89,
+  "checks": 237,
+  "passed": 237,
+  "browserLogs": [],
+  "primaryTextContrast": 6.5674578736938765,
+  "results": [
+    {
+      "name": "dashboard title",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "route dashboard",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route students",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route parent/links",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route reminders",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route schools/list",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route plans/list",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route higher/plans",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route content/dashboard",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route reach/search",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route student/D2026001/materials",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route student/D2026001/offers",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route student/D2026001/coe",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route visa/cases",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route student/D2026001/payments",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route student/D2026001/contracts",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route contracts/list",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route templates/contracts",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route revenue/cases",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route reports/overview",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route updates/sources",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route files/list",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route system/backup",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route system/safebox",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route system/users",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route system/audit",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route system/settings",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route transfer/cases",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route progression/cases",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route student/D2026001/services",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route student/D2026001/history",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route portal/form",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route transfer/arrangements",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route transfer/history",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route progression/paths",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route progression/history",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route higher/applications",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route higher/offers",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route schools/universities",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route schools/courses",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route schools/map",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route plans/submissions",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route plans/versions",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route visa/collection",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route visa/evidence",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route visa/s56",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route visa/decisions",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route contracts/signing",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route contracts/history",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route templates/reports",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route revenue/billing",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route revenue/direct",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route revenue/master",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route revenue/rules",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route revenue/reconciliation",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route revenue/receipts",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route parent/decisions",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route parent/access",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route content/extract",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route content/sync",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route content/tracking",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route content/analysis",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route reach/keywords",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route reach/trends",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route reach/history",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route files/review",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route files/markers",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route updates/preview",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route updates/logs",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route system/health",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route student/D2026001/profile",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route student/D2026001/workflow",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route student/D2026001/plans",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route student/D2026001/visa",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route student/D2026001/revenue",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route student/D2026001/notes",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route case/transfer/D2026001/overview",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route case/transfer/D2026001/materials",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route case/transfer/D2026001/offers",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route case/transfer/D2026001/arrangements",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route case/transfer/D2026001/readiness",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route case/progression/D2026001/overview",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route case/progression/D2026001/materials",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route case/progression/D2026001/offers",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route case/progression/D2026001/arrangements",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route case/progression/D2026001/readiness",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route portal/plan",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route portal/contract",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route portal/materials",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "route portal/visa",
+      "passed": true,
+      "detail": "等待对应分区选中后检查",
+      "attempts": [
+        {
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "等待对应分区选中后检查"
+        }
+      ]
+    },
+    {
+      "name": "student has all 13 business destinations",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "student grouping reaches application workflow",
+      "passed": true,
+      "detail": "已增加页面状态等待，避免读取导航前的旧快照",
+      "attempts": [
+        {
+          "passed": false,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "已增加页面状态等待，避免读取导航前的旧快照"
+        }
+      ]
+    },
+    {
+      "name": "review dialog opens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "material confirmation retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "material state synchronized to file center",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "student search",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "student empty state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "student creation preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "urgent shortcut filters overdue tasks",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "navigation function search",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "submission blocked before plan confirmation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "cancel plan reorder preserves saved order",
+      "passed": true,
+      "detail": "仅核对主内容，排除已关闭对话框内保留的草稿DOM",
+      "attempts": [
+        {
+          "passed": false,
+          "detail": ""
+        },
+        {
+          "passed": true,
+          "detail": "仅核对主内容，排除已关闭对话框内保留的草稿DOM"
+        }
+      ]
+    },
+    {
+      "name": "plan confirmation enables separate submission",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "formal submission changes school statuses",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "progression completion remains blocked",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "progression unlocks only after all conditions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "completed progression stays locked",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forecast commission cannot be claimed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "eligible commission claim preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "parent drafts isolated by student",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "parent draft survives route navigation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "parent form submission acknowledgment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "parent submission isolated by form type",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "parent partial selection reflected on admin",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "parent note reflected on admin",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "template preview substitutes student name",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "document template stays in document category",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "previewed template can publish",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "published template revision creates draft",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "old published version retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read-only role cannot open mutation dialog",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "consultant finance navigation hidden",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "direct finance route denied to consultant",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "skip link focuses content without changing business route",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile dashboard no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile menu opens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile navigation selection closes drawer",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile module selector exposes all school sections",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile module selector changes business section",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile student selector includes 13 sections",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile selector reaches payment function",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile width dashboard",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width students",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width parent/links",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width reminders",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width schools/list",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width plans/list",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width higher/plans",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width content/dashboard",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width reach/search",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width student/D2026001/materials",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width student/D2026001/offers",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width student/D2026001/coe",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width visa/cases",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width student/D2026001/payments",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width student/D2026001/contracts",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width contracts/list",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width templates/contracts",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width revenue/cases",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width reports/overview",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width updates/sources",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width files/list",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width system/backup",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width system/safebox",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width system/users",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width system/audit",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width system/settings",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width transfer/cases",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width progression/cases",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width student/D2026001/services",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width student/D2026001/history",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width portal/form",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width transfer/arrangements",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width transfer/history",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width progression/paths",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width progression/history",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width higher/applications",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width higher/offers",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width schools/universities",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width schools/courses",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width schools/map",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width plans/submissions",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width plans/versions",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width visa/collection",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width visa/evidence",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width visa/s56",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width visa/decisions",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width contracts/signing",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width contracts/history",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width templates/reports",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width revenue/billing",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width revenue/direct",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width revenue/master",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width revenue/rules",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width revenue/reconciliation",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width revenue/receipts",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width parent/decisions",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width parent/access",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width content/extract",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width content/sync",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width content/tracking",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width content/analysis",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width reach/keywords",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width reach/trends",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width reach/history",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width files/review",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width files/markers",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width updates/preview",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width updates/logs",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width system/health",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width student/D2026001/profile",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width student/D2026001/workflow",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width student/D2026001/plans",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width student/D2026001/visa",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width student/D2026001/revenue",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width student/D2026001/notes",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width case/transfer/D2026001/overview",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width case/transfer/D2026001/materials",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width case/transfer/D2026001/offers",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width case/transfer/D2026001/arrangements",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width case/transfer/D2026001/readiness",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width case/progression/D2026001/overview",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width case/progression/D2026001/materials",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width case/progression/D2026001/offers",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width case/progression/D2026001/arrangements",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width case/progression/D2026001/readiness",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width portal/plan",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width portal/contract",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width portal/materials",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "mobile width portal/visa",
+      "passed": true,
+      "detail": "{\"client\":390,\"scroll\":390}"
+    },
+    {
+      "name": "brand purple primary color",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "primary button text contrast at least 4.5",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile primary control height at least 44",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "metadata text at least 12px",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile form actions remain in viewport",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile form fields height at least 44",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "parent simulated signing retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "viewport 360 dashboard",
+      "passed": true,
+      "detail": "{\"client\":360,\"scroll\":360}"
+    },
+    {
+      "name": "viewport 360 students",
+      "passed": true,
+      "detail": "{\"client\":360,\"scroll\":360}"
+    },
+    {
+      "name": "viewport 360 student/D2026001/profile",
+      "passed": true,
+      "detail": "{\"client\":360,\"scroll\":360}"
+    },
+    {
+      "name": "viewport 360 case/transfer/D2026001/readiness",
+      "passed": true,
+      "detail": "{\"client\":360,\"scroll\":360}"
+    },
+    {
+      "name": "viewport 360 portal/form",
+      "passed": true,
+      "detail": "{\"client\":360,\"scroll\":360}"
+    },
+    {
+      "name": "viewport 768 dashboard",
+      "passed": true,
+      "detail": "{\"client\":768,\"scroll\":768}"
+    },
+    {
+      "name": "viewport 768 students",
+      "passed": true,
+      "detail": "{\"client\":768,\"scroll\":768}"
+    },
+    {
+      "name": "viewport 768 student/D2026001/profile",
+      "passed": true,
+      "detail": "{\"client\":768,\"scroll\":768}"
+    },
+    {
+      "name": "viewport 768 case/transfer/D2026001/readiness",
+      "passed": true,
+      "detail": "{\"client\":768,\"scroll\":768}"
+    },
+    {
+      "name": "viewport 768 portal/form",
+      "passed": true,
+      "detail": "{\"client\":768,\"scroll\":768}"
+    }
+  ]
+}
