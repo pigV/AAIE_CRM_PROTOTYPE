@@ -1,0 +1,115 @@
+{
+  "results": [
+    {
+      "name": "list page renders",
+      "ok": true,
+      "details": "{\"title\":\"学生管理 · AAIE CRM 紫色原型\",\"h1\":\"学生管理\",\"rows\":10,\"cards\":4,\"tools\":[\"新建学生\",\"生成家长表单链接\",\"从家长表单建档\",\"下载 Excel 模板\",\"已删除学生\",\"Excel 导入\"],\"hasFilters\":true,\"bodyLen\":1917,\"stuGlobal\":\"object\",\"errors\":[]}"
+    },
+    {
+      "name": "list has 10 rows on page 1",
+      "ok": true,
+      "details": "rows=10"
+    },
+    {
+      "name": "four summary cards",
+      "ok": true,
+      "details": "cards=4"
+    },
+    {
+      "name": "six toolbar actions",
+      "ok": true,
+      "details": "新建学生 | 生成家长表单链接 | 从家长表单建档 | 下载 Excel 模板 | 已删除学生 | Excel 导入"
+    },
+    {
+      "name": "filter form present",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "student data loaded",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "tab profile",
+      "ok": true,
+      "details": "{\"h\":\"学生基本信息\",\"tabs\":12,\"len\":2741,\"denied\":false,\"hasTable\":false,\"cards\":14}"
+    },
+    {
+      "name": "tab applications",
+      "ok": true,
+      "details": "{\"h\":\"申请材料清单\",\"tabs\":12,\"len\":1984,\"denied\":false,\"hasTable\":true,\"cards\":2}"
+    },
+    {
+      "name": "tab contracts",
+      "ok": true,
+      "details": "{\"h\":\"合同\",\"tabs\":12,\"len\":918,\"denied\":false,\"hasTable\":false,\"cards\":1}"
+    },
+    {
+      "name": "tab school_plans",
+      "ok": true,
+      "details": "{\"h\":\"学校方案\",\"tabs\":12,\"len\":990,\"denied\":false,\"hasTable\":true,\"cards\":2}"
+    },
+    {
+      "name": "tab offer",
+      "ok": true,
+      "details": "{\"h\":\"录取通知与接受记录\",\"tabs\":12,\"len\":1157,\"denied\":false,\"hasTable\":false,\"cards\":2}"
+    },
+    {
+      "name": "tab payments",
+      "ok": true,
+      "details": "{\"h\":\"付款\",\"tabs\":12,\"len\":898,\"denied\":false,\"hasTable\":true,\"cards\":1}"
+    },
+    {
+      "name": "tab coe",
+      "ok": true,
+      "details": "{\"h\":\"入学确认与学生保险\",\"tabs\":12,\"len\":790,\"denied\":false,\"hasTable\":false,\"cards\":0}"
+    },
+    {
+      "name": "tab visa",
+      "ok": true,
+      "details": "{\"h\":\"签证\",\"tabs\":12,\"len\":967,\"denied\":false,\"hasTable\":false,\"cards\":1}"
+    },
+    {
+      "name": "tab homestay",
+      "ok": true,
+      "details": "{\"h\":\"住宿与接机\",\"tabs\":12,\"len\":1121,\"denied\":false,\"hasTable\":true,\"cards\":3}"
+    },
+    {
+      "name": "tab history",
+      "ok": true,
+      "details": "{\"h\":\"历史记录\",\"tabs\":12,\"len\":1105,\"denied\":false,\"hasTable\":true,\"cards\":1}"
+    },
+    {
+      "name": "tab reminders",
+      "ok": true,
+      "details": "{\"h\":\"新增留言与提醒\",\"tabs\":12,\"len\":1055,\"denied\":false,\"hasTable\":true,\"cards\":3}"
+    },
+    {
+      "name": "tab revenue",
+      "ok": true,
+      "details": "{\"h\":\"收入与佣金\",\"tabs\":12,\"len\":827,\"denied\":false,\"hasTable\":false,\"cards\":1}"
+    },
+    {
+      "name": "materials check button rendered for D1",
+      "ok": true,
+      "details": "{\"disabled\":false,\"text\":\"材料审核完成\"}"
+    },
+    {
+      "name": "accept offer updates state",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "new student dialog opens",
+      "ok": true,
+      "details": "{\"open\":true,\"fields\":162,\"sections\":11,\"title\":\"新建学生\"}"
+    },
+    {
+      "name": "no runtime exceptions",
+      "ok": true,
+      "details": ""
+    }
+  ],
+  "runtimeErrors": []
+}

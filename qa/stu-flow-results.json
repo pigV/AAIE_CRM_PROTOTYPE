@@ -1,0 +1,95 @@
+{
+  "results": [
+    {
+      "name": "filter by student name",
+      "ok": true,
+      "details": "{\"rows\":1,\"summary\":\"1\"}"
+    },
+    {
+      "name": "pagination page 2",
+      "ok": true,
+      "details": "{\"rows\":3,\"pager\":\"共 13 条 · 第 2 / 2 页\"}"
+    },
+    {
+      "name": "deleted students page",
+      "ok": true,
+      "details": "{\"rows\":1,\"text\":true}"
+    },
+    {
+      "name": "restore deleted student",
+      "ok": true,
+      "details": "{\"rows\":1,\"text\":\"跳到内容\\nA\\nAAIE CRM\\n留学服务管理\\n/\\n日常工作\\n工作台\\n学生管理\\n提醒中心\\n5\\n学生与申请\\n资源与财务\\n运营与管理\\n演示数据 · 刷新恢复\\n家长端预览\\n业务功能地图\\n管理员\\n顾问\\n签证专员\\n财务\\n内容人员\\n只读\\n已删除学生\\n\\n软删除记录保留学生号、顾问与删除审计信息，可恢复。\\n\\n返回学生列表\\n已删除学生\\n\\n仅 Admin / Manager 可恢复；正式系统同时保留关联业务记录。\\n\\nStudent ID\\t学生\\t顾问\\t删除时间\\t删除人\\t操作\\n\\n\\n暂无已删除学生。\\n\\nAAIE CRM 原型 · 紫色品牌第二版\\n业务覆盖清单\\n学生已恢复：样例学生（已删除）\",\"toast\":\"学生已恢复：样例学生（已删除）\"}"
+    },
+    {
+      "name": "restored student visible in list",
+      "ok": true,
+      "details": "count=14"
+    },
+    {
+      "name": "create student from full 11-section form",
+      "ok": true,
+      "details": "required=80 {\"hash\":\"#student/D2026100/profile\",\"open\":false,\"toast\":\"学生已建档：D2026100（演示）\",\"sections\":11}"
+    },
+    {
+      "name": "upload missing required material",
+      "ok": true,
+      "details": "{\"missing\":false,\"uploaded\":true}"
+    },
+    {
+      "name": "complete material review",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "create contract",
+      "ok": true,
+      "details": "{\"cards\":2,\"hasNew\":true}"
+    },
+    {
+      "name": "update school plan result",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "add payment record",
+      "ok": true,
+      "details": "{\"rows\":2,\"has\":true}"
+    },
+    {
+      "name": "add COE record",
+      "ok": true,
+      "details": "3 -> 4"
+    },
+    {
+      "name": "add visa record",
+      "ok": true,
+      "details": "0 -> 1"
+    },
+    {
+      "name": "add reminder note",
+      "ok": true,
+      "details": "{\"cards\":3,\"has\":true}"
+    },
+    {
+      "name": "finance role cannot see applications",
+      "ok": true,
+      "details": "{\"denied\":true,\"tabs\":5}"
+    },
+    {
+      "name": "finance role sees payments",
+      "ok": true,
+      "details": "{\"denied\":false,\"tabs\":5}"
+    },
+    {
+      "name": "visa officer cannot see contracts",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "no runtime exceptions",
+      "ok": true,
+      "details": ""
+    }
+  ],
+  "runtimeErrors": []
+}

@@ -15,8 +15,8 @@
 | 高等教育申请 | `higher_education` | [进入页面](index.html#higher/plans) | `higher_education_views.py` |
 | 内容管理中心 | `content_center` | [进入页面](index.html#content/dashboard) | `app.py content_tabs` |
 | Agent Reach | `agent_reach` | [进入页面](index.html#reach/search) | `agent_reach_views.py` |
-| 申请材料 | `applications` | [进入页面](index.html#student/D2026001/materials) | `app.py student detail` |
-| Offer 管理 | `offer` | [进入页面](index.html#student/D2026001/offers) | `offer_acceptance.py` |
+| 申请材料 | `applications` | [进入页面](index.html#student/D2026001/applications) | `app.py student detail` |
+| Offer 管理 | `offer` | [进入页面](index.html#student/D2026001/offer) | `offer_acceptance.py` |
 | COE + OSHC | `coe_oshc` | [进入页面](index.html#student/D2026001/coe) | `app.py student detail` |
 | 签证 | `visa` | [进入页面](index.html#visa/cases) | `visa_workspace_candidate.py` |
 | 付款 | `payments` | [进入页面](index.html#student/D2026001/payments) | `app.py student detail` |
@@ -34,13 +34,17 @@
 | 系统设置 | `system_settings` | [进入页面](index.html#system/settings) | `ui.py` |
 | 转学办理 | `extra_transfer` | [进入页面](index.html#transfer/cases) | `transfer_completion_readiness.py` |
 | 升学办理 | `extra_progression` | [进入页面](index.html#progression/cases) | `progression_completion_readiness.py` |
-| 住宿与接机 | `extra_homestay` | [进入页面](index.html#student/D2026001/services) | `app.py homestay tab` |
+| 住宿与接机 | `extra_homestay` | [进入页面](index.html#student/D2026001/homestay) | `app.py homestay tab` |
 | 学生历史与跟进 | `extra_history` | [进入页面](index.html#student/D2026001/history) | `student_followup_notes.py` |
 | 家长端预览 | `extra_parent` | [进入页面](index.html#portal/form) | `parent_form_service.py / school_plan_lifecycle.py` |
 
+## 学生管理对齐说明
+
+学生列表页与详情页已按源系统重新实现，字段对照详见 [STUDENT-PARITY.md](STUDENT-PARITY.md)；自动化验收结果见 [VALIDATION.md](VALIDATION.md)。
+
 ## 关键业务如何在原型中体现
 
-- 学生：资料、家庭背景、健康、签证风险、学习背景、申请周期、材料与版本、方案、Offer、COE/OSHC、签证、合同、付款、住宿接机、收入佣金、历史、跟进提醒。
+- 学生：12 个详情分区与源系统一致——资料（11 分区 / 105 字段）、材料与版本、合同、学校方案、Offer、付款、COE/CAAW/OSHC/Letter of Confirmation、签证、住宿接机、历史、留言提醒、收入佣金。
 - 转学：原校与目标校、申请与 Offer、付款、COE、签证、保险、监护住宿、成绩及学校报告、就读转换、完成条件。
 - 升学：路径、多目标学校、最终 Offer、已签 Offer、付款、新 COE、新 OSHC、最新成绩单、必需材料、就读衔接与完成条件。
 - 高教：大学目录、路径组合、课程与合作机构、学生方案、申请、Offer、COE；不要求高教服务合同。

@@ -27,6 +27,20 @@
 
 浏览器验收使用内置浏览器访问本机只读HTTP原型服务。两处验收脚本读取时机/选择器问题已纠正并复核，重试记录保留于逐项结果，不代表业务数据修改失败。
 
+## 学生管理模块对齐验收（2026-11-08）
+
+源码基线 `AAIE_CRM` 提交 `27ca9a7`；字段定义来自 `fields.py`，页面结构来自 `app.py` 学生列表与学生详情。
+
+- 字段 schema：11 个资料分区、105 个字段与 `fields.py` 逐项一致（`qa/field-parity-results.json`）。
+- 学生列表：6 个工具栏动作、4 个汇总卡片、12 个筛选控件、10 列表格、分页、批量栏、已删除学生页。
+- 学生详情：12 个分区顺序与源系统一致；学生资料、申请材料、合同、学校方案、录取通知、付款、入学确认与学生保险、签证、住宿与接机、历史记录、留言与提醒、收入与佣金全部可渲染。
+- 端到端交互：筛选、分页、恢复删除、完整 11 分区新建学生、材料上传与审核、新建合同、更新学校结果、新增付款、新增 COE、新增签证、新增留言、角色权限，全部通过（`qa/stu-flow-results.json`）。
+- 布局：1440px 与 390px 下列表、资料、申请材料页面无文档级横向溢出；手机端分区导航切换为选择器（`qa/stu-layout-results.json`）。
+- 单文件版：同步重建 `crm-redesign-demo.html`，无外部资源依赖，学生列表与 12 个分区全部通过（`qa/standalone-student-results.json`）。
+- 浏览器运行时无异常。
+
+复跑：`node qa/field-parity.cjs && node qa/stu-check.cjs && node qa/stu-flows.cjs && node qa/stu-layout.cjs && node qa/build-standalone.cjs && node qa/stu-standalone.cjs`。
+
 ## 验证边界
 
 以上是静态交互原型验收，并非生产功能验收或完整无障碍认证。未运行生产服务、数据库迁移或真实微信/签署/财务/存储操作。图示数据均为虚构，刷新恢复。

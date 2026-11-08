@@ -474,6 +474,165 @@ dialog::backdrop { background:#24183965; backdrop-filter:blur(3px); }
  dialog::backdrop { background:none; }
 }
 
+/* ---------- student management module ---------- */
+.stu-crumb { margin-bottom:14px; align-items:center; }
+.stu-toolbar { display:flex; flex-wrap:wrap; gap:9px; margin-bottom:16px; }
+.stu-toolbar .btn { min-height:38px; padding:8px 13px; font-size:13px; }
+.stu-filter-card { margin-bottom:16px; }
+.stu-filter-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+.stu-filter-grid label { font-size:12px; font-weight:600; color:#514b60; }
+.stu-filter-grid label.wide { grid-column:span 2; }
+.stu-filter-grid input,.stu-filter-grid select { margin-top:6px; }
+.stu-filter-actions { display:flex; align-items:center; gap:10px; margin-top:16px; padding-top:15px; border-top:1px solid var(--line); }
+.stu-filter-actions .muted { font-size:12px; }
+.stu-summary { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-bottom:16px; }
+.stu-detail-summary { grid-template-columns:repeat(5,minmax(0,1fr)); }
+.stu-summary-card { display:flex; flex-direction:column; gap:5px; padding:15px 17px; background:#fff; border:1px solid var(--line); border-radius:10px; min-width:0; }
+.stu-summary-card small { font-size:11px; color:var(--muted); font-weight:600; letter-spacing:.02em; }
+.stu-summary-card strong { font-size:18px; color:var(--ink); line-height:1.35; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.stu-summary-card span { font-size:11px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.stu-summary-card.accent { border-top:3px solid var(--brand); }
+.stu-summary-card.warn { border-top:3px solid #b98217; }
+.stu-summary-card.danger { border-top:3px solid var(--red); }
+.stu-list-card { padding-bottom:0; }
+.stu-bulk { display:flex; align-items:center; flex-wrap:wrap; gap:12px; padding:13px 18px; border-bottom:1px solid var(--line); background:#fbf9fe; }
+.stu-bulk .result-count { font-size:13px; font-weight:600; color:var(--brand-deep); }
+.stu-bulk-actions { display:flex; gap:7px; flex-wrap:wrap; }
+.stu-bulk small { margin-left:auto; }
+.stu-check { display:inline-flex; align-items:center; gap:7px; font-size:12px; color:#514b60; }
+.stu-check input { min-height:auto; width:16px; height:16px; }
+.stu-list-table th { white-space:nowrap; }
+.stu-list-table td { vertical-align:middle; }
+.stu-col-check { width:38px; }
+.stu-id-link { color:var(--brand); text-decoration:none; font-weight:600; }
+.stu-row-actions { display:flex; gap:5px; flex-wrap:wrap; align-items:center; }
+.stu-row-actions .btn { min-height:30px; padding:4px 9px; font-size:12px; }
+.stu-pager { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:15px 18px; border-top:1px solid var(--line); font-size:12px; color:var(--muted); }
+.stu-pager > div { display:flex; gap:8px; }
+.stu-pager .btn { min-height:32px; padding:5px 11px; font-size:12px; }
+.stu-hero .student-facts { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.stu-hero-title { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.stu-alert-list { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:16px; }
+.stu-alert { display:flex; align-items:center; gap:10px; flex:1 1 210px; max-width:320px; padding:10px 13px; border-radius:9px; border:1px solid #e7e1f0; background:#fff; text-decoration:none; color:var(--ink); }
+.stu-alert .icon { width:17px; height:17px; flex:none; }
+.stu-alert span { display:flex; flex-direction:column; gap:2px; flex:1; min-width:0; }
+.stu-alert small { font-size:11px; color:var(--muted); }
+.stu-alert > .icon:last-child { width:14px; height:14px; color:#a79fb6; }
+.stu-alert.risk { border-color:#efcfd3; background:#fff7f8; }
+.stu-alert.risk > .icon:first-child { color:var(--red); }
+.stu-alert.waiting { border-color:#f0dfbc; background:#fffaf0; }
+.stu-alert.waiting > .icon:first-child { color:#a97613; }
+.stu-alert.ok { border-color:#d7e8dd; background:#f5fbf7; color:#34634b; }
+.stu-actionbar { display:flex; align-items:center; gap:8px; flex-wrap:wrap; padding:12px 15px; border:1px dashed #d9cbed; border-radius:9px; background:#fbf8ff; margin-bottom:18px; }
+.stu-actionbar .btn { min-height:34px; padding:6px 11px; font-size:12px; }
+.stu-actionbar-note { display:inline-flex; align-items:center; gap:5px; margin-left:auto; font-size:11px; color:var(--muted); }
+.stu-tabbar .student-tabs { margin-bottom:0; }
+.stu-tabbar .tab { white-space:nowrap; font-size:13px; }
+.stu-tabbar .section-picker { display:none; }
+.stu-tab-head { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; margin-bottom:16px; }
+.stu-tab-head h2 { margin:0 0 4px; font-size:19px; }
+.stu-tab-head p { margin:0; font-size:12px; color:var(--muted); }
+.stu-tab-head .head-actions { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+.stu-section-card .card-head { padding-bottom:12px; }
+.stu-section-body { padding-top:0; }
+.stu-facts { padding:0; gap:16px 22px; }
+.stu-facts .fact span { overflow-wrap:anywhere; }
+.stu-profile-grid .stack { gap:16px; }
+.stu-status-strip { display:flex; flex-wrap:wrap; gap:18px; padding:12px 23px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#fbf9fe; font-size:12px; color:#5d566c; }
+.stu-status-strip span { display:inline-flex; align-items:center; gap:6px; }
+.stu-status-strip .icon { width:15px; height:15px; color:var(--brand); }
+.stu-status-strip strong { color:var(--ink); }
+.stu-card-foot { display:flex; align-items:center; gap:12px; flex-wrap:wrap; padding:15px 23px 20px; border-top:1px solid var(--line); }
+.stu-card-foot .muted { font-size:11px; }
+.stu-req { color:var(--red); font-weight:700; }
+.stu-record-card { margin-bottom:16px; }
+.stu-record-card .card-pad { padding-top:0; }
+.stu-meta-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:15px 20px; padding:16px 0 6px; }
+.stu-meta-grid > div { display:flex; flex-direction:column; gap:4px; min-width:0; }
+.stu-meta-grid small { font-size:11px; color:var(--muted); }
+.stu-meta-grid strong { font-size:13px; color:var(--ink); overflow-wrap:anywhere; }
+.stu-subtitle { margin:18px 0 9px; font-size:13px; color:var(--brand-deep); }
+.stu-scope-list { margin:0; padding-left:19px; columns:2; column-gap:26px; font-size:12px; color:#514b60; line-height:1.9; }
+.stu-scope-check { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 14px; margin-top:12px; }
+.stu-note-block { padding:13px 15px; border:1px solid var(--line); border-radius:8px; background:#fbf9fe; margin:12px 0 2px; }
+.stu-note-block small { font-size:11px; color:var(--muted); }
+.stu-note-block p { margin:5px 0 0; font-size:13px; line-height:1.7; }
+.stu-decision-list { display:flex; flex-direction:column; gap:10px; }
+.stu-decision { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:12px 14px; border:1px solid var(--line); border-radius:9px; background:#fff; }
+.stu-decision-main { display:flex; flex-direction:column; gap:5px; min-width:0; }
+.stu-decision-main strong { font-size:14px; }
+.stu-decision-badges { display:flex; gap:5px; flex-wrap:wrap; }
+.stu-rank { align-self:flex-start; font-size:11px; font-weight:700; color:var(--brand); background:var(--brand-soft); border-radius:5px; padding:2px 7px; }
+.stu-decision-result { display:flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+.stu-decision-result small { font-size:11px; color:var(--muted); }
+.stu-plan-card .card-head { align-items:flex-start; }
+.stu-plan-card .card-head .head-actions { flex-wrap:wrap; justify-content:flex-end; }
+.stu-note-list { display:flex; flex-direction:column; gap:12px; padding-top:0; }
+.stu-note-card { border:1px solid var(--line); border-radius:9px; padding:13px 15px; background:#fff; }
+.stu-note-head { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+.stu-note-head p { margin:5px 0 0; font-size:11px; color:var(--muted); }
+.stu-note-badges { display:flex; gap:5px; flex-wrap:wrap; }
+.stu-revenue-list { display:flex; flex-direction:column; gap:10px; padding-top:0; }
+.stu-revenue-card { display:grid; grid-template-columns:minmax(0,1fr) auto auto; gap:18px; align-items:center; padding:14px 16px; border:1px solid var(--line); border-radius:9px; }
+.stu-revenue-card > div:first-child { display:flex; flex-direction:column; gap:4px; }
+.stu-revenue-card small { font-size:11px; color:var(--muted); }
+.stu-revenue-card > div:nth-child(2) { display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+.stu-form-section { margin-bottom:14px; }
+.stu-form-section .card-head h3 { margin:0; font-size:15px; }
+.stu-readonly-box { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; padding:14px 16px; border:1px dashed #d9cbed; background:#fbf8ff; border-radius:8px; margin-bottom:14px; }
+.stu-readonly-box > div { display:flex; flex-direction:column; gap:4px; }
+.stu-readonly-box small { font-size:11px; color:var(--muted); }
+.stu-readonly-box strong { font-size:12px; overflow-wrap:anywhere; }
+.stu-readonly-box > span { grid-column:1/-1; font-size:11px; color:var(--muted); }
+.stu-radio { border:0; padding:0; margin:0; min-width:0; }
+.stu-radio legend { font-size:12px; font-weight:600; color:#514b60; margin-bottom:7px; }
+.stu-option-row { display:flex; flex-wrap:wrap; gap:7px 15px; padding-top:3px; }
+.stu-option { display:inline-flex; align-items:center; gap:6px; font-size:12px; color:#4c455b; font-weight:500; }
+.stu-option input { width:15px; height:15px; min-height:auto; }
+.stu-inline-form { align-items:end; }
+.stu-form-submit { display:flex; align-items:end; }
+.stu-inline-form label { font-size:12px; font-weight:600; color:#514b60; }
+.stu-inline-form textarea { min-height:64px; }
+.stu-confirm-text { font-size:13px; line-height:1.8; }
+.stu-file-box { display:flex; align-items:center; gap:13px; padding:16px; border:1px solid var(--line); border-radius:9px; background:#fbf9fe; margin-bottom:14px; }
+.stu-file-box .icon { width:28px; height:28px; color:var(--brand); }
+.stu-file-box p { margin:4px 0 0; font-size:11px; color:var(--muted); }
+.stu-dialog-divider { height:1px; background:var(--line); margin:18px 0; }
+.stu-parent-submissions { display:flex; flex-direction:column; gap:10px; margin-bottom:16px; }
+.stu-parent-row { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:12px 14px; border:1px solid var(--line); border-radius:9px; }
+.stu-parent-row > div:first-child { display:flex; flex-direction:column; gap:4px; }
+.stu-parent-row small { font-size:11px; color:var(--muted); }
+.stu-parent-row p { margin:0; font-size:11px; color:var(--muted); }
+.stu-parent-row > div:last-child { display:flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+.stu-plan-preview h2 { margin:0 0 5px; font-size:18px; }
+.stu-plan-preview p { margin:0 0 10px; font-size:12px; color:var(--muted); }
+.stu-plan-preview ul { margin:0; padding-left:19px; font-size:13px; line-height:2; }
+.stu-demo-note { margin-top:16px; font-size:11px; color:var(--muted); }
+@media (max-width:1180px) {
+  .stu-filter-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .stu-detail-summary { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .stu-meta-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+@media (max-width:900px) {
+  .stu-summary { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .stu-filter-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .stu-filter-grid label.wide { grid-column:span 2; }
+  .stu-hero .student-facts { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .stu-tabbar .section-picker { display:flex; }
+  .stu-tabbar .student-tabs { display:none; }
+  .stu-decision { flex-direction:column; align-items:flex-start; }
+  .stu-decision-result { justify-content:flex-start; }
+  .stu-readonly-box { grid-template-columns:1fr; }
+}
+@media (max-width:620px) {
+  .stu-summary,.stu-detail-summary,.stu-filter-grid { grid-template-columns:1fr; }
+  .stu-filter-grid label.wide { grid-column:span 1; }
+  .stu-meta-grid,.stu-scope-check { grid-template-columns:1fr; }
+  .stu-scope-list { columns:1; }
+  .stu-actionbar-note { margin-left:0; }
+  .stu-bulk small { margin-left:0; }
+}
+
 </style></head>
 <body><a class="skip" href="#main">跳到内容</a><div id="app"></div><dialog id="dialog" aria-labelledby="dialog-title"></dialog><div id="toast" role="status" aria-live="polite"></div><script>
 /* All records are fictitious. Nothing in this prototype connects to CRM. */
@@ -609,6 +768,826 @@ const COVERAGE = [
  ['dashboard','工作台','dashboard','ui.py / dashboard_kpi_cards.py'],['students','学生管理','students','app.py / fields.py'],['parent_form','家长表单','parent/links','parent_form_admin_views.py'],['reminders','提醒中心','reminders','reminder_center.py'],['school_library','学校管理','schools/list','app.py / higher_education_admin_views.py'],['school_plan_reports','学校方案报告','plans/list','school_plan_lifecycle.py'],['higher_education','高等教育申请','higher/plans','higher_education_views.py'],['content_center','内容管理中心','content/dashboard','app.py content_tabs'],['agent_reach','Agent Reach','reach/search','agent_reach_views.py'],['applications','申请材料','student/D2026001/materials','app.py student detail'],['offer','Offer 管理','student/D2026001/offers','offer_acceptance.py'],['coe_oshc','COE + OSHC','student/D2026001/coe','app.py student detail'],['visa','签证','visa/cases','visa_workspace_candidate.py'],['payments','付款','student/D2026001/payments','app.py student detail'],['student_contracts','学生合同','student/D2026001/contracts','contract_domain.py'],['contract_management_center','合同管理','contracts/list','contract_generation_authority.py'],['template_management','模板管理','templates/contracts','contract_template_editor.py'],['revenue_commission','收入与佣金','revenue/cases','revenue/read_models.py'],['reports','数据报表','reports/overview','database.py MODULE_DEFINITIONS'],['data_update_centre','数据更新中心','updates/sources','app.py data_update_centre'],['file_manager','文件管理','files/list','app.py'],['backup_restore','备份与恢复','system/backup','ui.py'],['safebox_centre','SAFEBOX / 恢复记录','system/safebox','database.py MODULE_DEFINITIONS'],['user_management','用户管理','system/users','database.py ROLE_MODULE_PRESETS'],['audit_logs','操作日志','system/audit','ui.py'],['system_settings','系统设置','system/settings','ui.py'],
  ['extra_transfer','转学办理','transfer/cases','transfer_completion_readiness.py'],['extra_progression','升学办理','progression/cases','progression_completion_readiness.py'],['extra_homestay','住宿与接机','student/D2026001/services','app.py homestay tab'],['extra_history','学生历史与跟进','student/D2026001/history','student_followup_notes.py'],['extra_parent','家长端预览','portal/form','parent_form_service.py / school_plan_lifecycle.py']
 ];
+
+</script><script>
+/* Student management demo data. All records are fictitious.
+   Field definitions mirror the CRM parent-form schema (fields.py) exactly. */
+'use strict';
+
+const STU_YEAR_LEVELS = Array.from({ length: 12 }, (_, i) => 'Year ' + (i + 1)).concat(['其他']);
+const STU_APPLYING_YEAR_LEVELS = Array.from({ length: 12 }, (_, i) => 'Year ' + (i + 1)).concat(['预科+本科', '本科', '研究生', '不确定']);
+const STU_CITIES = [
+  ['melbourne', '墨尔本'], ['sydney', '悉尼'], ['brisbane', '布里斯班'], ['adelaide', '阿德莱德'],
+  ['perth', '珀斯'], ['canberra', '堪培拉'], ['tasmania', '塔斯马尼亚'], ['unsure', '不确定'],
+];
+const STU_YEAR_OPTION = STU_YEAR_LEVELS;
+
+const STU_SECTIONS = [
+  ['basic', '学生基本信息', [
+    ['passport_last_name', '护照姓（拼音）', 'text', true, null],
+    ['passport_first_name', '护照名（拼音）', 'text', true, null],
+    ['english_nickname', '英文昵称', 'text', false, null],
+    ['gender', '性别', 'radio', true, ['男', '女']],
+    ['date_of_birth', '出生日期', 'date', true, null],
+    ['current_year_level', '在读年级', 'select', true, STU_YEAR_OPTION],
+    ['application_stream', '申请类型', 'select', true, ['school_education|中小学申请', 'higher_education|高等教育申请']],
+    ['preferred_intake_year', '计划入读年份', 'select', true, ['2026', '2027', '2028', '2029', '不确定']],
+    ['preferred_intake_term', '计划入澳学期', 'select', true, ['02|2月入学', '04|4月入学', '07|7月入学', '10|10月入学', 'unsure|不确定']],
+    ['applying_year_level', '申请年级', 'select', false, STU_APPLYING_YEAR_LEVELS],
+    ['higher_education_course_type', '高等教育课程类型', 'select', false, ['Foundation|预科', 'Diploma', 'Bachelor|本科', 'Postgraduate|研究生', 'Package|打包课程']],
+    ['higher_education_package_combination', 'Package 组合', 'select', false, ['Foundation + Bachelor', 'Diploma + Bachelor', 'Foundation + Diploma + Bachelor']],
+    ['preferred_cities', '申请意向城市', 'checkbox', true, STU_CITIES.map(([v, l]) => v + '|' + l)],
+    ['visa_status', '身份状态', 'select', true, ['中国护照', '澳洲PR', '澳洲公民', '其他', '不确定']],
+    ['previous_name', '曾用名', 'text', false, null],
+  ]],
+  ['contact', '联系方式与地址', [
+    ['home_address', '家庭住址', 'text', true, null],
+    ['home_postcode', '家庭住址邮编', 'text', true, null],
+    ['australia_address', '澳洲住址', 'text', false, null],
+    ['australia_postcode', '澳洲住址邮编', 'text', false, null],
+    ['mobile_phone', '学生手机号', 'tel', true, null],
+    ['student_email', '学生Email', 'email', false, null],
+  ]],
+  ['siblings', '兄弟姐妹信息', [
+    ['has_sibling_under_6', '家庭中是否有6岁以下直系兄弟姐妹', 'radio', true, ['是', '否']],
+    ['sibling_1_name', '兄弟姐妹1姓名', 'text', false, null],
+    ['sibling_1_gender', '兄弟姐妹1性别', 'radio', false, ['男', '女']],
+    ['sibling_1_dob', '兄弟姐妹1出生日期', 'date', false, null],
+    ['sibling_1_school_company', '兄弟姐妹1学校/公司', 'text', false, null],
+    ['sibling_1_year_level', '兄弟姐妹1年级', 'select', false, STU_YEAR_OPTION],
+    ['sibling_2_name', '兄弟姐妹2姓名', 'text', false, null],
+    ['sibling_2_gender', '兄弟姐妹2性别', 'radio', false, ['男', '女']],
+    ['sibling_2_dob', '兄弟姐妹2出生日期', 'date', false, null],
+    ['sibling_2_school_company', '兄弟姐妹2学校/公司', 'text', false, null],
+    ['sibling_2_year_level', '兄弟姐妹2年级', 'select', false, STU_YEAR_OPTION],
+  ]],
+  ['accommodation', '陪读与住宿偏好', [
+    ['requires_parent_accompaniment', '是否需要陪读', 'radio', true, ['是', '否', '不确定']],
+    ['accompanying_person_relationship', '与学生关系', 'select', false, ['父亲', '母亲', '祖父', '祖母', '外祖父', '外祖母', '其他', '不确定']],
+    ['accommodation_preference', '申请住宿方式', 'checkbox', true, ['住校', '寄宿家庭', '不确定']],
+    ['accept_homestay_with_young_children', '接受住家有8岁以下小孩吗', 'radio', false, ['接受', '不接受', '不确定']],
+    ['homestay_style_preference', '偏向于中式或西式住家', 'radio', false, ['中式', '西式', '都可以', '不确定']],
+    ['smoke_allergy', '对烟过敏吗', 'radio', true, ['是', '否', '不确定']],
+    ['food_allergy', '对某些食物过敏吗', 'radio', true, ['是', '否', '不确定']],
+    ['food_allergy_notes', '食物过敏补充说明', 'text', false, null],
+    ['pet_allergy', '对宠物过敏吗', 'radio', true, ['是', '否', '不确定']],
+    ['pet_allergy_notes', '宠物过敏补充说明', 'text', false, null],
+    ['medicine_allergy', '对某些药物过敏吗', 'radio', true, ['是', '否', '不确定']],
+    ['medicine_allergy_notes', '药物过敏补充说明', 'text', false, null],
+    ['accommodation_notes', '其他需要补充的', 'textarea', false, null],
+  ]],
+  ['health', '健康、安全与学校声明', [
+    ['photo_permission', '是否同意学校为学生照相作宣传用途', 'radio', true, ['同意', '不同意', '需要进一步确认']],
+    ['can_swim', '学生是否会游泳', 'radio', true, ['会', '不会', '一般']],
+    ['has_medical_or_psychological_history', '有无残疾或心理/身体疾病史', 'radio', true, ['有', '无', '不确定']],
+    ['medical_history_notes', '疾病史补充说明', 'textarea', false, null],
+    ['requires_long_term_medication', '有无需要长期/持续性使用药物治疗', 'radio', true, ['有', '无', '不确定']],
+    ['medication_notes', '药物治疗补充说明', 'textarea', false, null],
+    ['has_violent_behavior_history', '过去有无暴力行为史', 'radio', true, ['有', '无', '不确定']],
+    ['has_suspension_or_expulsion_history', '曾经有无被学校停学或开除', 'radio', true, ['有', '无', '不确定']],
+  ]],
+  ['visa', '签证风险信息', [
+    ['student_australia_visa_refusal', '学生有无澳洲拒签史', 'radio', true, ['有', '无', '不确定']],
+    ['student_visa_refusal_notes', '拒签史补充说明', 'textarea', false, null],
+    ['parents_australia_visa_refusal', '父母有无澳洲拒签史', 'radio', true, ['有', '无', '不确定']],
+    ['parents_australia_visa_refusal_person', '父母澳洲拒签史对象', 'radio', false, ['父亲', '母亲', '父母都有']],
+    ['father_migration_application_status', '父亲是否已经或者正在申请移民', 'radio', true, ['是', '否', '不确定']],
+    ['father_migration_notes', '父亲移民补充信息', 'textarea', false, null],
+    ['mother_migration_application_status', '母亲是否已经或者正在申请移民', 'radio', true, ['是', '否', '不确定']],
+    ['mother_migration_notes', '母亲移民补充信息', 'textarea', false, null],
+  ]],
+  ['study', '学习经历与语言测试', [
+    ['current_school_name', '现在读学校名称', 'text', true, null],
+    ['current_school_year_level', '现在就读年级', 'select', true, STU_YEAR_OPTION],
+    ['study_history_notes', '学习经历备注', 'textarea', false, null],
+    ['has_aeas_or_idat', '是否考过 AEAS 或 IDAT', 'radio', true, ['是', '否', '准备考', '不确定']],
+    ['aeas_idat_score', 'AEAS/IDAT 分数', 'text', false, null],
+    ['has_ielts_or_toefl', '是否考过雅思或托福', 'radio', true, ['是', '否', '准备考', '不确定']],
+    ['language_test_notes', '任何语言测试', 'textarea', false, null],
+    ['account_username', '账号用户名', 'text', false, null],
+    ['account_password', '账号密码', 'text', false, null],
+  ]],
+  ['father', '父亲信息', [
+    ['father_passport_last_name', '父亲护照姓', 'text', true, null],
+    ['father_passport_first_name', '父亲护照名', 'text', true, null],
+    ['father_date_of_birth', '父亲出生日期', 'date', true, null],
+    ['father_mobile', '父亲手机号', 'tel', true, null],
+    ['father_email', '父亲常用 Email', 'email', true, null],
+    ['father_employer', '父亲工作单位', 'text', false, null],
+    ['father_work_address', '父亲单位地址', 'text', false, null],
+    ['father_work_postcode', '父亲单位邮编', 'text', false, null],
+    ['father_work_phone', '父亲单位电话', 'tel', false, null],
+    ['father_position', '父亲工作职务', 'text', false, null],
+    ['father_marital_status', '父亲婚姻状况', 'select', false, ['已婚', '离异', '单身', '丧偶', '其他']],
+    ['father_religion', '父亲宗教信仰', 'select', false, ['无', '佛教', '基督教', '天主教', '伊斯兰教', '其他', '不方便透露']],
+    ['father_highest_school', '父亲最高学历毕业院校', 'text', false, null],
+    ['father_highest_qualification', '父亲所获学历', 'select', false, ['高中', '大专', '本科', '硕士', '博士', '其他']],
+  ]],
+  ['mother', '母亲信息', [
+    ['mother_passport_last_name', '母亲护照姓', 'text', true, null],
+    ['mother_passport_first_name', '母亲护照名', 'text', true, null],
+    ['mother_date_of_birth', '母亲出生日期', 'date', true, null],
+    ['mother_mobile', '母亲手机号', 'tel', true, null],
+    ['mother_email', '母亲常用 Email', 'email', true, null],
+    ['mother_employer', '母亲工作单位', 'text', false, null],
+    ['mother_work_address', '母亲单位地址', 'text', false, null],
+    ['mother_work_postcode', '母亲单位邮编', 'text', false, null],
+    ['mother_work_phone', '母亲单位电话', 'tel', false, null],
+    ['mother_position', '母亲工作职务', 'text', false, null],
+    ['mother_marital_status', '母亲婚姻状况', 'select', false, ['已婚', '离异', '单身', '丧偶', '其他']],
+    ['mother_religion', '母亲宗教信仰', 'select', false, ['无', '佛教', '基督教', '天主教', '伊斯兰教', '其他', '不方便透露']],
+    ['mother_highest_school', '母亲最高学历毕业院校', 'text', false, null],
+    ['mother_highest_qualification', '母亲所获学历', 'select', false, ['高中', '大专', '本科', '硕士', '博士', '其他']],
+  ]],
+  ['emergency', '紧急联系人', [
+    ['emergency_contact_name', '紧急联系人姓名', 'text', false, null],
+    ['emergency_contact_gender', '紧急联系人性别', 'radio', false, ['男', '女']],
+    ['emergency_contact_relationship', '紧急联系人与学生的关系', 'select', false, ['父亲', '母亲', '亲属', '朋友', '其他']],
+    ['emergency_contact_mobile', '紧急联系人手机号', 'tel', false, null],
+    ['emergency_contact_email', '紧急联系人 Email', 'email', false, null],
+    ['emergency_contact_address', '紧急联系人住址及邮编', 'textarea', false, null],
+  ]],
+  ['notes', '备注', [
+    ['general_notes', '备注', 'textarea', false, null],
+  ]],
+];
+
+const STU_FIELD_MAP = {};
+STU_SECTIONS.forEach(([sectionId, title, fields]) => fields.forEach((f) => {
+  STU_FIELD_MAP[f[0]] = { label: f[1], type: f[2], required: f[3], options: f[4], section: sectionId, sectionTitle: title };
+}));
+
+const STU_STAGES = ['建档', '签约', '申请材料审核', '制定学校计划', '递交申请', '面试', '下offer', '接受OFFER+缴费', 'COE已出', '签证材料准备', '签证审核', '签证递交', '签证下签或拒签'];
+const STU_STAGE_INDEX = Object.fromEntries(STU_STAGES.map((v, i) => [v, i]));
+
+const STU_MATERIALS = [
+  ['StudentPassport', '学生护照'], ['FatherPassport', '父亲护照'], ['MotherPassport', '母亲护照'],
+  ['GuardianPassport', '监护人护照'], ['BirthCertificate', '出生证明'], ['Transcripts', '成绩单'],
+  ['Vaccination', '疫苗接种记录'], ['AEAS', 'AEAS'], ['IDAT', 'IDAT'], ['IELTS', '雅思'],
+  ['TOEFL', '托福'], ['Award', '获奖证明'], ['SchoolPlanReport', '学校方案报告'],
+  ['FinalConfirmedSchoolPlan', '最终确认方案'], ['ParentSignaturePage', '家长签字页'],
+  ['SignedContract', '已签署合同'], ['ContractSignatureConfirmationPage', '合同签署确认页'], ['Others', '其他材料'],
+];
+
+const STU_OFFER_STATUS = {
+  received: '已收到', sent_to_parent: '已发送给家长', signed: '已签署',
+  signed_received: '已收到签署文件', cancelled: '已取消', rejected: '已拒绝', expired: '已过期',
+};
+const STU_CONTRACT_STATUS = {
+  Draft: '草稿', Active: '当前有效', Sent: '已发送', ParentSigned: '家长已签署',
+  FullyExecuted: '双方签署完成', Revoked: '已撤销链接', Deleted: '已删除', Voided: '已作废',
+  Superseded: '已被新合同替代', Cancelled: '已取消', Expired: '已过期',
+};
+const STU_CONTRACT_TYPES = {
+  NewInternationalStudentContract: '新留学生合同',
+  TransferApplicationContract: '转学申请合同',
+  LocalStudentApplicationContract: '本地生申请合同',
+};
+const STU_SERVICE_SCOPES = [
+  ['study_planning_consulting', '澳洲留学规划咨询'],
+  ['school_transfer_planning_and_application', '转学规划与转学申请协调'],
+  ['school_information_and_selection_advice', '学校信息介绍与选校建议'],
+  ['document_checklist_guidance_and_document_preparation', '申请材料清单指导与材料整理'],
+  ['application_process_guidance_and_coordination', '申请流程说明与沟通协调'],
+  ['offer_coe_caaw_oshc_process_assistance', '录取文件 / COE / CAAW / OSHC 相关流程协助'],
+  ['offer_coe_oshc_process_assistance', '录取文件 / COE / OSHC 相关流程协助'],
+  ['offer_enrolment_confirmation_coordination', '录取与入学确认沟通协调'],
+  ['visa_document_checklist_guidance', '签证申请材料清单指导'],
+  ['visa_application_form_information_assistance', '签证申请表格信息整理协助'],
+  ['student_visa_lodgement', '学生签证递交'],
+  ['subclass_590_guardian_visa_lodgement', '590 陪读签证递交'],
+  ['gs_study_plan_consulting', 'GS / 学习计划相关咨询'],
+  ['subclass_590_guardian_visa_consulting', '590 陪读签证相关咨询'],
+  ['accommodation_airport_pickup_insurance_prearrival_consulting', '住宿 / 接机 / 保险 / 入学前准备事项咨询'],
+];
+const STU_PAYMENT_CATEGORIES = ['Service Fee', 'Application Fee', 'Offer Deposit', 'Tuition Fee', 'OSHC', 'Homestay', 'Airport Pickup', 'Refund', 'Other'];
+const STU_PAYMENT_METHODS = ['Bank Transfer', 'Alipay', 'WeChat Pay', 'Cash', 'Company Account', 'Personal Account', 'Other'];
+const STU_PAYMENT_CURRENCIES = ['AUD', 'CNY', 'USD'];
+const STU_CONTRACT_PAYMENT_METHODS = ['支付宝', '微信', '国内银行', '澳洲私户', '澳洲公户'];
+const STU_VISA_SECTORS = ['Schools Sector', 'Higher Education', '590 陪读', 'Other'];
+const STU_VISA_STATUSES = ['granted', 'active', 'pending', 'refused', 'cancelled', 'expired'];
+const STU_VISA_STATUS_LABELS = { granted: '已获签', active: '当前有效', pending: '待审批', refused: '已拒签', cancelled: '已取消', expired: '已过期' };
+const STU_VISA_DOCUMENT_TYPES = [
+  ['other', 'Other / 其他'], ['grant_letter', 'Grant Letter / 下签信'],
+  ['refusal_letter', 'Refusal Letter / 拒签信'], ['s56_request', 'S56 Request / S56 补料信'],
+  ['s56_response', 'S56 Response / S56 补料回复'], ['lodgement_receipt', 'Lodgement Receipt / 签证递交收据'],
+  ['immi_acknowledgment', 'IMMI Acknowledgment Letter / IMMI 递交确认信'],
+  ['bridging_visa', 'Bridging Visa / 过桥签证'], ['health_examination', 'Health Examination / 体检材料'],
+  ['hap_id', 'HAP ID / 体检编号'], ['withdrawal_confirmation', 'Withdrawal Confirmation / 撤签确认'],
+];
+const STU_COE_KINDS = [['COE', 'COE'], ['CAAW', 'CAAW'], ['OSHC', 'OSHC'], ['OSHCReceipt', 'OSHCReceipt'], ['COE_CAAW', 'COE_CAAW'], ['LetterOfConfirmation', 'Letter of Confirmation']];
+const STU_HOMESTAY_TYPES = [
+  ['HomestayApplication', '寄宿家庭申请'], ['HomestayPlacement', '寄宿家庭安置'],
+  ['HomestayAgreement', '寄宿家庭协议'], ['HomestayInvoice', '寄宿家庭账单'],
+  ['HomestayPaymentReceipt', '寄宿家庭付款证明'], ['AirportPickupRequest', '接机申请'],
+  ['AirportPickupConfirmation', '接机确认'], ['AirportPickupPaymentReceipt', '接机付款证明'],
+  ['FlightItinerary', '航班行程单'], ['OtherHomestayAirport', '其他住宿 / 接机材料'],
+];
+const STU_REMINDER_STATUS = {
+  Pending: '待提醒', Due: '当前提醒', Snoozed: '稍后提醒', Completed: '已完成',
+  Dismissed: '已忽略', Cancelled: '已取消', Overdue: '已逾期', open: '待提醒',
+};
+const STU_REMINDER_PRIORITY = { Low: '低', Normal: '普通', High: '高', Urgent: '紧急' };
+const STU_REMINDER_TYPES = {
+  contract_sent: '签约提醒', offer_expiry: 'Offer 过期提醒', offer_missing_expiry: 'Offer 信息提醒',
+  interview: '面试提醒', phone_follow_up: '电话跟进', email_follow_up: '邮件跟进',
+  offer_coe_follow_up: '催 Offer + COE', oshc_expiry: 'OSHC 到期提醒',
+  oshc_missing_expiry: 'OSHC 信息提醒', visa_expiry: '签证到期', visa_missing_expiry: '签证信息提醒',
+  year_transition: '小学升中学提醒', manual: '自定义提醒', next_action: '下一步事项',
+  student_followup: '学生跟进留言',
+};
+
+const STU_SCHOOLS = [
+  ['Northfield College（虚构）', '墨尔本', 'private'],
+  ['Westhaven School（虚构）', '悉尼', 'private'],
+  ['Eastwood Academy（虚构）', '布里斯班', 'private'],
+  ['Harbourview College（虚构）', '珀斯', 'private'],
+  ['Southern Coast University（虚构）', '墨尔本', 'private'],
+  ['Canberra Grammar（虚构）', '堪培拉', 'private'],
+  ['Adelaide High School（虚构）', '阿德莱德', 'public'],
+  ['Melbourne Central College（虚构）', '墨尔本', 'public'],
+];
+
+function stuAddDays(iso, days) {
+  const d = new Date(iso + 'T00:00:00');
+  d.setDate(d.getDate() + days);
+  return d.toISOString().slice(0, 10);
+}
+function stuAu(iso) {
+  if (!iso) return '';
+  const m = String(iso).match(/^(\d{4})-(\d{2})-(\d{2})/);
+  return m ? m[3] + '/' + m[2] + '/' + m[1] : String(iso);
+}
+function stuIsoFromAu(value) {
+  const m = String(value || '').match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+  return m ? m[3] + '-' + m[2] + '-' + m[1] : '';
+}
+function stuDateTime(iso) {
+  if (!iso) return '—';
+  const m = String(iso).match(/^(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2})/);
+  return m ? m[3] + '/' + m[2] + '/' + m[1] + ' ' + m[4] + ':' + m[5] : String(iso);
+}
+
+const STU_STUDENTS = [
+  { id: 'D2026001', name: '林悦宁', english: 'Nina Lin', avatar: '林', lifecycle: 'initial', stage: '申请材料审核', school: '待确认', grade: 'Year 9', intake: '2027 · 2月入学', owner: '陈顾问', updated: '2026-11-08', created_at: '2026-09-18', city: 'Melbourne', email: 'nina.lin@example.test', phone: '0412 000 101', parent_form: 'Pending' },
+  { id: 'D2026002', name: '周子涵', english: 'Ethan Zhou', avatar: '周', lifecycle: 'initial', stage: '下offer', school: 'Northfield College（虚构）', grade: 'Year 10', intake: '2027 · 2月入学', owner: '陈顾问', updated: '2026-11-07', created_at: '2026-09-05', city: 'Melbourne', email: 'ethan.zhou@example.test', phone: '0412 000 102', parent_form: 'Submitted' },
+  { id: 'D2026003', name: '许安然', english: 'Anna Xu', avatar: '许', lifecycle: 'transfer', stage: '接受OFFER+缴费', school: 'Westhaven School（虚构）', grade: 'Year 11', intake: '2027 · 2月入学', owner: '王顾问', updated: '2026-11-06', created_at: '2026-08-22', city: 'Sydney', email: 'anna.xu@example.test', phone: '0412 000 103', parent_form: 'Submitted' },
+  { id: 'D2026004', name: '沈一诺', english: 'Leo Shen', avatar: '沈', lifecycle: 'initial', stage: '制定学校计划', school: '待确认', grade: '本科', intake: '2027 · 2月入学', owner: '陈顾问', updated: '2026-11-05', created_at: '2026-10-02', city: 'Melbourne', email: 'leo.shen@example.test', phone: '0412 000 104', parent_form: 'Submitted' },
+  { id: 'D2026005', name: '顾思远', english: 'Ryan Gu', avatar: '顾', lifecycle: 'progression', stage: 'COE已出', school: 'Eastwood Academy（虚构）', grade: 'Year 11', intake: '2027 · 2月入学', owner: '王顾问', updated: '2026-11-05', created_at: '2026-07-14', city: 'Brisbane', email: 'ryan.gu@example.test', phone: '0412 000 105', parent_form: 'Submitted' },
+  { id: 'D2026006', name: '宋可欣', english: 'Chloe Song', avatar: '宋', lifecycle: 'initial', stage: '签证审核', school: 'Northfield College（虚构）', grade: 'Year 8', intake: '2027 · 2月入学', owner: '李签证', updated: '2026-11-04', created_at: '2026-06-30', city: 'Melbourne', email: 'chloe.song@example.test', phone: '0412 000 106', parent_form: 'Submitted' },
+  { id: 'D2026007', name: '陈沐阳', english: 'Max Chen', avatar: '陈', lifecycle: 'initial', stage: '签证下签或拒签', school: 'Harbourview College（虚构）', grade: 'Year 9', intake: '2026 · 10月入学', owner: '王顾问', updated: '2026-11-03', created_at: '2026-03-12', city: 'Perth', email: 'max.chen@example.test', phone: '0412 000 107', parent_form: 'Submitted' },
+  { id: 'D2026008', name: '叶知夏', english: 'Mia Ye', avatar: '叶', lifecycle: 'initial', stage: '签约', school: '待确认', grade: 'Year 7', intake: '2027 · 2月入学', owner: '陈顾问', updated: '2026-11-02', created_at: '2026-10-28', city: 'Sydney', email: 'mia.ye@example.test', phone: '0412 000 108', parent_form: 'Pending' },
+  { id: 'D2026009', name: '韩泽宇', english: 'Kevin Han', avatar: '韩', lifecycle: 'transfer', stage: '递交申请', school: '待确认', grade: 'Year 10', intake: '2027 · 4月入学', owner: '王顾问', updated: '2026-11-01', created_at: '2026-08-06', city: 'Adelaide', email: 'kevin.han@example.test', phone: '0412 000 109', parent_form: 'Submitted' },
+  { id: 'D2026010', name: '苏念安', english: 'Grace Su', avatar: '苏', lifecycle: 'initial', stage: '面试', school: '待确认', grade: 'Year 11', intake: '2027 · 2月入学', owner: '陈顾问', updated: '2026-10-31', created_at: '2026-09-10', city: 'Canberra', email: 'grace.su@example.test', phone: '0412 000 110', parent_form: 'Submitted' },
+  { id: 'D2026011', name: '梁书瑶', english: 'Yuki Liang', avatar: '梁', lifecycle: 'initial', stage: '建档', school: '待确认', grade: 'Year 8', intake: '2027 · 7月入学', owner: '陈顾问', updated: '2026-10-30', created_at: '2026-10-30', city: 'Melbourne', email: 'yuki.liang@example.test', phone: '0412 000 111', parent_form: 'Pending' },
+  { id: 'D2026012', name: '唐睿', english: 'Ray Tang', avatar: '唐', lifecycle: 'initial', stage: '签证材料准备', school: 'Northfield College（虚构）', grade: 'Year 10', intake: '2027 · 2月入学', owner: '李签证', updated: '2026-10-29', created_at: '2026-05-19', city: 'Melbourne', email: 'ray.tang@example.test', phone: '0412 000 112', parent_form: 'Submitted' },
+  { id: 'D2026013', name: '方以宁', english: 'Cindy Fang', avatar: '方', lifecycle: 'initial', stage: '签证递交', school: 'Westhaven School（虚构）', grade: 'Year 12', intake: '2027 · 2月入学', owner: '李签证', updated: '2026-10-28', created_at: '2026-04-15', city: 'Sydney', email: 'cindy.fang@example.test', phone: '0412 000 113', parent_form: 'Submitted' },
+];
+
+STU_STUDENTS.forEach((s) => {
+  s.type = (s.grade === '本科' || s.grade === '研究生' || s.grade === '预科+本科') ? '高等教育' : '中小学申请';
+  s.stage_index = STU_STAGE_INDEX[s.stage];
+  s.final_school = s.school;
+  s.offer_course_start = '';
+  s.visa_grant_date = '';
+});
+
+function stuCityKey(city) {
+  const text = String(city || '').toLowerCase();
+  const found = STU_CITIES.find((entry) => entry[0] === text || entry[1] === city);
+  return found ? found[0] : 'melbourne';
+}
+
+function stuMakeProfile(s, i) {
+  const parts = String(s.english).split(' ');
+  const first = (parts[0] || 'STUDENT').toUpperCase();
+  const last = (parts.slice(1).join(' ') || 'STUDENT').toUpperCase();
+  const higher = ['本科', '研究生', '预科+本科'].includes(s.grade);
+  const gradeNum = Number((String(s.grade).match(/Year (\d+)/) || [])[1] || (higher ? 12 : 9));
+  const birthYear = 2026 - gradeNum - 5;
+  const motherLast = ['WANG', 'LI', 'ZHANG', 'LIU'][i % 4];
+  const motherFirst = ['MEI', 'JING', 'YAN', 'HONG'][i % 4];
+  const fatherFirst = ['WEI', 'JUN', 'MING', 'TAO'][i % 4];
+  return {
+    basic: {
+      passport_last_name: last,
+      passport_first_name: first,
+      english_nickname: parts[0] || '',
+      gender: i % 2 === 0 ? '女' : '男',
+      date_of_birth: '15/06/' + birthYear,
+      current_year_level: String(s.grade).startsWith('Year') ? s.grade : 'Year 12',
+      application_stream: higher ? 'higher_education' : 'school_education',
+      preferred_intake_year: '2027',
+      preferred_intake_term: s.intake.includes('4月') ? '04' : '02',
+      applying_year_level: s.grade,
+      higher_education_course_type: higher ? 'Bachelor' : '',
+      higher_education_package_combination: '',
+      preferred_cities: [stuCityKey(s.city)],
+      visa_status: '中国护照',
+      previous_name: '',
+    },
+    contact: {
+      home_address: '示例路 ' + (100 + i) + ' 号，示例小区 ' + (i + 1) + ' 栋（虚构地址）',
+      home_postcode: '2000' + (i % 10),
+      australia_address: '',
+      australia_postcode: '',
+      mobile_phone: s.phone,
+      student_email: s.email,
+    },
+    siblings: {
+      has_sibling_under_6: s.id === 'D2026008' ? '是' : '否',
+      sibling_1_name: s.id === 'D2026008' ? '叶知秋（虚构）' : '',
+      sibling_1_gender: s.id === 'D2026008' ? '男' : '',
+      sibling_1_dob: s.id === 'D2026008' ? '15/03/2022' : '',
+      sibling_1_school_company: s.id === 'D2026008' ? '示例幼儿园（虚构）' : '',
+      sibling_1_year_level: '',
+      sibling_2_name: '',
+      sibling_2_gender: '',
+      sibling_2_dob: '',
+      sibling_2_school_company: '',
+      sibling_2_year_level: '',
+    },
+    accommodation: {
+      requires_parent_accompaniment: s.id === 'D2026001' ? '不确定' : '否',
+      accompanying_person_relationship: s.id === 'D2026001' ? '母亲' : '',
+      accommodation_preference: [higher ? '住校' : '寄宿家庭'],
+      accept_homestay_with_young_children: '接受',
+      homestay_style_preference: '都可以',
+      smoke_allergy: '否',
+      food_allergy: s.id === 'D2026003' ? '是' : '否',
+      food_allergy_notes: s.id === 'D2026003' ? '对花生过敏，需要避免含花生食品。' : '',
+      pet_allergy: '否',
+      pet_allergy_notes: '',
+      medicine_allergy: '否',
+      medicine_allergy_notes: '',
+      accommodation_notes: higher ? '优先申请学校宿舍，若无名额再安排寄宿家庭。' : '希望住家距离学校 30 分钟车程以内。',
+    },
+    health: {
+      photo_permission: '同意',
+      can_swim: '会',
+      has_medical_or_psychological_history: s.id === 'D2026007' ? '有' : '无',
+      medical_history_notes: s.id === 'D2026007' ? '轻度哮喘，随身携带处方吸入器。' : '',
+      requires_long_term_medication: s.id === 'D2026007' ? '有' : '无',
+      medication_notes: s.id === 'D2026007' ? '每日使用控制药物，已附医生说明。' : '',
+      has_violent_behavior_history: '无',
+      has_suspension_or_expulsion_history: '无',
+    },
+    visa: {
+      student_australia_visa_refusal: '无',
+      student_visa_refusal_notes: '',
+      parents_australia_visa_refusal: '无',
+      parents_australia_visa_refusal_person: '',
+      father_migration_application_status: '否',
+      father_migration_notes: '',
+      mother_migration_application_status: '否',
+      mother_migration_notes: '',
+    },
+    study: {
+      current_school_name: '示例' + (higher ? '大学附属中学' : '实验学校') + '（虚构）',
+      current_school_year_level: String(s.grade).startsWith('Year') ? s.grade : 'Year 12',
+      study_history_notes: '近两年成绩稳定，英语与数学表现较好。',
+      has_aeas_or_idat: i % 3 === 0 ? '是' : '否',
+      aeas_idat_score: i % 3 === 0 ? 'AEAS 68' : '',
+      has_ielts_or_toefl: higher ? '是' : '否',
+      language_test_notes: higher ? 'IELTS 6.5（单项不低于 6.0）' : '',
+      account_username: s.email.split('@')[0],
+      account_password: 'Demo#2026',
+    },
+    father: {
+      father_passport_last_name: last,
+      father_passport_first_name: fatherFirst,
+      father_date_of_birth: '08/09/1980',
+      father_mobile: '139 0000 ' + (2000 + i),
+      father_email: 'father.' + s.id.toLowerCase() + '@example.test',
+      father_employer: '示例科技有限公司（虚构）',
+      father_work_address: '示例大道 ' + (20 + i) + ' 号（虚构）',
+      father_work_postcode: '1000' + (i % 10),
+      father_work_phone: '010-6000 ' + (3000 + i),
+      father_position: '部门经理',
+      father_marital_status: '已婚',
+      father_religion: '无',
+      father_highest_school: '示例大学（虚构）',
+      father_highest_qualification: '本科',
+    },
+    mother: {
+      mother_passport_last_name: motherLast,
+      mother_passport_first_name: motherFirst,
+      mother_date_of_birth: '21/11/1982',
+      mother_mobile: '139 0000 ' + (4000 + i),
+      mother_email: 'mother.' + s.id.toLowerCase() + '@example.test',
+      mother_employer: '示例咨询有限公司（虚构）',
+      mother_work_address: '示例中心 ' + (8 + i) + ' 层（虚构）',
+      mother_work_postcode: '2000' + (i % 10),
+      mother_work_phone: '021-6000 ' + (5000 + i),
+      mother_position: '财务主管',
+      mother_marital_status: '已婚',
+      mother_religion: '无',
+      mother_highest_school: '示例师范大学（虚构）',
+      mother_highest_qualification: '本科',
+    },
+    emergency: {
+      emergency_contact_name: '林女士（虚构）',
+      emergency_contact_gender: '女',
+      emergency_contact_relationship: '亲属',
+      emergency_contact_mobile: '139 0000 ' + (6000 + i),
+      emergency_contact_email: 'emergency.' + s.id.toLowerCase() + '@example.test',
+      emergency_contact_address: '示例路 ' + (100 + i) + ' 号（虚构）',
+    },
+    notes: {
+      general_notes: '家长希望定期同步申请进度；所有材料通过家长端补充。',
+    },
+  };
+}
+
+function stuRequiredMaterials(s) {
+  const higher = ['预科+本科', '本科', '研究生'].includes(s.grade);
+  return higher ? ['StudentPassport', 'Transcripts', 'Vaccination'] : ['StudentPassport', 'BirthCertificate', 'Transcripts', 'Vaccination'];
+}
+
+function stuMakeDocuments(s, idx, i) {
+  const docs = [];
+  const add = (type, name, days, status) => docs.push({
+    id: 'DOC-' + s.id + '-' + type,
+    type, name, version: 'v1',
+    uploaded_at: stuAddDays(s.created_at, days),
+    status: status || (idx >= 3 ? '已确认' : '待审核'),
+  });
+  if (idx >= 1) add('StudentPassport', '学生护照.pdf', 2);
+  if (idx >= 2) {
+    if (s.grade !== '本科' && s.grade !== '研究生' && s.grade !== '预科+本科') add('BirthCertificate', '出生证明.pdf', 3);
+    add('Vaccination', '疫苗接种记录.pdf', 4);
+    if (idx > 2) add('Transcripts', '最近两年成绩单.pdf', 5);
+  }
+  if (idx >= 3) {
+    add('FatherPassport', '父亲护照.pdf', 6);
+    add('MotherPassport', '母亲护照.pdf', 6);
+    if (i % 2 === 0) add('AEAS', 'AEAS 成绩单.pdf', 8);
+  }
+  if (idx >= 6) add('Award', '获奖证明.pdf', 12);
+  return docs;
+}
+
+function stuMakeOffer(s, idx, i) {
+  if (idx < 6) return [];
+  const accepted = idx >= 7;
+  const school = s.school === '待确认' ? 'Northfield College（虚构）' : s.school;
+  const expiry = s.id === 'D2026002' ? '18/11/2026' : s.id === 'D2026013' ? '12/11/2026' : '20/12/2026';
+  const offer = {
+    id: 'OFF-' + s.id + '-1', school_name: school,
+    language_school_name: idx >= 8 ? '' : 'Northfield English Centre（虚构）',
+    document_type: 'Offer', offer_date: stuAu(stuAddDays(s.created_at, 40 + i)),
+    course_start_date: '28/01/2027', offer_expiry_date: expiry,
+    deposit_amount: idx >= 7 ? '5000.00' : '', deposit_currency: 'AUD',
+    status: idx === 6 ? 'received' : 'signed_received',
+    accepted, file_name: 'Offer_' + school.replace(/[（）]/g, '') + '.pdf',
+    uploaded_at: stuAddDays(s.created_at, 41 + i),
+  };
+  const offers = [offer];
+  if (s.id === 'D2026003') {
+    offers.push({
+      id: 'OFF-' + s.id + '-2', school_name: 'Northfield College（虚构）', language_school_name: '',
+      document_type: 'Offer', offer_date: '05/10/2026', course_start_date: '28/01/2027',
+      offer_expiry_date: '10/11/2026', deposit_amount: '5000.00', deposit_currency: 'AUD',
+      status: 'rejected', accepted: false, file_name: 'Offer_Northfield_Rejected.pdf', uploaded_at: '2026-10-05',
+    });
+  }
+  return offers;
+}
+
+function stuMakeCoe(s, idx, i) {
+  if (idx < 8) return [];
+  const school = s.school === '待确认' ? 'Northfield College（虚构）' : s.school;
+  const higher = ['本科', '研究生', '预科+本科'].includes(s.grade);
+  const records = [{
+    id: 'COE-' + s.id + '-1', kind: 'COE', coe_provider: school,
+    coe_course: higher ? 'Bachelor of Business' : 'Secondary School Program',
+    coe_start_date: '28/01/2027', coe_end_date: higher ? '15/12/2029' : '15/12/2027',
+    file_name: 'COE_' + s.id + '.pdf', uploaded_at: stuAddDays(s.created_at, 80),
+  }, {
+    id: 'COE-' + s.id + '-2', kind: 'OSHC', oshc_company_name: 'Medibank（虚构）',
+    oshc_policy_number: 'OSHC-' + s.id + '-' + (1000 + i),
+    oshc_commencement_date: '20/01/2027', oshc_expiry_date: higher ? '15/03/2030' : '15/03/2028',
+    file_name: 'OSHC_' + s.id + '.pdf', uploaded_at: stuAddDays(s.created_at, 81),
+  }];
+  if (!higher) records.push({
+    id: 'COE-' + s.id + '-3', kind: 'CAAW', coe_provider: school,
+    caaw_welfare_start_date: '20/01/2027', caaw_welfare_end_date: '15/12/2027',
+    file_name: 'CAAW_' + s.id + '.pdf', uploaded_at: stuAddDays(s.created_at, 82),
+  });
+  return records;
+}
+
+function stuMakeVisas(s, idx, i) {
+  const visas = [];
+  if (s.lifecycle === 'transfer') {
+    visas.push({
+      id: 'VISA-' + s.id + '-existing', visa_type: 'Student Visa Subclass 500', visa_sector: 'Schools Sector',
+      document_type: 'grant_letter', visa_grant_date: '10/02/2024', visa_start_date: '15/02/2024',
+      visa_expiry_date: '20/01/2027', visa_status: 'active', visa_conditions: '沿用现有签证，转学后需更新学校与 COE。',
+      file_name: 'Existing_Visa_' + s.id + '.pdf', existing: true, created_at: '2026-08-22',
+    });
+  }
+  if (idx >= 10 && idx < 12) {
+    visas.push({
+      id: 'VISA-' + s.id + '-current', visa_type: 'Student Visa Subclass 500', visa_sector: 'Schools Sector',
+      document_type: idx === 10 ? 's56_request' : 'lodgement_receipt',
+      visa_grant_date: '', visa_start_date: '', visa_expiry_date: '', visa_status: 'pending',
+      visa_conditions: idx === 10 ? '收到 S56 补件要求：需补充资金证明与 GS 说明。' : '签证已递交，等待移民局审理。',
+      file_name: (idx === 10 ? 'S56_Request_' : 'Visa_Lodgement_') + s.id + '.pdf',
+      existing: false, created_at: stuAddDays(s.created_at, 95),
+    });
+  }
+  if (idx >= 12) {
+    visas.push({
+      id: 'VISA-' + s.id + '-current', visa_type: 'Student Visa Subclass 500', visa_sector: 'Schools Sector',
+      document_type: 'grant_letter', visa_grant_date: '28/10/2026', visa_start_date: '01/11/2026',
+      visa_expiry_date: '15/03/2030', visa_status: 'granted', visa_conditions: '8202 学习进度要求；8533 保持入学注册。',
+      file_name: 'Visa_Grant_' + s.id + '.pdf', existing: false, created_at: '2026-10-28',
+    });
+  }
+  return visas;
+}
+
+function stuMakePayments(s, idx, i) {
+  const rows = [];
+  if (idx >= 7) rows.push({
+    id: 'PAY-' + s.id + '-1', category: 'Offer Deposit', amount: '5000.00', currency: 'AUD',
+    paid_date: stuAu(stuAddDays(s.created_at, 55 + i)), method: 'Bank Transfer',
+    payer_name: '家长（虚构）', receiver_name: s.school === '待确认' ? 'Northfield College（虚构）' : s.school,
+    transfer_confirmed: s.lifecycle === 'transfer' ? '已确认' : '', proof: 'Offer_Deposit_Receipt.pdf',
+  });
+  if (idx >= 8) rows.push({
+    id: 'PAY-' + s.id + '-2', category: 'OSHC', amount: '680.00', currency: 'AUD',
+    paid_date: stuAu(stuAddDays(s.created_at, 70 + i)), method: 'Company Account',
+    payer_name: 'AAIE（虚构）', receiver_name: 'Medibank（虚构）',
+    transfer_confirmed: '', proof: 'OSHC_Receipt.pdf',
+  });
+  if (idx >= 9) rows.push({
+    id: 'PAY-' + s.id + '-3', category: 'Service Fee', amount: '2400.00', currency: 'CNY',
+    paid_date: stuAu(stuAddDays(s.created_at, 20 + i)), method: 'Alipay',
+    payer_name: '家长（虚构）', receiver_name: 'AAIE（虚构）', transfer_confirmed: '', proof: 'Service_Fee_Receipt.pdf',
+  });
+  if (idx >= 12) rows.push({
+    id: 'PAY-' + s.id + '-4', category: 'Tuition Fee', amount: '18500.00', currency: 'AUD',
+    paid_date: '25/10/2026', method: 'Bank Transfer', payer_name: '家长（虚构）',
+    receiver_name: s.school, transfer_confirmed: '', proof: 'Tuition_Receipt.pdf',
+  });
+  return rows;
+}
+
+function stuMakeContracts(s, idx, i) {
+  if (idx < 1) return [];
+  const type = s.lifecycle === 'transfer' ? 'TransferApplicationContract' : s.lifecycle === 'progression' ? 'LocalStudentApplicationContract' : 'NewInternationalStudentContract';
+  const status = idx === 1 ? 'Sent' : 'FullyExecuted';
+  return [{
+    id: 'CON-' + s.id + '-1', contract_type: type, status, version: 'v1',
+    service_scopes: s.lifecycle === 'transfer'
+      ? ['school_transfer_planning_and_application', 'school_information_and_selection_advice', 'document_checklist_guidance_and_document_preparation', 'application_process_guidance_and_coordination', 'offer_coe_caaw_oshc_process_assistance']
+      : ['study_planning_consulting', 'school_information_and_selection_advice', 'document_checklist_guidance_and_document_preparation', 'application_process_guidance_and_coordination', 'student_visa_lodgement'],
+    fee: '2400.00', discount: '0.00', payment_method: i % 2 === 0 ? '支付宝' : '微信',
+    file_name: (type === 'TransferApplicationContract' ? 'Transfer' : type === 'LocalStudentApplicationContract' ? 'Local' : 'Study') + '_Contract_' + s.id + '.pdf',
+    created_at: stuAddDays(s.created_at, 6), signed_at: idx >= 2 ? stuAddDays(s.created_at, 10) : '',
+  }];
+}
+
+function stuMakePlans(s, idx, i) {
+  if (idx < 3) return [];
+  const school = s.school === '待确认' ? 'Northfield College（虚构）' : s.school;
+  const publicPlan = s.id === 'D2026002';
+  const sector = publicPlan ? 'public' : 'private';
+  const second = publicPlan ? 'Melbourne Central College（虚构）' : (school === 'Westhaven School（虚构）' ? 'Northfield College（虚构）' : 'Westhaven School（虚构）');
+  const confirmed = idx >= 4;
+  const report = {
+    id: 'PLAN-' + s.id + '-1', city: s.city, sector, version: idx >= 5 ? 2 : 1,
+    status: confirmed ? 'confirmed' : 'draft', updated_at: stuAddDays(s.created_at, 30 + i),
+    is_current: true, report_title: '学校方案报告',
+    confirmed_schools: confirmed ? [{
+      id: 'PLANSCH-' + s.id + '-1', school_name: school,
+      decision_mode: publicPlan ? 'ranked' : 'selected', rank_order: 1,
+      submission_status: 'submitted', submitted_at: stuAddDays(s.created_at, 36 + i), submitted_by_name: '家长（虚构）',
+      result_status: idx >= 6 ? 'offer_received' : 'pending', is_offer_accepted: idx >= 7,
+      is_offer_received: idx >= 6, is_final_school: idx >= 7 || school === 'Harbourview College（虚构）',
+      result_note: '', result_at: idx >= 6 ? stuAddDays(s.created_at, 45 + i) : '', result_by_name: idx >= 6 ? '陈顾问' : '',
+    }, {
+      id: 'PLANSCH-' + s.id + '-2', school_name: second,
+      decision_mode: publicPlan ? 'ranked' : 'selected', rank_order: 2,
+      submission_status: idx >= 4 ? 'submitted' : 'unsubmitted', submitted_at: idx >= 4 ? stuAddDays(s.created_at, 36 + i) : '', submitted_by_name: idx >= 4 ? '家长（虚构）' : '',
+      result_status: 'pending', is_offer_accepted: false, is_offer_received: false,
+      is_final_school: false, result_note: '', result_at: '', result_by_name: '',
+    }] : [],
+  };
+  const plans = [report];
+  if (s.id === 'D2026003' || s.id === 'D2026007') {
+    plans.push({
+      id: 'PLAN-' + s.id + '-0', city: s.city, sector, version: 1, status: 'superseded',
+      updated_at: stuAddDays(s.created_at, 12), is_current: false, report_title: '学校方案报告',
+      confirmed_schools: [],
+    });
+  }
+  return plans;
+}
+
+function stuMakeHomestay(s, idx, i) {
+  const docs = [];
+  const add = (type, days) => docs.push({
+    id: 'HOM-' + s.id + '-' + type, type,
+    name: (STU_HOMESTAY_TYPES.find((x) => x[0] === type) || [type, type])[1] + '_' + s.id + '.pdf',
+    uploaded_at: stuAddDays(s.created_at, days), status: idx >= 6 ? '已确认' : '待审核',
+  });
+  if (idx >= 4) add('HomestayApplication', 25);
+  if (idx >= 6) add('HomestayPlacement', 50);
+  if (idx >= 7) add('HomestayAgreement', 55);
+  if (idx >= 8) add('FlightItinerary', 75);
+  if (idx >= 9) add('AirportPickupConfirmation', 80);
+  if (s.lifecycle === 'transfer' && idx >= 7) add('AirportPickupRequest', 60);
+  return docs;
+}
+
+function stuMakeHistory(s, idx) {
+  const rows = [];
+  const push = (days, section, field, before, after, user) => rows.push({
+    id: 'LOG-' + s.id + '-' + rows.length, changed_at: stuAddDays(s.created_at, days) + 'T09:30:00',
+    user: user || s.owner, section, field, before, after,
+  });
+  push(0, '学生基本信息', '建档', '', s.name + ' · ' + s.id);
+  if (idx >= 1) push(7, '合同', '合同状态', '草稿', '已发送');
+  if (idx >= 2) push(14, '申请材料', '学生护照', '未上传', '已上传');
+  if (idx >= 2) push(18, '联系方式与地址', '学生手机号', '未记录', s.phone);
+  if (idx >= 3) push(30, '申请材料', '材料审核', '待审核', '已完成', '陈顾问');
+  if (idx >= 3) push(32, '学校方案', '方案版本', '—', 'v1');
+  if (idx >= 4) push(38, '学校方案', '递交状态', '未递交', '已递交');
+  if (idx >= 6) push(45, '录取通知', 'Offer 状态', '—', '已收到');
+  if (idx >= 7) push(55, '付款', 'Offer 定金', '—', 'AUD 5,000.00');
+  if (idx >= 8) push(80, '入学确认与学生保险', 'COE', '未上传', '已确认');
+  if (idx >= 10) push(95, '签证', '签证状态', '未建立', '待审批');
+  if (idx >= 12) push(110, '签证', '签证状态', '待审批', '已获签');
+  return rows.sort((a, b) => b.changed_at.localeCompare(a.changed_at));
+}
+
+function stuMakeReminders(s, idx, i) {
+  const due = stuAddDays('2026-11-08', -(idx % 3)) + 'T' + (10 + (i % 6)).toString().padStart(2, '0') + ':00:00';
+  const notes = [{
+    id: 'NOTE-' + s.id + '-1',
+    description: idx >= 8 ? '跟进签证结果并核对下签日期。' : idx >= 6 ? '联系家长确认 Offer 接受与押金安排。' : '跟进家长补充申请材料。',
+    reminder_at: due,
+    recipient_name: s.owner,
+    status: idx <= 2 ? 'Overdue' : 'Pending',
+    priority: idx <= 2 ? 'High' : 'Normal',
+    source_type: 'manual',
+    created_by: s.owner,
+    creator_name: s.owner,
+    created_at: stuAddDays(s.created_at, 20),
+  }];
+  notes.push({
+    id: 'NOTE-' + s.id + '-2',
+    description: '已向家长说明当前申请进度与下一步安排。',
+    reminder_at: stuAddDays(s.created_at, 15) + 'T15:00:00',
+    recipient_name: s.owner, status: 'Completed', priority: 'Normal',
+    source_type: 'student_followup', created_by: s.owner, creator_name: s.owner,
+    created_at: stuAddDays(s.created_at, 15),
+  });
+  const other = [];
+  if (idx >= 1) other.push({
+    id: 'REM-' + s.id + '-1', type: 'contract_sent', type_label: STU_REMINDER_TYPES.contract_sent,
+    reminder_at: stuAddDays(s.created_at, 10) + 'T09:00:00', status: idx >= 2 ? 'Completed' : 'Pending',
+    priority: 'Normal', owner: s.owner,
+  });
+  if (idx >= 6) other.push({
+    id: 'REM-' + s.id + '-2', type: 'offer_expiry', type_label: STU_REMINDER_TYPES.offer_expiry,
+    reminder_at: '2026-11-15T09:00:00', status: idx >= 7 ? 'Completed' : 'Pending',
+    priority: idx >= 7 ? 'Normal' : 'High', owner: s.owner,
+  });
+  if (idx >= 9) other.push({
+    id: 'REM-' + s.id + '-3', type: 'visa_expiry', type_label: STU_REMINDER_TYPES.visa_expiry,
+    reminder_at: '2029-12-01T09:00:00', status: 'Pending', priority: 'Low', owner: s.owner,
+  });
+  return { notes, other };
+}
+
+function stuMakeRevenue(s, i) {
+  const rows = [];
+  const stream = ['本科', '研究生', '预科+本科'].includes(s.grade) ? 'higher_education' : 'school_education';
+  if (s.lifecycle === 'transfer' || s.lifecycle === 'progression') {
+    rows.push({
+      case_uid: 'REV-2024-' + String(200 + i), application_cycle_id: 80 + i,
+      cycle_type: 'initial', education_stream: stream, cycle_status: 'completed',
+      case_status: '已关闭', updated_at: '2025-12-10T10:00:00', href: '#revenue/cases',
+    });
+  }
+  rows.push({
+    case_uid: 'REV-2026-' + String(300 + i), application_cycle_id: 100 + i,
+    cycle_type: s.lifecycle, education_stream: stream, cycle_status: 'active',
+    case_status: '进行中', updated_at: s.updated + 'T16:20:00', href: '#revenue/cases',
+  });
+  return rows;
+}
+
+function stuDayDiff(fromIso, toIso) {
+  return Math.round((new Date(toIso + 'T00:00:00') - new Date(fromIso + 'T00:00:00')) / 86400000);
+}
+
+function stuBuildAlerts(s, detail) {
+  const idx = s.stage_index;
+  const alerts = [];
+  const required = stuRequiredMaterials(s);
+  const counts = {};
+  detail.documents.forEach((d) => { counts[d.type] = (counts[d.type] || 0) + 1; });
+  const missing = required.filter((type) => !counts[type]);
+  if (!detail.parent_form_submitted) alerts.push({ key: 'waiting', label: '等待家长', level: 'waiting', tab: 'applications' });
+  if (missing.length && idx >= 2) alerts.push({ key: 'missing_docs', label: '缺材料', level: 'risk', tab: 'applications' });
+  if (detail.parent_form_submitted && !detail.materials_checked) alerts.push({ key: 'materials_pending', label: '材料待审核', level: 'risk', tab: 'applications' });
+  if (idx >= 2 && !detail.plans.length) alerts.push({ key: 'missing_school_plan', label: '未制作学校方案', level: 'waiting', tab: 'school_plans' });
+  const offer = detail.offers.find((o) => !o.accepted && o.status !== 'rejected' && o.status !== 'cancelled');
+  if (offer && offer.offer_expiry_date) {
+    const expiry = stuIsoFromAu(offer.offer_expiry_date);
+    if (expiry && stuDayDiff('2026-11-08', expiry) >= 0 && stuDayDiff('2026-11-08', expiry) <= 30) {
+      alerts.push({ key: 'offer_expiring', label: 'Offer即将过期', level: 'risk', tab: 'offer' });
+    }
+  }
+  const visa = detail.visas.find((v) => ['active', 'granted'].includes(v.visa_status) && v.visa_expiry_date);
+  if (visa) {
+    const expiry = stuIsoFromAu(visa.visa_expiry_date);
+    if (expiry && stuDayDiff('2026-11-08', expiry) <= 90) {
+      alerts.push({ key: 'visa_expiring', label: '签证即将到期', level: 'risk', tab: 'visa' });
+    }
+  }
+  return alerts;
+}
+
+function stuBuildDetail(s, i) {
+  const idx = s.stage_index;
+  const profile = stuMakeProfile(s, i);
+  const documents = stuMakeDocuments(s, idx, i);
+  const offers = stuMakeOffer(s, idx, i);
+  const coe = stuMakeCoe(s, idx, i);
+  const visas = stuMakeVisas(s, idx, i);
+  const payments = stuMakePayments(s, idx, i);
+  const contracts = stuMakeContracts(s, idx, i);
+  const plans = stuMakePlans(s, idx, i);
+  const homestay = stuMakeHomestay(s, idx, i);
+  const history = stuMakeHistory(s, idx);
+  const reminderData = stuMakeReminders(s, idx, i);
+  const revenue = stuMakeRevenue(s, i);
+  const detail = {
+    student_id: s.id,
+    profile,
+    documents,
+    parent_form_submitted: s.parent_form !== 'Pending',
+    materials_checked: idx >= 3,
+    materials_checked_at: idx >= 3 ? stuAddDays(s.created_at, 30) + 'T16:00:00' : '',
+    materials_checker_name: idx >= 3 ? '陈顾问' : '',
+    offers,
+    coe,
+    visas,
+    payments,
+    contracts,
+    plans,
+    homestay,
+    history,
+    notes: reminderData.notes,
+    other_reminders: reminderData.other,
+    revenue,
+    docx: {
+      file_name: 'StudentInfo_' + s.id + '.docx',
+      updated_at: stuAddDays(s.created_at, 1),
+      option: 'keep',
+    },
+    storage_status: i % 5 === 0 ? '部分文件待归档' : '正常',
+  };
+  detail.alerts = stuBuildAlerts(s, detail);
+  s.alerts = detail.alerts;
+  s.offer_course_start = offers[0] ? offers[0].course_start_date : '';
+  s.visa_grant_date = (visas.find((v) => v.visa_status === 'granted') || {}).visa_grant_date || '';
+  s.final_school = plans.flatMap((p) => p.confirmed_schools).find((x) => x.is_final_school)?.school_name || (contracts.length ? '' : '') || '待确认';
+  if (s.final_school === '待确认' && s.school !== '待确认') s.final_school = s.school;
+  return detail;
+}
+
+const STU_DETAILS = {};
+STU_STUDENTS.forEach((s, i) => { STU_DETAILS[s.id] = stuBuildDetail(s, i); });
+STU_STUDENTS.forEach((s) => {
+  s.school = s.stage_index >= 7 ? s.final_school : (s.final_school === '待确认' ? '待确认' : s.final_school);
+  if (s.stage_index < 7) s.school = s.final_school === '待确认' ? '待确认' : s.final_school;
+  if (s.final_school === '待确认') s.school = '待确认';
+});
+
+DEMO.students = STU_STUDENTS;
+
+const STU_PARENT_LINKS_SEED = [
+  { id: 'LINK-2026-001', student: 'D2026001', type: '学生资料', status: 'Pending', expires: '2026-11-20', visits: 0 },
+  { id: 'LINK-2026-002', student: 'D2026008', type: '学生资料', status: 'Pending', expires: '2026-11-18', visits: 1 },
+  { id: 'LINK-2026-003', student: 'D2026011', type: '学生资料', status: 'Pending', expires: '2026-11-25', visits: 0 },
+];
+const STU_DELETED_SEED = [{
+  student: {
+    id: 'D2025099', name: '样例学生（已删除）', english: 'Sample Student', avatar: '样',
+    lifecycle: 'initial', stage: '建档', school: '待确认', grade: 'Year 9', intake: '2027 · 2月入学',
+    owner: '陈顾问', updated: '2025-12-01', created_at: '2025-11-20', city: 'Melbourne',
+    email: 'deleted.sample@example.test', phone: '0412 000 099', type: '中小学申请', stage_index: 0,
+    final_school: '待确认', offer_course_start: '', visa_grant_date: '', alerts: [],
+  },
+  deleted_at: '2025-12-02T10:15:00', deleted_by: '管理员',
+}];
 
 </script><script>
 'use strict';
@@ -772,6 +1751,1335 @@ document.addEventListener('submit',e=>{const f=e.target;if(!['dialog-form','glob
 window.addEventListener('hashchange',()=>{if($('#dialog').open)closeDialog();state.selected.clear();render();window.scrollTo(0,0);$('#main')?.focus({preventScroll:true})});
 document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('#global-search input')?.focus()}if(e.key==='/'&&!e.metaKey&&!e.ctrlKey&&!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)){e.preventDefault();$('#nav-search')?.focus()}if(e.key==='Escape'){$('#sidebar')?.classList.remove('open');$('.mobile-menu')?.setAttribute('aria-expanded','false')}});
 $('#dialog').addEventListener('click',e=>{if(e.target===$('#dialog')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closeDialog()}});
+render();
+
+</script><script>
+/* Student management module — aligned with the CRM source business flow.
+   Loaded after app.js so its page renderers replace the generic demo ones. */
+'use strict';
+
+const STU_TAB_LABELS = {
+  profile: '学生资料',
+  applications: '申请材料',
+  contracts: '合同',
+  school_plans: '学校方案',
+  offer: '录取通知',
+  payments: '付款',
+  coe: '入学确认与学生保险',
+  visa: '签证',
+  homestay: '住宿与接机',
+  history: '历史记录',
+  reminders: '留言与提醒',
+  revenue: '收入与佣金',
+};
+const STU_TAB_ORDER = ['profile', 'applications', 'contracts', 'school_plans', 'offer', 'payments', 'coe', 'visa', 'homestay', 'history', 'reminders', 'revenue'];
+const STU_PROFILE_ORDER = ['basic', 'contact', 'siblings', 'father', 'mother', 'accommodation', 'health', 'visa', 'study', 'emergency', 'notes'];
+const STU_FILTER_DEFAULTS = {
+  q: '', sort: 'recent', stage: '', lifecycle_type: '', consultant: '', year_level: '',
+  alert: '', contract_status: '', created_from: '', created_to: '', updated_from: '', updated_to: '',
+};
+const STU_SORT_OPTIONS = [
+  ['recent', '最近更新'], ['created', '创建时间'], ['student_name', '学生姓名'], ['student_id', 'Student ID'],
+  ['stage', '当前阶段'], ['consultant', '负责顾问'], ['waiting', '等待家长'], ['risk', '风险优先'],
+  ['offer_expiry', 'Offer即将过期'], ['visa_expiry', '签证即将到期'],
+];
+const STU_ALERT_OPTIONS = [
+  ['', '全部提醒'], ['waiting', '等待家长'], ['risk', '风险优先'], ['materials_pending', '材料待审核'],
+  ['missing_docs', '缺材料'], ['missing_school_plan', '未制作学校方案'], ['offer_expiring', 'Offer即将过期'],
+  ['visa_expiring', '签证即将到期'],
+];
+const STU_PLAN_RESULT_OPTIONS = [
+  ['pending', '等待学校结果'], ['offer_received', '已收到 Offer'], ['rejected', '学校拒绝'],
+  ['no_place_or_closed', '无学位／申请关闭'], ['withdrawn', '主动撤回'], ['voided', '申请记录作废'],
+];
+const STU_PLAN_SECTOR_LABELS = { public: '公校', private: '私校', unclassified: '待分类' };
+const STU_PLAN_RESULT_LABELS = Object.fromEntries(STU_PLAN_RESULT_OPTIONS);
+const STU_REVENUE_STREAM = { school_education: '中小学', higher_education: '高等教育' };
+const STU_REVENUE_CYCLE = { initial: '初始申请', transfer: '转学', progression: '升学' };
+
+const STU_PARENT_SUBMISSIONS = [
+  {
+    key: 'PF-2026-0101', name: '赵一川', english: 'Yichuan Zhao', grade: 'Year 9',
+    city: 'Melbourne', owner: '陈顾问', submitted_at: '2026-11-08T08:40:00', form: '学生与家庭资料',
+  },
+  {
+    key: 'PF-2026-0102', name: '钱雨桐', english: 'Yutong Qian', grade: 'Year 11',
+    city: 'Sydney', owner: '王顾问', submitted_at: '2026-11-07T16:20:00', form: '学生与家庭资料',
+  },
+];
+
+function stuFilters() {
+  state.stuFilters = state.stuFilters || { ...STU_FILTER_DEFAULTS };
+  return state.stuFilters;
+}
+function stuSelected() {
+  state.stuSelected = state.stuSelected || new Set();
+  return state.stuSelected;
+}
+function stuDeleted() {
+  state.stuDeleted = state.stuDeleted || STU_DELETED_SEED.map((x) => ({ ...x }));
+  return state.stuDeleted;
+}
+function stuParentLinks() {
+  state.stuParentLinks = state.stuParentLinks || STU_PARENT_LINKS_SEED.map((x) => ({ ...x }));
+  return state.stuParentLinks;
+}
+function stuParentSubmissions() {
+  state.stuParentSubmissions = state.stuParentSubmissions || STU_PARENT_SUBMISSIONS.map((x) => ({ ...x }));
+  return state.stuParentSubmissions;
+}
+function stuDetail(id) { return STU_DETAILS[id]; }
+function stuAlerts(s) { return (STU_DETAILS[s.id] || {}).alerts || s.alerts || []; }
+function stuLifecycleLabel(v) { return v === 'transfer' ? '转学' : v === 'progression' ? '升学' : '新申请'; }
+function stuToday() { return '08/11/2026'; }
+function stuIsoToday() { return '2026-11-08'; }
+function stuAuToIso(v) {
+  const m = String(v || '').match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+  return m ? m[3] + '-' + m[2] + '-' + m[1] : '';
+}
+function stuIsoToAu(v) {
+  const m = String(v || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
+  return m ? m[3] + '/' + m[2] + '/' + m[1] : String(v || '');
+}
+function stuWithin(iso, from, to) {
+  if (from && iso && iso < from) return false;
+  if (to && iso && iso > to) return false;
+  return true;
+}
+function stuHasAlert(s, key) {
+  const alerts = stuAlerts(s);
+  return key === 'waiting' || key === 'risk'
+    ? alerts.some((a) => a.level === key)
+    : alerts.some((a) => a.key === key);
+}
+function stuContractStatuses(s) {
+  return (stuDetail(s.id)?.contracts || []).map((c) => c.status);
+}
+function stuOfferExpiryIso(s) {
+  const d = stuDetail(s.id);
+  const dates = (d?.offers || []).filter((o) => !o.accepted && o.status !== 'rejected')
+    .map((o) => stuAuToIso(o.offer_expiry_date)).filter(Boolean).sort();
+  return dates[0] || '9999-12-31';
+}
+function stuVisaExpiryIso(s) {
+  const d = stuDetail(s.id);
+  const dates = (d?.visas || []).filter((v) => ['granted', 'active'].includes(v.visa_status))
+    .map((v) => stuAuToIso(v.visa_expiry_date)).filter(Boolean).sort();
+  return dates[0] || '9999-12-31';
+}
+
+function stuFilteredStudents() {
+  const f = stuFilters();
+  const q = String(f.q || '').trim().toLowerCase();
+  let rows = DEMO.students.filter((s) => {
+    if (q && ![s.id, s.name, s.english, s.school, s.owner, s.email, s.phone, s.grade].join(' ').toLowerCase().includes(q)) return false;
+    if (f.stage && s.stage !== f.stage) return false;
+    if (f.lifecycle_type && s.lifecycle !== f.lifecycle_type) return false;
+    if (f.consultant && s.owner !== f.consultant) return false;
+    if (f.year_level && s.grade !== f.year_level) return false;
+    if (f.alert && !stuHasAlert(s, f.alert)) return false;
+    if (f.contract_status && !stuContractStatuses(s).includes(f.contract_status)) return false;
+    if (!stuWithin(s.created_at, f.created_from, f.created_to)) return false;
+    if (!stuWithin(s.updated, f.updated_from, f.updated_to)) return false;
+    return true;
+  });
+  const byNumber = (a, b) => String(a).localeCompare(String(b), 'zh-Hans-CN');
+  rows = rows.slice().sort((a, b) => {
+    switch (f.sort) {
+      case 'created': return String(b.created_at).localeCompare(String(a.created_at));
+      case 'student_name': return byNumber(a.name, b.name);
+      case 'student_id': return byNumber(a.id, b.id);
+      case 'stage': return b.stage_index - a.stage_index;
+      case 'consultant': return byNumber(a.owner, b.owner) || byNumber(a.id, b.id);
+      case 'waiting': {
+        const ca = stuAlerts(a).filter((x) => x.level === 'waiting').length;
+        const cb = stuAlerts(b).filter((x) => x.level === 'waiting').length;
+        return cb - ca;
+      }
+      case 'risk': {
+        const ca = stuAlerts(a).filter((x) => x.level === 'risk').length;
+        const cb = stuAlerts(b).filter((x) => x.level === 'risk').length;
+        return cb - ca;
+      }
+      case 'offer_expiry': return stuOfferExpiryIso(a).localeCompare(stuOfferExpiryIso(b));
+      case 'visa_expiry': return stuVisaExpiryIso(a).localeCompare(stuVisaExpiryIso(b));
+      default: return String(b.updated).localeCompare(String(a.updated));
+    }
+  });
+  return rows;
+}
+
+function stuSelect(name, value, options, extra = '') {
+  return `<select name="${name}" ${extra}>${options.map(([v, l]) => `<option value="${esc(v)}" ${String(v) === String(value) ? 'selected' : ''}>${esc(l)}</option>`).join('')}</select>`;
+}
+function stuField(label, name, value, opts = {}) {
+  const wide = opts.wide ? ' wide' : '';
+  if (opts.options) {
+    return `<label class="${wide.trim()}">${esc(label)}${opts.required ? ' <span class="stu-req">*</span>' : ''}${stuSelect(name, value, opts.options, opts.required ? 'required' : '')}</label>`;
+  }
+  if (opts.textarea) {
+    return `<label class="${wide.trim()}">${esc(label)}${opts.required ? ' <span class="stu-req">*</span>' : ''}<textarea name="${name}" ${opts.required ? 'required' : ''} placeholder="${esc(opts.placeholder || '')}">${esc(value || '')}</textarea></label>`;
+  }
+  return `<label class="${wide.trim()}">${esc(label)}${opts.required ? ' <span class="stu-req">*</span>' : ''}<input type="${opts.type || 'text'}" name="${name}" value="${esc(value || '')}" ${opts.required ? 'required' : ''} placeholder="${esc(opts.placeholder || '')}"></label>`;
+}
+function stuDisplayOption(key, value) {
+  if (value === null || value === undefined || value === '') return '—';
+  const year = String(value).match(/^Year (\d+)$/);
+  if (year) return year[1] + '年级';
+  if (key === 'preferred_intake_term') return ({ '02': '2月入学', '04': '4月入学', '07': '7月入学', '10': '10月入学', unsure: '不确定' })[value] || value;
+  if (key === 'application_stream') return ({ school_education: '中小学申请', higher_education: '高等教育申请' })[value] || value;
+  if (key === 'higher_education_course_type') return ({ Foundation: '预科', Diploma: '文凭课程', Bachelor: '本科', Postgraduate: '研究生', Package: '打包课程' })[value] || value;
+  if (key === 'higher_education_package_combination') return ({ 'Foundation + Bachelor': '预科 + 本科', 'Diploma + Bachelor': '文凭课程 + 本科', 'Foundation + Diploma + Bachelor': '预科 + 文凭课程 + 本科' })[value] || value;
+  if (key === 'preferred_cities') return ({ melbourne: '墨尔本', sydney: '悉尼', brisbane: '布里斯班', adelaide: '阿德莱德', perth: '珀斯', canberra: '堪培拉', tasmania: '塔斯马尼亚', unsure: '不确定' })[value] || value;
+  const meta = STU_FIELD_MAP[key];
+  if (meta && meta.options) {
+    const hit = meta.options.find((o) => String(o).split('|')[0] === String(value));
+    if (hit) return String(hit).split('|').slice(1).join('|') || hit;
+  }
+  return String(value);
+}
+function stuDisplay(key, value) {
+  if (Array.isArray(value)) {
+    const parts = value.map((v) => stuDisplayOption(key, v)).filter((v) => v && v !== '—');
+    return parts.length ? parts.join('、') : '—';
+  }
+  return stuDisplayOption(key, value);
+}
+function stuProfileFacts(fields, profile) {
+  return `<div class="facts-grid stu-facts">${fields.map((f) => {
+    const key = f[0], label = f[1];
+    const val = stuDisplay(key, (profile || {})[key]);
+    return `<div class="fact"><small>${esc(label)}</small><span title="${esc(val)}">${esc(val)}</span></div>`;
+  }).join('')}</div>`;
+}
+function stuSectionDef(id) { return STU_SECTIONS.find((x) => x[0] === id); }
+function stuSummaryCard(label, value, foot, tone = '') {
+  return `<div class="stu-summary-card ${tone}"><small>${esc(label)}</small><strong>${value}</strong><span>${esc(foot || '')}</span></div>`;
+}
+function stuBtn(text, action, kind = '', attrs = '') {
+  return `<button class="btn ${kind}" data-stu="${action}" ${attrs}>${text}</button>`;
+}
+function stuLink(text, href, kind = '') {
+  return `<a class="btn ${kind}" href="#${href}">${text}</a>`;
+}
+function stuEmpty(text) {
+  return `<div class="empty">${ico('folder')}<p>${esc(text)}</p></div>`;
+}
+function stuBadge(value) { return badge(value); }
+function stuWritable() { return writable(); }
+
+function stuPlanCurrent(s) {
+  return (stuDetail(s.id)?.plans || []).filter((p) => p.is_current);
+}
+function stuFinalSchool(s) {
+  const plan = stuPlanCurrent(s).find((p) => p.status === 'confirmed');
+  const row = plan && plan.confirmed_schools.find((x) => x.is_final_school);
+  return (row && row.school_name) || s.final_school || '待确认';
+}
+function stuPlanSummary(s) {
+  const plans = stuPlanCurrent(s);
+  if (!plans.length) return '未制作';
+  const p = plans[0];
+  if (p.status === 'confirmed') return '已确认 · ' + stuFinalSchool(s);
+  return '草稿 / 待家长确认';
+}
+function stuOfferSummary(s) {
+  const offers = stuDetail(s.id)?.offers || [];
+  if (!offers.length) return '无 Offer';
+  const accepted = offers.find((o) => o.accepted);
+  if (accepted) return '已接受 · ' + accepted.school_name;
+  return (STU_OFFER_STATUS[offers[0].status] || offers[0].status) + ' · ' + offers[0].school_name;
+}
+function stuParentFormLabel(s) { return s.parent_form === 'Pending' ? '待提交' : '已提交'; }
+function stuMaterialsLabel(s) {
+  const d = stuDetail(s.id);
+  if (!d) return '—';
+  return d.materials_checked ? '材料审核已完成' : (d.parent_form_submitted ? '材料待审核' : '等待家长提交');
+}
+
+/* ---------------- student list ---------------- */
+function students() {
+  if (route().split('/')[1] === 'deleted') return stuDeletedPage();
+  const f = stuFilters();
+  const rows = stuFilteredStudents();
+  const perPage = 10;
+  const pages = Math.max(1, Math.ceil(rows.length / perPage));
+  state.stuPage = Math.min(Math.max(1, state.stuPage || 1), pages);
+  const pageRows = rows.slice((state.stuPage - 1) * perPage, state.stuPage * perPage);
+  const waiting = rows.filter((s) => stuHasAlert(s, 'waiting')).length;
+  const risk = rows.filter((s) => stuHasAlert(s, 'risk')).length;
+  const pendingForm = rows.filter((s) => s.parent_form === 'Pending').length;
+  const selected = stuSelected();
+  const toolbar = `<div class="stu-toolbar">
+    ${stuBtn(ico('plus') + ' 新建学生', 'new-student', 'primary', !stuWritable() ? 'disabled' : '')}
+    ${stuBtn('生成家长表单链接', 'parent-link')}
+    ${stuBtn('从家长表单建档', 'from-parent')}
+    ${stuBtn('下载 Excel 模板', 'excel-template')}
+    ${stuBtn('已删除学生', 'deleted-students')}
+    ${stuBtn('Excel 导入', 'excel-import')}
+  </div>`;
+  const filter = `<section class="card card-pad stu-filter-card">
+    <form id="stu-filter-form" data-stu-form="filters">
+      <div class="stu-filter-grid">
+        <label class="wide">搜索学生<input name="q" value="${esc(f.q)}" placeholder="学生姓名、Student ID、学校、顾问、邮箱或手机"></label>
+        <label>排序${stuSelect('sort', f.sort, STU_SORT_OPTIONS)}</label>
+        <label>申请阶段${stuSelect('stage', f.stage, [['', '全部阶段']].concat(STU_STAGES.map((x) => [x, x])))}</label>
+        <label>业务类型${stuSelect('lifecycle_type', f.lifecycle_type, [['', '全部 Lifecycle'], ['initial', 'Initial'], ['transfer', 'Transfer'], ['progression', 'Progression']])}</label>
+        <label>负责顾问${stuSelect('consultant', f.consultant, [['', '全部顾问']].concat([...new Set(DEMO.students.map((s) => s.owner))].map((x) => [x, x])))}</label>
+        <label>申请年级${stuSelect('year_level', f.year_level, [['', '全部年级']].concat([...new Set(DEMO.students.map((s) => s.grade))].map((x) => [x, x])))}</label>
+        <label>提醒筛选${stuSelect('alert', f.alert, STU_ALERT_OPTIONS)}</label>
+        <label>合同状态${stuSelect('contract_status', f.contract_status, [['', '全部合同状态']].concat(Object.entries(STU_CONTRACT_STATUS).map(([v, l]) => [v, l])))}</label>
+        <label>建档时间从<input type="date" name="created_from" value="${esc(f.created_from)}"></label>
+        <label>建档时间到<input type="date" name="created_to" value="${esc(f.created_to)}"></label>
+        <label>更新时间从<input type="date" name="updated_from" value="${esc(f.updated_from)}"></label>
+        <label>更新时间到<input type="date" name="updated_to" value="${esc(f.updated_to)}"></label>
+      </div>
+      <div class="stu-filter-actions">
+        <button class="btn primary" type="submit">查询</button>
+        <button class="btn" type="button" data-stu="reset-filters">重置筛选</button>
+        <span class="muted">排序与筛选组合后即时生效；数据为虚构演示。</span>
+      </div>
+    </form>
+  </section>`;
+  const summary = `<div class="stu-summary">
+    ${stuSummaryCard('当前结果', rows.length, '符合当前筛选条件', 'accent')}
+    ${stuSummaryCard('等待家长', waiting, '含等待家长 / 未提交表单', waiting ? 'warn' : '')}
+    ${stuSummaryCard('风险提醒', risk, '缺材料、Offer / 签证到期等', risk ? 'danger' : '')}
+    ${stuSummaryCard('表单待提交', pendingForm, '家长表单尚未提交', pendingForm ? 'warn' : '')}
+  </div>`;
+  const bulk = `<div class="stu-bulk">
+    <label class="stu-check"><input type="checkbox" data-stu-select-all ${pageRows.length && pageRows.every((s) => selected.has(s.id)) ? 'checked' : ''}> 本页全选</label>
+    <span class="result-count">已选 ${selected.size}</span>
+    <div class="stu-bulk-actions">
+      ${stuBtn('分配顾问', 'bulk-assign', 'small', 'disabled')}
+      ${stuBtn('导出选中', 'bulk-export', 'small', 'disabled')}
+      ${stuBtn('标记等待/提醒', 'bulk-remind', 'small', 'disabled')}
+      ${stuBtn('批量删除', 'bulk-delete', 'small danger', selected.size ? '' : 'disabled')}
+    </div>
+    <small class="muted">Admin / Manager 可批量软删除；删除后可在已删除学生中恢复。</small>
+  </div>`;
+  const table = `<div class="table-wrap stu-list-table" tabindex="0" aria-label="学生列表，可横向滚动">
+    <table><thead><tr>
+      <th class="stu-col-check"><input type="checkbox" data-stu-select-all ${pageRows.length && pageRows.every((s) => selected.has(s.id)) ? 'checked' : ''} aria-label="选择本页学生"></th>
+      <th>学生号</th><th>学生名</th><th>申请阶段</th><th>最终确认学校</th><th>申请年级</th><th>建档时间</th><th>Offer开学时间</th><th>下签时间</th><th>操作</th>
+    </tr></thead><tbody>${pageRows.length ? pageRows.map((s) => `<tr>
+      <td><input type="checkbox" data-stu-select="${esc(s.id)}" ${selected.has(s.id) ? 'checked' : ''} aria-label="选择 ${esc(s.name)}"></td>
+      <td><a class="mono stu-id-link" href="#student/${esc(s.id)}/profile">${esc(s.id)}</a></td>
+      <td><div class="student-cell"><span class="avatar">${esc(s.avatar || s.name[0])}</span><div><strong>${esc(s.name)}</strong><small>${esc(s.english)} · ${esc(stuLifecycleLabel(s.lifecycle))}</small></div></div></td>
+      <td>${stuBadge(s.stage)}</td>
+      <td>${esc(stuFinalSchool(s))}</td>
+      <td>${esc(s.grade)}</td>
+      <td>${esc(stuIsoToAu(s.created_at))}</td>
+      <td>${esc(s.offer_course_start || '—')}</td>
+      <td>${esc(s.visa_grant_date || '—')}</td>
+      <td><div class="stu-row-actions">${stuLink('查看档案', 'student/' + s.id + '/profile', 'small')}${stuBtn('编辑', 'edit-student', 'small', `data-id="${s.id}"`)}${stuBtn('删除', 'delete-student', 'small danger', `data-id="${s.id}"`)}</div></td>
+    </tr>`).join('') : `<tr><td colspan="10">${stuEmpty('没有符合条件的学生，请调整筛选。')}</td></tr>`}</tbody></table>
+  </div>`;
+  const pager = `<div class="stu-pager"><span>共 ${rows.length} 条 · 第 ${state.stuPage} / ${pages} 页</span><div>${stuBtn('上一页', 'page-prev', 'small', state.stuPage <= 1 ? 'disabled' : '')}${stuBtn('下一页', 'page-next', 'small', state.stuPage >= pages ? 'disabled' : '')}</div></div>`;
+  return head('学生管理', '统一管理学生档案、申请阶段、材料、录取、签证与后续服务；列表字段与源系统保持一致。', '', 'STUDENTS / 学生全生命周期')
+    + toolbar + filter + summary + `<section class="card stu-list-card">${bulk}${table}${pager}</section>`
+    + `<p class="demo-note">共 13 名虚构学生，覆盖 13 个办理阶段与 Initial / Transfer / Progression 三类业务。</p>`;
+}
+
+function stuDeletedPage() {
+  const rows = stuDeleted();
+  return `<div class="page-head"><div class="page-heading"><h1>已删除学生</h1><p>软删除记录保留学生号、顾问与删除审计信息，可恢复。</p></div><div class="head-actions">${stuLink('返回学生列表', 'students', 'small')}</div></div>
+    <section class="card"><div class="card-head"><div><h2>已删除学生</h2><p>仅 Admin / Manager 可恢复；正式系统同时保留关联业务记录。</p></div></div>
+    <div class="table-wrap"><table><thead><tr><th>Student ID</th><th>学生</th><th>顾问</th><th>删除时间</th><th>删除人</th><th>操作</th></tr></thead><tbody>
+    ${rows.length ? rows.map((r) => `<tr><td class="mono">${esc(r.student.id)}</td><td><strong>${esc(r.student.name)}</strong><small class="muted"> ${esc(r.student.english)}</small></td><td>${esc(r.student.owner)}</td><td>${esc(stuIsoToAu(r.deleted_at))} ${esc(String(r.deleted_at).slice(11, 16))}</td><td>${esc(r.deleted_by)}</td><td>${stuBtn('恢复', 'restore-student', 'small primary', `data-id="${esc(r.student.id)}"`)}</td></tr>`).join('') : `<tr><td colspan="6">${stuEmpty('暂无已删除学生。')}</td></tr>`}
+    </tbody></table></div></section>`;
+}
+
+/* ---------------- student detail ---------------- */
+function student(id, sub) {
+  const s = studentById(id);
+  if (!s) return head('未找到学生', '此编号不在本次演示数据中。', stuLink('返回学生列表', 'students'));
+  const d = stuDetail(id);
+  if (!d) return head('学生档案未建立', '该学生缺少演示档案数据。', stuLink('返回学生列表', 'students'));
+  const tab = STU_TAB_LABELS[sub] ? sub : 'profile';
+  const alerts = stuAlerts(s);
+  const allowed = canViewStudentTab(tab);
+  const hero = `<section class="student-hero stu-hero">
+    <div class="student-hero-top">
+      <div class="student-identity"><span class="avatar">${esc(s.avatar || s.name[0])}</span><div><div class="stu-hero-title"><h1>${esc(s.name)}</h1>${stuBadge(s.stage)}<span class="badge blue">${esc(stuLifecycleLabel(s.lifecycle))}</span></div><small>${esc(s.english)} · ${esc(s.id)} · ${esc(s.type)}</small></div></div>
+      <div class="head-actions">${stuLink('转学 / 升学', 'case/' + (s.lifecycle === 'progression' ? 'progression' : 'transfer') + '/' + s.id + '/overview', 'small')}${stuBtn('编辑学生资料', 'edit-student', '', `data-id="${s.id}"`)}${stuBtn('删除学生', 'delete-student', 'danger', `data-id="${s.id}"`)}</div>
+    </div>
+    <div class="student-facts">${[['当前业务', stuLifecycleLabel(s.lifecycle)], ['申请类型', s.type], ['申请年级', s.grade], ['入学时间', s.intake], ['目标城市', s.city], ['负责顾问', s.owner], ['最终确认学校', stuFinalSchool(s)], ['建档时间', stuIsoToAu(s.created_at)]].map(([k, v]) => `<div><small>${k}</small><strong>${esc(v)}</strong></div>`).join('')}</div>
+  </section>`;
+  const summary = `<div class="stu-summary stu-detail-summary">
+    ${stuSummaryCard('当前阶段', esc(s.stage), '建档 ' + stuIsoToAu(s.created_at) + ' · 更新 ' + stuIsoToAu(s.updated), 'accent')}
+    ${stuSummaryCard('学校方案', esc(stuPlanSummary(s)), (stuPlanCurrent(s)[0] ? 'v' + stuPlanCurrent(s)[0].version : '尚未制作'))}
+    ${stuSummaryCard('Offer', esc(stuOfferSummary(s)), (stuDetail(s.id)?.offers || []).length + ' 条录取记录')}
+    ${stuSummaryCard('家长表单 / 材料', esc(stuParentFormLabel(s)), esc(stuMaterialsLabel(s)), s.parent_form === 'Pending' ? 'warn' : '')}
+    ${stuSummaryCard('文件存储', esc(d.storage_status), '学生目录与文件归档状态', d.storage_status === '正常' ? '' : 'warn')}
+  </div>`;
+  const alertHTML = alerts.length ? `<div class="stu-alert-list">${alerts.map((a) => `<a class="stu-alert ${a.level}" href="#student/${s.id}/${a.tab}">${ico(a.level === 'risk' ? 'bell' : 'clock')}<span><strong>${esc(a.label)}</strong><small>${a.level === 'risk' ? '需优先处理' : '等待家长或下一步'}</small></span>${ico('chevron')}</a>`).join('')}</div>` : `<div class="stu-alert-list"><span class="stu-alert ok">${ico('check')}<span><strong>暂无风险提醒</strong><small>当前阶段关键事项均已完成</small></span></span></div>`;
+  const actions = `<div class="stu-actionbar">
+    ${stuBtn((s.type === '高等教育' ? '制作高等教育学校方案' : '制作学校方案'), 'new-plan', '', `data-id="${s.id}"`)}
+    ${stuBtn('编辑学生资料', 'edit-student', '', `data-id="${s.id}"`)}
+    ${stuBtn('记录留言', 'note-add', '', `data-id="${s.id}"`)}
+    ${stuBtn('建立500签证', 'visa-add', '', `data-id="${s.id}" data-purpose="current_application" data-sector="Schools Sector"`)}
+    ${stuBtn('建立590签证', 'visa-add', '', `data-id="${s.id}" data-purpose="current_application" data-sector="590 陪读"`)}
+    <span class="stu-actionbar-note">${ico('info')} 学生号、文件夹路径、建档时间不可修改</span>
+  </div>`;
+  return `<div class="page-head stu-crumb"><div class="crumb"><a href="#students">学生管理</a><span>/</span><strong>${esc(s.name)}</strong></div>${stuLink('返回学生列表', 'students', 'small')}</div>`
+    + hero + summary + alertHTML + actions + studentNavigation(s.id, tab) + (allowed ? stuTab(s, d, tab) : denied())
+    + `<p class="demo-note">学生档案、业务记录与家长协作状态均为虚构演示；刷新页面恢复初始数据。</p>`;
+}
+
+function canViewStudentTab(tab) {
+  if (['revenue', 'payments'].includes(tab)) return ['管理员', '财务'].includes(state.role);
+  if (state.role === '签证专员') return ['profile', 'applications', 'coe', 'visa', 'history', 'reminders'].includes(tab);
+  if (state.role === '财务') return ['profile', 'contracts', 'payments', 'revenue', 'history'].includes(tab);
+  return true;
+}
+
+function studentNavigation(id, active) {
+  const tabs = STU_TAB_ORDER.filter((k) => canViewStudentTab(k));
+  if (!tabs.length) return '';
+  const prefix = 'student/' + id + '/';
+  return `<div class="student-navigation stu-tabbar"><nav class="tabs student-tabs" aria-label="学生业务分区">${tabs.map((k) => `<a class="tab ${k === active ? 'active' : ''}" href="#${prefix + k}" ${k === active ? 'aria-current="page"' : ''}>${esc(STU_TAB_LABELS[k])}</a>`).join('')}</nav><label class="section-picker">当前分区${stuSelect('', active, tabs.map((k) => [k, STU_TAB_LABELS[k]]), `data-route-picker aria-label="选择学生业务分区"`)}</label></div>`;
+}
+
+function stuTab(s, d, tab) {
+  switch (tab) {
+    case 'applications': return stuApplicationsTab(s, d);
+    case 'contracts': return stuContractsTab(s, d);
+    case 'school_plans': return stuPlansTab(s, d);
+    case 'offer': return stuOfferTab(s, d);
+    case 'payments': return stuPaymentsTab(s, d);
+    case 'coe': return stuCoeTab(s, d);
+    case 'visa': return stuVisaTab(s, d);
+    case 'homestay': return stuHomestayTab(s, d);
+    case 'history': return stuHistoryTab(s, d);
+    case 'reminders': return stuRemindersTab(s, d);
+    case 'revenue': return stuRevenueTab(s, d);
+    default: return stuProfileTab(s, d);
+  }
+}
+
+function stuProfileTab(s, d) {
+  const left = STU_PROFILE_ORDER.map((id) => {
+    const def = stuSectionDef(id);
+    if (!def) return '';
+    return `<section class="card stu-section-card"><div class="card-head"><h2>${esc(def[1])}</h2></div><div class="card-pad stu-section-body">${stuProfileFacts(def[2], d.profile[id])}</div></section>`;
+  }).join('');
+  const recent = d.history.slice(0, 6).map((h) => `<div class="activity-item"><strong>${esc(h.field)}</strong><p>${esc(h.before || '—')} → ${esc(h.after || '—')}</p><time>${esc(stuIsoToAu(h.changed_at))} · ${esc(h.user)}</time></div>`).join('');
+  const right = `<section class="card"><div class="card-head"><h2>档案信息</h2>${stuBadge('档案已建立')}</div><div class="card-pad">${facts([
+    ['Student ID', s.id], ['建档时间', stuIsoToAu(s.created_at)], ['最近更新', stuIsoToAu(s.updated)],
+    ['负责顾问', s.owner], ['文件夹路径', 'students/' + s.id + '/' + s.english.replace(/\s+/g, '_')],
+    ['学生状态', s.lifecycle === 'progression' ? '升学中' : s.lifecycle === 'transfer' ? '转学中' : '在读申请'],
+  ])}</div></section>
+  <section class="card"><div class="card-head"><div><h2>StudentInfo.docx</h2><p>学生信息表由资料自动生成或保留现有文件</p></div>${stuBadge(d.docx.updated_at ? '已生成' : '待生成')}</div><div class="card-pad"><div class="facts-grid"><div class="fact"><small>文件名称</small><span>${esc(d.docx.file_name)}</span></div><div class="fact"><small>更新时间</small><span>${esc(stuIsoToAu(d.docx.updated_at))}</span></div></div><div class="link-row">${stuBtn('下载', 'docx-download', 'small', `data-id="${s.id}"`)}${stuBtn('重新生成', 'docx-regenerate', 'small primary', `data-id="${s.id}"`)}</div></div></section>
+  <section class="card"><div class="card-head"><h2>最近变更</h2></div><div class="activity">${recent || '<p class="muted">暂无变更记录。</p>'}</div></section>`;
+  return `<div class="detail-grid stu-profile-grid"><div class="stack">${left}</div><div class="stack">${right}</div></div>`;
+}
+
+/* ---------------- applications ---------------- */
+function stuApplicationsTab(s, d) {
+  const required = stuRequiredMaterials(s);
+  const byType = {};
+  d.documents.forEach((doc) => { (byType[doc.type] = byType[doc.type] || []).push(doc); });
+  const missing = required.filter((t) => !(byType[t] || []).length);
+  const checklist = STU_MATERIALS.map(([type, label]) => {
+    const docs = byType[type] || [];
+    const isRequired = required.includes(type);
+    const status = !docs.length ? '未上传' : docs.some((x) => x.status === '已确认') ? '已确认' : '待审核';
+    return `<tr><td><strong>${esc(label)}</strong>${isRequired ? ' <span class="stu-req">*</span>' : ''}<br><small class="muted mono">${esc(type)}</small></td><td>${isRequired ? '必需' : '可选'}</td><td>${docs.length ? '已上传 ' + docs.length : '未上传'}</td><td>${docs.length ? stuBadge(status) : '<span class="muted">—</span>'}</td><td>${docs.length ? docs.map((x) => esc(x.name)).join('<br>') : '—'}</td><td class="stu-row-actions">${stuBtn(docs.length ? '补充上传' : '上传', 'material-upload', 'small', `data-id="${s.id}" data-type="${type}"`)}${docs.length ? stuBtn('查看', 'material-view', 'small', `data-id="${s.id}" data-type="${type}"`) : ''}</td></tr>`;
+  }).join('');
+  const uploaded = d.documents.length ? `<div class="table-wrap"><table><thead><tr><th>文件名称</th><th>材料类型</th><th>版本</th><th>上传时间</th><th>审核状态</th><th>操作</th></tr></thead><tbody>${d.documents.map((doc) => `<tr><td>${esc(doc.name)}</td><td>${esc((STU_MATERIALS.find((x) => x[0] === doc.type) || [doc.type, doc.type])[1])}</td><td>${esc(doc.version)}</td><td>${esc(stuIsoToAu(doc.uploaded_at))}</td><td>${stuBadge(doc.status)}</td><td>${stuBtn('查看 / 审核', 'doc-review', 'small', `data-id="${s.id}" data-key="${doc.id}"`)}</td></tr>`).join('')}</tbody></table></div>` : stuEmpty('尚未上传任何申请材料。');
+  return `<section class="card"><div class="card-head"><div><h2>申请材料清单</h2><p>支持多文件 / ZIP 上传；上传后确认材料类型并完成审核。必填材料以 * 标记。</p></div>${stuBtn(ico('upload') + ' 上传材料', 'material-upload', 'primary', `data-id="${s.id}"`)}</div>
+    <div class="stu-status-strip"><span>${ico('file')} 家长表单：<strong>${esc(stuParentFormLabel(s))}</strong></span><span>${ico('check')} 材料审核：<strong>${d.materials_checked ? '已完成' : '待审核'}</strong></span><span>${ico('clock')} 已上传：<strong>${d.documents.length}</strong> 个文件</span></div>
+    ${!d.parent_form_submitted ? `<div class="info-strip warn">${ico('info')} 家长表单尚未提交。可先生成家长表单链接，家长提交后再建档 / 审核。</div>` : ''}
+    ${missing.length ? `<div class="info-strip warn">${ico('info')} 缺少：${missing.map((t) => esc((STU_MATERIALS.find((x) => x[0] === t) || [t, t])[1])).join('、')}</div>` : `<div class="info-strip">${ico('check')} 必填材料已齐全。${d.materials_checked ? '材料审核已完成。' : '可点击“材料审核完成”记录审核结果。'}</div>`}
+    <div class="table-wrap"><table><thead><tr><th>材料类型</th><th>要求</th><th>上传状态</th><th>审核状态</th><th>文件</th><th>操作</th></tr></thead><tbody>${checklist}</tbody></table></div>
+    <div class="stu-card-foot">${stuBtn(d.materials_checked ? '材料审核已完成' : '材料审核完成', 'materials-check', 'primary', `data-id="${s.id}" ${!stuWritable() || d.materials_checked ? 'disabled' : ''}`)}<span class="muted">审核完成后记录审核人与时间；后续补充材料会保留版本。</span></div>
+  </section>
+  <section class="card"><div class="card-head"><div><h2>已上传文件</h2><p>文件版本、上传时间与审核状态</p></div></div>${uploaded}</section>`;
+}
+
+/* ---------------- contracts ---------------- */
+function stuContractsTab(s, d) {
+  const cards = d.contracts.length ? d.contracts.map((c) => `<section class="card stu-record-card"><div class="card-head"><div><h2>${esc(STU_CONTRACT_TYPES[c.contract_type] || c.contract_type)}</h2><p>${esc(/^v/i.test(c.version) ? c.version : 'v' + c.version)} · 创建 ${esc(stuIsoToAu(c.created_at))} · ${esc(c.file_name)}</p></div>${stuBadge(STU_CONTRACT_STATUS[c.status] || c.status)}</div><div class="card-pad">
+    <div class="stu-meta-grid"><div><small>服务费</small><strong>¥ ${esc(c.fee)}</strong></div><div><small>优惠</small><strong>¥ ${esc(c.discount || '0.00')}</strong></div><div><small>付款方式</small><strong>${esc(c.payment_method)}</strong></div><div><small>签署时间</small><strong>${esc(c.signed_at ? stuIsoToAu(c.signed_at) : '—')}</strong></div></div>
+    <h3 class="stu-subtitle">服务范围</h3><ul class="stu-scope-list">${c.service_scopes.map((k) => `<li>${esc((STU_SERVICE_SCOPES.find((x) => x[0] === k) || [k, k])[1])}</li>`).join('')}</ul>
+    <div class="link-row">${stuBtn('预览合同', 'contract-preview', 'small', `data-id="${s.id}" data-key="${c.id}"`)}${stuBtn('下载', 'contract-download', 'small', `data-id="${s.id}" data-key="${c.id}"`)}${c.status !== 'Deleted' ? stuBtn('删除', 'contract-delete', 'small danger', `data-id="${s.id}" data-key="${c.id}"`) : ''}</div>
+  </div></section>`).join('') : stuEmpty('该学生尚未创建合同。');
+  return `<div class="stu-tab-head"><div><h2>合同</h2><p>合同类型、服务范围、费用与付款方式按当前业务记录独立保存。</p></div>${stuBtn('新建合同', 'contract-new', 'primary', `data-id="${s.id}" ${!stuWritable() ? 'disabled' : ''}`)}</div>${cards}`;
+}
+
+/* ---------------- school plans ---------------- */
+function stuPlansTab(s, d) {
+  const plans = d.plans;
+  const current = plans.filter((p) => p.is_current);
+  const history = plans.filter((p) => !p.is_current);
+  const planCard = (p) => {
+    const decisions = p.confirmed_schools.length ? `<div class="stu-decision-list">${p.confirmed_schools.map((x) => `<div class="stu-decision"><div class="stu-decision-main"><span class="stu-rank">${x.decision_mode === 'ranked' ? '第 ' + (x.rank_order || 1) + ' 顺位' : '家长已选择'}</span><strong>${esc(x.school_name)}</strong><span class="stu-decision-badges">${stuBadge(x.submission_status === 'submitted' ? '已递交' : '未递交')}${x.is_final_school ? stuBadge('最终入读学校') : ''}${x.is_offer_received ? stuBadge('已收到 Offer') : ''}${x.is_offer_accepted ? stuBadge('已接受') : ''}</span></div><div class="stu-decision-result"><small>学校结果</small>${stuBadge(STU_PLAN_RESULT_LABELS[x.result_status] || x.result_status)}${stuBtn('更新结果', 'plan-result', 'small', `data-id="${s.id}" data-key="${p.id}" data-type="${x.id}"`)}</div></div>`).join('')}</div>` : `<div class="info-strip">${ico('info')} 尚未形成家长确认递交学校清单。</div>`;
+    return `<section class="card stu-plan-card"><div class="card-head"><div><h2>学校方案报告 · v${esc(p.version)}</h2><p>${esc(p.city)} · ${esc(STU_PLAN_SECTOR_LABELS[p.sector] || p.sector)} · 更新 ${esc(stuIsoToAu(p.updated_at))}</p></div><div class="head-actions">${stuBadge(p.status === 'confirmed' ? '已确认' : p.status === 'draft' ? '草稿' : p.status)}${stuBtn('查看 / 编辑', 'plan-edit', 'small', `data-id="${s.id}" data-key="${p.id}"`)}${stuBtn('预览', 'plan-preview', 'small', `data-id="${s.id}" data-key="${p.id}"`)}${stuBtn('下载', 'plan-download', 'small', `data-id="${s.id}" data-key="${p.id}"`)}${stuBtn('复制链接', 'plan-link', 'small', `data-id="${s.id}" data-key="${p.id}"`)}</div></div>
+      <div class="card-pad"><h3 class="stu-subtitle">家长确认递交的学校</h3>${decisions}${p.sector === 'public' ? `<div class="link-row">${stuBtn('递交全部公校申请', 'plan-submit-public', '', `data-id="${s.id}" data-key="${p.id}"`)}</div>` : ''}</div></section>`;
+  };
+  const historyHTML = history.length ? `<section class="card"><div class="card-head"><div><h2>历史过期方案</h2><p>历史版本保留，不参与当前递交与最终入读判断。</p></div></div><div class="card-pad"><div class="table-wrap"><table><thead><tr><th>版本</th><th>城市</th><th>类别</th><th>状态</th><th>更新时间</th></tr></thead><tbody>${history.map((p) => `<tr><td>v${esc(p.version)}</td><td>${esc(p.city)}</td><td>${esc(STU_PLAN_SECTOR_LABELS[p.sector] || p.sector)}</td><td>${stuBadge(p.status)}</td><td>${esc(stuIsoToAu(p.updated_at))}</td></tr>`).join('')}</tbody></table></div></div></section>` : '';
+  return `<div class="stu-tab-head"><div><h2>学校方案</h2><p>集中查看家长确认递交的学校、递交进度、学校结果与最终入读状态。</p></div>${stuBtn('新建学校方案', 'new-plan', 'primary', `data-id="${s.id}" ${!stuWritable() ? 'disabled' : ''}`)}</div>${current.length ? current.map(planCard).join('') : stuEmpty('尚未制作学校方案。')}${historyHTML}`;
+}
+
+/* ---------------- offers ---------------- */
+function stuOfferTab(s, d) {
+  const offers = d.offers;
+  const cards = offers.length ? offers.map((o) => `<section class="card stu-record-card"><div class="card-head"><div><h2>${esc(o.school_name)}</h2><p>${esc(STU_OFFER_STATUS[o.status] || o.status)} · ${esc(o.document_type || 'Offer')} · ${esc(o.file_name || '')}</p></div>${stuBadge(o.accepted ? '已接受' : (STU_OFFER_STATUS[o.status] || o.status))}</div><div class="card-pad">
+    <div class="stu-meta-grid"><div><small>发 Offer 时间</small><strong>${esc(o.offer_date || '—')}</strong></div><div><small>语言学校</small><strong>${esc(o.language_school_name || '待确认')}</strong></div><div><small>课程开学日期</small><strong>${esc(o.course_start_date || '—')}</strong></div><div><small>有效期</small><strong>${esc(o.offer_expiry_date || '—')}</strong></div><div><small>接收定金</small><strong>${esc(o.deposit_amount ? o.deposit_currency + ' ' + o.deposit_amount : '—')}</strong></div><div><small>文件类型</small><strong>${esc(o.document_type || 'Offer')}</strong></div></div>
+    <div class="link-row">${stuBtn('编辑', 'offer-edit', 'small', `data-id="${s.id}" data-key="${o.id}"`)}${!o.accepted && o.status !== 'rejected' ? stuBtn('设为已接受', 'offer-accept', 'small primary', `data-id="${s.id}" data-key="${o.id}"`) : ''}${o.accepted ? stuBtn('撤回接受', 'offer-withdraw', 'small', `data-id="${s.id}" data-key="${o.id}"`) : ''}${o.file_name ? stuBtn('查看 Offer 文件', 'offer-file', 'small', `data-id="${s.id}" data-key="${o.id}"`) : ''}</div>
+  </div></section>`).join('') : stuEmpty('尚无录取通知记录。');
+  return `<div class="stu-tab-head"><div><h2>录取通知与接受记录</h2><p>按学校记录 Offer 文件、开学时间、定金、状态与家长接受结果。</p></div>${stuBtn('手动新增', 'offer-add', 'primary', `data-id="${s.id}" ${!stuWritable() ? 'disabled' : ''}`)}</div>${cards}<div class="info-strip">${ico('info')} Offer 接受后仍需核对已签 Offer、付款凭证与后续 COE；状态变更会同步到学生列表与提醒。</div>`;
+}
+
+/* ---------------- payments ---------------- */
+function stuPaymentsTab(s, d) {
+  const rows = d.payments;
+  const totals = {};
+  rows.forEach((r) => { totals[r.currency] = (totals[r.currency] || 0) + Number(r.amount || 0); });
+  const totalText = Object.entries(totals).map(([c, n]) => c + ' ' + n.toLocaleString('en-AU', { minimumFractionDigits: 2 })).join(' · ') || '—';
+  return `<div class="stu-tab-head"><div><h2>付款</h2><p>记录类别、金额、币种、支付方式、付款人与收款人，可上传多个付款凭证。</p></div>${stuBtn('新增付款记录', 'payment-add', 'primary', `data-id="${s.id}" ${!stuWritable() ? 'disabled' : ''}`)}</div>
+    <section class="card"><div class="stu-status-strip"><span>${ico('wallet')} 已记录付款：<strong>${rows.length}</strong> 笔</span><span>${ico('chart')} 合计：<strong>${esc(totalText)}</strong></span><span>${ico('file')} 凭证：<strong>${rows.filter((r) => r.proof).length}</strong> 份</span></div>
+    ${rows.length ? `<div class="table-wrap"><table><thead><tr><th>类别</th><th>金额</th><th>币种</th><th>日期</th><th>方式</th><th>付款人 / 收款人</th><th>转学确认</th><th>凭证</th><th>操作</th></tr></thead><tbody>${rows.map((r) => `<tr><td>${esc(r.category)}</td><td class="mono">${esc(r.amount)}</td><td>${esc(r.currency)}</td><td>${esc(r.paid_date)}</td><td>${esc(r.method)}</td><td>${esc(r.payer_name)} → ${esc(r.receiver_name)}</td><td>${r.transfer_confirmed ? stuBadge(r.transfer_confirmed) : '<span class="muted">—</span>'}</td><td>${r.proof ? esc(r.proof) : '<span class="muted">待补充</span>'}</td><td>${stuBtn('查看凭证', 'payment-proof', 'small', `data-id="${s.id}" data-key="${r.id}"`)}</td></tr>`).join('')}</tbody></table></div>` : stuEmpty('暂无付款记录。')}</section>`;
+}
+
+/* ---------------- COE / OSHC ---------------- */
+function stuCoeTab(s, d) {
+  const records = d.coe;
+  const label = (k) => (STU_COE_KINDS.find((x) => x[0] === k) || [k, k])[1];
+  const card = (r) => {
+    let meta = [];
+    if (r.kind === 'COE' || r.kind === 'COE_CAAW') meta = [['Provider', r.coe_provider], ['Course', r.coe_course], ['Course Start Date', r.coe_start_date], ['Course End Date', r.coe_end_date]];
+    if (r.kind === 'CAAW') meta = [['Provider', r.coe_provider]];
+    if (r.kind === 'CAAW' || r.kind === 'COE_CAAW') meta = meta.concat([['Nominated Welfare Period Start Date', r.caaw_welfare_start_date], ['Nominated Welfare Period End Date', r.caaw_welfare_end_date]]);
+    if (r.kind === 'OSHC' || r.kind === 'OSHCReceipt') meta = meta.concat([['OSHC Company Name', r.oshc_company_name], ['Policy / Membership Number', r.oshc_policy_number], ['Commencement Date', r.oshc_commencement_date], ['Expiry Date', r.oshc_expiry_date]]);
+    if (r.kind === 'LetterOfConfirmation') meta = [['Language Course / English Language Centre', r.loc_language_course], ['Language Course Start Date', r.loc_language_start], ['Language Course End Date', r.loc_language_end], ['Year Level', r.loc_year_level], ['Main Course / Host School', r.loc_main_course], ['Main Course Start Date', r.loc_main_start], ['Main Course End Date', r.loc_main_end]];
+    return `<section class="card stu-record-card"><div class="card-head"><div><h2>${esc(label(r.kind))}</h2><p>${esc(r.file_name || '尚未上传文件')}</p></div>${stuBadge('已确认')}</div><div class="card-pad"><div class="stu-meta-grid">${meta.map(([k, v]) => `<div><small>${esc(k)}</small><strong>${esc(v || '—')}</strong></div>`).join('')}</div><div class="link-row">${stuBtn('编辑', 'coe-edit', 'small', `data-id="${s.id}" data-key="${r.id}"`)}${r.file_name ? stuBtn('预览文件', 'coe-file', 'small', `data-id="${s.id}" data-key="${r.id}"`) : ''}</div></div></section>`;
+  };
+  return `<div class="stu-tab-head"><div><h2>入学确认与学生保险</h2><p>分别记录 COE、CAAW、OSHC 与 Letter of Confirmation；字段与源系统一致。</p></div>${stuBtn('录入文件信息', 'coe-add', 'primary', `data-id="${s.id}" ${!stuWritable() ? 'disabled' : ''}`)}</div>${records.length ? records.map(card).join('') : stuEmpty('尚无 COE / OSHC 记录。')}<div class="info-strip warn">${ico('info')} 转学、升学各自核对 COE、保险与完成条件；不因页面展示自动完成。</div>`;
+}
+
+/* ---------------- visa ---------------- */
+function stuVisaTab(s, d) {
+  const cards = d.visas.length ? d.visas.map((v) => `<section class="card stu-record-card"><div class="card-head"><div><h2>${esc(v.visa_type)}</h2><p>${esc(v.existing ? '已有签证证据' : '本轮签证记录')} · ${esc(v.visa_sector)} · ${esc(v.file_name || '')}</p></div>${stuBadge(STU_VISA_STATUS_LABELS[v.visa_status] || v.visa_status)}</div><div class="card-pad">
+    <div class="stu-meta-grid"><div><small>文件类型</small><strong>${esc((STU_VISA_DOCUMENT_TYPES.find((x) => x[0] === v.document_type) || [v.document_type, v.document_type])[1])}</strong></div><div><small>Sector</small><strong>${esc(v.visa_sector)}</strong></div><div><small>批准 / 拒签</small><strong>${esc(v.visa_grant_date || (v.visa_status === 'refused' ? '已拒签' : '待审批'))}</strong></div><div><small>开始日期</small><strong>${esc(v.visa_start_date || '—')}</strong></div><div><small>到期日期</small><strong>${esc(v.visa_expiry_date || '—')}</strong></div><div><small>状态</small><strong>${esc(STU_VISA_STATUS_LABELS[v.visa_status] || v.visa_status)}</strong></div></div>
+    <div class="stu-note-block"><small>签证条件 / 备注</small><p>${esc(v.visa_conditions || '—')}</p></div>
+    <div class="link-row">${stuBtn('编辑', 'visa-edit', 'small', `data-id="${s.id}" data-key="${v.id}"`)}${['pending'].includes(v.visa_status) ? stuBtn('记录下签', 'visa-grant', 'small primary', `data-id="${s.id}" data-key="${v.id}"`) : ''}${v.file_name ? stuBtn('预览签证文件', 'visa-file', 'small', `data-id="${s.id}" data-key="${v.id}"`) : ''}</div>
+  </div></section>`).join('') : stuEmpty('尚无签证记录。');
+  return `<div class="stu-tab-head"><div><h2>签证</h2><p>区分“上传已有签证”和“新增本轮签证记录”，记录 Sector、文件类型、批准日期与签证条件。</p></div><div class="head-actions">${stuBtn('上传已有签证', 'visa-add', 'small', `data-id="${s.id}" data-purpose="existing_evidence"`)}${stuBtn('新增本轮签证记录', 'visa-add', 'primary', `data-id="${s.id}" data-purpose="current_application"`)}</div></div>${cards}`;
+}
+
+/* ---------------- homestay / airport ---------------- */
+function stuHomestayTab(s, d) {
+  const a = d.profile.accommodation || {};
+  const docs = d.homestay;
+  const docRows = docs.length ? `<div class="table-wrap"><table><thead><tr><th>文件类型</th><th>文件名称</th><th>上传时间</th><th>状态</th><th>操作</th></tr></thead><tbody>${docs.map((x) => `<tr><td>${esc((STU_HOMESTAY_TYPES.find((y) => y[0] === x.type) || [x.type, x.type])[1])}</td><td>${esc(x.name)}</td><td>${esc(stuIsoToAu(x.uploaded_at))}</td><td>${stuBadge(x.status)}</td><td>${stuBtn('查看', 'homestay-view', 'small', `data-id="${s.id}" data-key="${x.id}"`)}</td></tr>`).join('')}</tbody></table></div>` : stuEmpty('尚无住宿 / 接机文件。');
+  return `<div class="stu-tab-head"><div><h2>住宿与接机</h2><p>陪读、住宿偏好、寄宿家庭与接机文件集中展示；资料字段来自学生资料。</p></div>${stuBtn('上传住宿 / 接机文件', 'homestay-add', 'primary', `data-id="${s.id}" ${!stuWritable() ? 'disabled' : ''}`)}</div>
+    <div class="detail-grid"><section class="card"><div class="card-head"><h2>住宿与监护安排</h2></div><div class="card-pad">${facts([
+      ['是否需要陪读', stuDisplay('requires_parent_accompaniment', a.requires_parent_accompaniment)],
+      ['与学生关系', stuDisplay('accompanying_person_relationship', a.accompanying_person_relationship)],
+      ['申请住宿方式', stuDisplay('accommodation_preference', a.accommodation_preference)],
+      ['接受住家有 8 岁以下小孩', stuDisplay('accept_homestay_with_young_children', a.accept_homestay_with_young_children)],
+      ['中式 / 西式住家', stuDisplay('homestay_style_preference', a.homestay_style_preference)],
+      ['食物过敏', stuDisplay('food_allergy', a.food_allergy) + (a.food_allergy_notes ? ' · ' + a.food_allergy_notes : '')],
+      ['宠物过敏', stuDisplay('pet_allergy', a.pet_allergy)],
+      ['药物过敏', stuDisplay('medicine_allergy', a.medicine_allergy)],
+      ['其他补充', a.accommodation_notes || '—'],
+    ])}</div></section>
+    <section class="card"><div class="card-head"><h2>接机安排</h2></div><div class="card-pad">${facts([
+      ['航班', docs.find((x) => x.type === 'FlightItinerary') ? '已上传行程单' : '待补充'],
+      ['到达机场', s.city],
+      ['接机确认', docs.find((x) => x.type === 'AirportPickupConfirmation') ? '已确认' : '待确认'],
+      ['接机申请', docs.find((x) => x.type === 'AirportPickupRequest') ? '已提交' : '待提交'],
+    ])}</div></section></div>
+    <section class="card"><div class="card-head"><div><h2>住宿 / 接机文件</h2><p>按文件类型归档，供顾问与家长协作核对。</p></div></div>${docRows}</section>`;
+}
+
+/* ---------------- history ---------------- */
+function stuHistoryTab(s, d) {
+  const rows = d.history.slice(0, 80);
+  return `<section class="card"><div class="card-head"><div><h2>历史记录</h2><p>按时间倒序保留学生资料分区、字段、原值与新值；最多展示 80 条。</p></div></div>${rows.length ? `<div class="table-wrap"><table><thead><tr><th>修改时间</th><th>修改人</th><th>资料分区</th><th>字段</th><th>原值</th><th>新值</th></tr></thead><tbody>${rows.map((h) => `<tr><td>${esc(stuIsoToAu(h.changed_at))} ${esc(String(h.changed_at).slice(11, 16))}</td><td>${esc(h.user)}</td><td>${esc(h.section)}</td><td>${esc(h.field)}</td><td>${esc(h.before || '—')}</td><td>${esc(h.after || '—')}</td></tr>`).join('')}</tbody></table></div>` : stuEmpty('暂无历史变更。')}</section>`;
+}
+
+/* ---------------- reminders ---------------- */
+function stuRemindersTab(s, d) {
+  const notes = d.notes;
+  const cards = notes.length ? notes.map((n) => `<div class="stu-note-card"><div class="stu-note-head"><div><strong>${esc(n.description)}</strong><p>${esc(n.creator_name)} · ${esc(n.recipient_name)} · ${esc(stuIsoToAu(n.reminder_at))} ${esc(String(n.reminder_at).slice(11, 16))}</p></div><div class="stu-note-badges">${stuBadge(STU_REMINDER_STATUS[n.status] || n.status)}${stuBadge(STU_REMINDER_PRIORITY[n.priority] || n.priority)}</div></div><div class="link-row">${n.status !== 'Completed' ? stuBtn('完成', 'note-done', 'small', `data-id="${s.id}" data-key="${n.id}"`) : ''}${n.status !== 'Completed' ? stuBtn('稍后提醒', 'note-snooze', 'small', `data-id="${s.id}" data-key="${n.id}"`) : ''}${n.status !== 'Completed' ? stuBtn('忽略', 'note-dismiss', 'small', `data-id="${s.id}" data-key="${n.id}"`) : ''}${stuBtn('编辑', 'note-edit', 'small', `data-id="${s.id}" data-key="${n.id}"`)}${stuBtn('删除', 'note-delete', 'small danger', `data-id="${s.id}" data-key="${n.id}"`)}</div></div>`).join('') : stuEmpty('暂无留言与提醒。');
+  const otherRows = d.other_reminders.length ? d.other_reminders.map((r) => `<tr><td>${stuBadge(STU_REMINDER_STATUS[r.status] || r.status)}</td><td>${esc(r.type_label)}<br><small class="muted">${esc(r.type)}</small></td><td>${esc(stuIsoToAu(r.reminder_at))} ${esc(String(r.reminder_at).slice(11, 16))}</td><td>${stuBadge(STU_REMINDER_PRIORITY[r.priority] || r.priority)}</td><td>${esc(r.owner)}</td></tr>`).join('') : `<tr><td colspan="5">${stuEmpty('暂无系统提醒。')}</td></tr>`;
+  return `<section class="card card-pad"><div class="card-head" style="padding:0"><div><h2>新增留言与提醒</h2><p>提醒接收人默认负责顾问，可选择其他同事。</p></div></div>
+    <form data-stu-form="note-add" data-id="${s.id}" class="form-grid stu-inline-form"><label class="wide">留言内容<textarea name="description" required placeholder="例如：跟进家长补充成绩单"></textarea></label><label>提醒日期<input type="date" name="reminder_date" value="2026-11-08" required></label><label>提醒时间<input type="time" name="reminder_time" value="10:00" required></label><label>提醒接收人${stuSelect('recipient_name', s.owner, [...new Set(DEMO.students.map((x) => x.owner))].map((x) => [x, x]))}</label><div class="stu-form-submit"><button class="btn primary" type="submit">添加留言</button></div></form></section>
+    <section class="card"><div class="card-head"><div><h2>留言与提醒</h2><p>完成、稍后提醒、忽略或编辑会更新当前演示状态。</p></div></div><div class="card-pad stu-note-list">${cards}</div></section>
+    <section class="card"><div class="card-head"><div><h2>其他提醒</h2><p>来自合同、Offer、签证等业务事实的系统提醒。</p></div></div><div class="table-wrap"><table><thead><tr><th>状态</th><th>提醒</th><th>提醒时间</th><th>优先级</th><th>负责人</th></tr></thead><tbody>${otherRows}</tbody></table></div></section>`;
+}
+
+/* ---------------- revenue ---------------- */
+function stuRevenueTab(s, d) {
+  const rows = d.revenue;
+  return `<section class="card"><div class="card-head"><div><h2>收入与佣金</h2><p>按申请周期查看收费与佣金档案；不同申请、转学、升学周期独立保留。</p></div></div>${rows.length ? `<div class="card-pad stu-revenue-list">${rows.map((r) => `<div class="stu-revenue-card"><div><small>申请周期 #${esc(r.application_cycle_id)}</small><strong>${esc(STU_REVENUE_CYCLE[r.cycle_type] || r.cycle_type)} · ${esc(STU_REVENUE_STREAM[r.education_stream] || r.education_stream)}</strong><span>${esc(r.case_uid)}</span></div><div>${stuBadge(r.cycle_status === 'active' ? '进行中' : '已完成')}${stuBadge(r.case_status)}<small>更新 ${esc(stuIsoToAu(r.updated_at))}</small></div><div>${stuLink('查看收费档案', r.href.replace('#', ''), 'small')}</div></div>`).join('')}</div>` : stuEmpty('该学生暂未建立收费与佣金档案。')}</section>`;
+}
+
+/* ---------------- student edit / create form ---------------- */
+function stuBlankProfile() {
+  const profile = {};
+  STU_SECTIONS.forEach(([id, , fields]) => {
+    profile[id] = {};
+    fields.forEach((f) => { profile[id][f[0]] = f[2] === 'checkbox' ? [] : ''; });
+  });
+  return profile;
+}
+function stuFormField(field, values) {
+  const [key, label, type, required, options] = field;
+  const value = values ? values[key] : '';
+  const star = required ? ' <span class="stu-req">*</span>' : '';
+  const wide = type === 'textarea' ? ' wide' : '';
+  if (type === 'radio') {
+    return `<fieldset class="stu-radio ${wide.trim()}"><legend>${esc(label)}${star}</legend><div class="stu-option-row">${(options || []).map((opt) => `<label class="stu-option"><input type="radio" name="${key}" value="${esc(opt)}" ${String(value) === String(opt) ? 'checked' : ''} ${required ? 'required' : ''}> ${esc(opt)}</label>`).join('')}</div></fieldset>`;
+  }
+  if (type === 'checkbox') {
+    const arr = Array.isArray(value) ? value : [];
+    return `<fieldset class="stu-radio wide"><legend>${esc(label)}${star}</legend><div class="stu-option-row">${(options || []).map((opt) => {
+      const raw = String(opt).split('|')[0];
+      const lab = String(opt).split('|').slice(1).join('|') || raw;
+      return `<label class="stu-option"><input type="checkbox" name="${key}" value="${esc(raw)}" ${arr.includes(raw) ? 'checked' : ''}> ${esc(lab)}</label>`;
+    }).join('')}</div></fieldset>`;
+  }
+  if (type === 'select') {
+    const opts = (options || []).map((opt) => {
+      const raw = String(opt).split('|')[0];
+      const lab = String(opt).split('|').slice(1).join('|') || raw;
+      return [raw, lab];
+    });
+    return `<label class="${wide.trim()}">${esc(label)}${star}${stuSelect(key, value, opts, required ? 'required' : '')}</label>`;
+  }
+  if (type === 'textarea') {
+    return `<label class="wide">${esc(label)}${star}<textarea name="${key}" ${required ? 'required' : ''}>${esc(value || '')}</textarea></label>`;
+  }
+  const inputType = type === 'date' ? 'text' : type === 'tel' ? 'tel' : type === 'email' ? 'email' : 'text';
+  return `<label>${esc(label)}${star}<input type="${inputType}" name="${key}" value="${esc(value || '')}" ${required ? 'required' : ''} ${type === 'date' ? 'placeholder="DD/MM/YYYY" inputmode="numeric"' : ''}></label>`;
+}
+function stuStudentForm(id) {
+  const s = id ? studentById(id) : null;
+  const d = s ? STU_DETAILS[id] : null;
+  const profile = d ? d.profile : stuBlankProfile();
+  const readonly = s ? `<div class="stu-readonly-box"><div><small>Student ID</small><strong class="mono">${esc(s.id)}</strong></div><div><small>文件夹路径</small><strong>students/${esc(s.id)}/${esc(s.english.replace(/\s+/g, '_'))}</strong></div><div><small>建档时间</small><strong>${esc(stuIsoToAu(s.created_at))}</strong></div><span>以上字段由系统生成，不可修改。</span></div>` : `<div class="info-strip">${ico('info')} 新建学生保存后自动生成 Student ID、学生文件夹与建档记录。</div>`;
+  const sections = STU_PROFILE_ORDER.map((sid) => {
+    const def = stuSectionDef(sid);
+    return `<section class="card stu-form-section"><div class="card-head"><h3>${esc(def[1])}</h3><span class="muted">${def[2].length} 个字段</span></div><div class="card-pad"><div class="form-grid">${def[2].map((f) => stuFormField(f, profile[sid] || {})).join('')}</div></div></section>`;
+  }).join('');
+  const docx = s ? `<section class="card stu-form-section"><div class="card-head"><h3>StudentInfo.docx</h3></div><div class="card-pad"><fieldset class="stu-radio"><legend>生成方式</legend><div class="stu-option-row"><label class="stu-option"><input type="radio" name="student_info_option" value="keep" checked> 保留现有文件</label><label class="stu-option"><input type="radio" name="student_info_option" value="regenerate"> 重新生成 StudentInfo.docx</label></div></fieldset><p class="form-hint">当前文件：${esc(d.docx.file_name)} · 更新 ${esc(stuIsoToAu(d.docx.updated_at))}</p></div></section>` : '';
+  const body = `<form id="stu-form" data-stu-form="student-save" data-id="${esc(id || '')}">${readonly}${sections}${docx}</form>`;
+  openDialog(s ? '编辑学生资料' : '新建学生', body, `<button class="btn primary" type="submit" form="stu-form">保存修改</button>`, '字段与学生/家长资料表一致；保存后同步更新学生档案。');
+}
+function stuNextStudentId() {
+  const max = DEMO.students.reduce((m, s) => Math.max(m, Number(String(s.id).replace(/\D/g, '').slice(-3)) || 0), 0);
+  return 'D2026' + String(max + 1).padStart(3, '0');
+}
+function stuCityFromValue(v) {
+  const hit = STU_CITIES.find((x) => x[0] === (Array.isArray(v) ? v[0] : v));
+  return hit ? hit[1] : '待确认';
+}
+function stuIntakeLabel(profile) {
+  const y = profile.preferred_intake_year || '2027';
+  const term = stuDisplayOption('preferred_intake_term', profile.preferred_intake_term);
+  return y + ' · ' + (term === '—' ? '2月入学' : term);
+}
+
+function stuSaveStudent(form, fd) {
+  const id = form.dataset.id;
+  const profile = {};
+  Object.entries(STU_FIELD_MAP).forEach(([key, meta]) => {
+    profile[key] = meta.type === 'checkbox' ? fd.getAll(key) : String(fd.get(key) || '');
+  });
+  const missing = Object.entries(STU_FIELD_MAP).filter(([key, meta]) => {
+    if (!meta.required) return false;
+    const v = profile[key];
+    return Array.isArray(v) ? !v.length : !String(v).trim();
+  }).map(([, meta]) => meta.label);
+  if (missing.length) { toast('请填写必填项：' + missing.slice(0, 4).join('、') + (missing.length > 4 ? ' 等' : '')); return; }
+  if (id) {
+    const s = studentById(id);
+    const d = STU_DETAILS[id];
+    if (!s || !d) return;
+    d.profile = profile;
+    s.grade = profile.applying_year_level || s.grade;
+    s.intake = stuIntakeLabel(profile);
+    s.city = stuCityFromValue(profile.preferred_cities);
+    s.email = profile.student_email || s.email;
+    s.phone = profile.mobile_phone || s.phone;
+    s.updated = stuIsoToday();
+    if (fd.get('student_info_option') === 'regenerate') d.docx.updated_at = stuIsoToday();
+    d.history.unshift({ id: 'LOG-' + id + '-' + Date.now(), changed_at: stuIsoToday() + 'T10:30:00', user: state.role, section: '学生资料', field: '资料批量编辑', before: '原资料', after: '已保存 11 个分区' });
+    closeDialog(); render(); toast('学生资料已保存（演示）');
+    return;
+  }
+  const last = String(profile.passport_last_name || '').toUpperCase();
+  const first = String(profile.passport_first_name || '').toUpperCase();
+  const s = {
+    id: stuNextStudentId(),
+    name: (last + ' ' + first).trim() || '未命名学生',
+    english: (first + ' ' + last).trim(),
+    avatar: (first || '新').slice(0, 1),
+    lifecycle: 'initial', stage: '建档', stage_index: 0, school: '待确认', final_school: '待确认',
+    grade: profile.applying_year_level || profile.current_year_level || '不确定',
+    intake: stuIntakeLabel(profile), owner: state.role === '管理员' ? '陈顾问' : state.role,
+    updated: stuIsoToday(), created_at: stuIsoToday(), city: stuCityFromValue(profile.preferred_cities),
+    email: profile.student_email || '', phone: profile.mobile_phone || '',
+    parent_form: 'Pending', type: profile.application_stream === 'higher_education' ? '高等教育' : '中小学申请',
+    offer_course_start: '', visa_grant_date: '', alerts: [],
+  };
+  const d = stuBuildDetail(s, DEMO.students.length);
+  d.profile = profile;
+  d.parent_form_submitted = false;
+  d.materials_checked = false;
+  d.alerts = stuBuildAlerts(s, d);
+  s.alerts = d.alerts;
+  STU_DETAILS[s.id] = d;
+  DEMO.students.unshift(s);
+  audit('新建学生 ' + s.name, s.id);
+  closeDialog();
+  location.hash = 'student/' + s.id + '/profile';
+  render();
+  toast('学生已建档：' + s.id + '（演示）');
+}
+
+/* ---------------- generic dialogs ---------------- */
+function stuDialog(title, body, foot, desc) {
+  openDialog(title, body, foot, desc || '演示操作仅在当前页面内存中生效。');
+}
+function stuClose(message) {
+  closeDialog();
+  render();
+  if (message) toast(message);
+}
+function stuConfirm(title, text, action, attrs = '') {
+  stuDialog(title, `<p class="stu-confirm-text">${esc(text)}</p><div class="editor-note">此操作仅修改当前原型的演示状态。</div>`,
+    `${stuBtn('确认', action, 'primary', attrs)}`);
+}
+function stuFileDialog(title, fileName, extra = '') {
+  stuDialog(title, `<div class="stu-file-box">${ico('file')}<div><strong>${esc(fileName || '演示文件.pdf')}</strong><p>演示文件 · 不包含真实学生信息</p></div></div>${extra ? `<div class="info-strip">${ico('info')} ${esc(extra)}</div>` : ''}`,
+    `${stuBtn('下载演示文件', 'download-demo', 'primary', 'data-name="' + esc(fileName || 'demo.pdf') + '"')}`);
+}
+function stuApplyStudentSummary(s) {
+  s.offer_course_start = (STU_DETAILS[s.id]?.offers || []).find((o) => o.accepted)?.course_start_date || '';
+  s.visa_grant_date = (STU_DETAILS[s.id]?.visas || []).find((v) => v.visa_status === 'granted')?.visa_grant_date || '';
+  s.alerts = stuBuildAlerts(s, STU_DETAILS[s.id]);
+}
+
+/* ---------------- list dialogs ---------------- */
+function stuParentLinkDialog() {
+  const links = stuParentLinks();
+  const rows = links.length ? `<div class="table-wrap"><table><thead><tr><th>链接编号</th><th>学生</th><th>表单类型</th><th>状态</th><th>有效期</th><th>访问</th></tr></thead><tbody>${links.map((l) => {
+    const s = studentById(l.student);
+    return `<tr><td class="mono">${esc(l.id)}</td><td>${esc(s ? s.name + ' · ' + s.id : l.student)}</td><td>${esc(l.type)}</td><td>${stuBadge(l.status === 'Pending' ? '待填写' : l.status)}</td><td>${esc(l.expires)}</td><td>${esc(l.visits)} 次</td></tr>`;
+  }).join('')}</tbody></table></div>` : stuEmpty('尚未生成家长表单链接。');
+  const body = `<form id="stu-form" data-stu-form="parent-link">${rows}<div class="stu-dialog-divider"></div><div class="form-grid"><label>选择学生${stuSelect('student', DEMO.students[0].id, DEMO.students.map((s) => [s.id, s.name + ' · ' + s.id]))}</label><label>表单类型${stuSelect('type', '学生资料', [['学生资料', '学生资料'], ['签证信息采集', '签证信息采集']])}</label><label>链接有效期<input type="date" name="expires" value="2026-11-30" required></label></div></form>`;
+  stuDialog('生成家长表单链接', body, `<button class="btn primary" type="submit" form="stu-form">生成链接</button>`, '生成后可通过复制链接让家长补充资料；提交后可在“从家长表单建档”中处理。');
+}
+function stuFromParentDialog() {
+  const rows = stuParentSubmissions();
+  const body = `<div class="stu-parent-submissions">${rows.length ? rows.map((r) => `<div class="stu-parent-row"><div><strong>${esc(r.name)}</strong><small>${esc(r.english)} · ${esc(r.grade)} · ${esc(r.city)} · ${esc(r.form)}</small><p>提交时间 ${esc(stuIsoToAu(r.submitted_at))} ${esc(String(r.submitted_at).slice(11, 16))} · 顾问 ${esc(r.owner)}</p></div><div>${stuBadge('待建档')}${stuBtn('从表单建档', 'parent-create', 'small primary', `data-key="${esc(r.key)}"`)}</div></div>`).join('') : stuEmpty('暂无待建档的家长表单提交。')}</div>`;
+  stuDialog('从家长表单建档', body, ``, '家长提交的资料将生成新的学生档案，并保留原始表单记录。');
+}
+function stuExcelImportDialog() {
+  const body = `<form id="stu-form" data-stu-form="excel-import"><div class="form-grid"><label class="wide">选择 Excel 文件<input type="file" name="file" accept=".xlsx,.xls,.csv" required></label><label class="wide">导入选项${stuSelect('mode', 'create', [['create', '新建学生档案'], ['update', '按 Student ID 更新']])}</label></div><div class="info-strip warn">${ico('info')} 导入会校验必填字段、年级与城市映射；演示环境不会写入真实数据。</div><p class="form-hint">可先下载 Excel 模板，按模板列填写后上传。</p></form>`;
+  stuDialog('Excel 导入', body, `<button class="btn primary" type="submit" form="stu-form">开始导入</button>`, '支持批量导入学生资料；重复学生号按所选模式处理。');
+}
+
+/* ---------------- materials ---------------- */
+function stuMaterialDialog(s, type) {
+  const body = `<form id="stu-form" data-stu-form="material-save" data-id="${s.id}" data-type="${esc(type || '')}"><div class="form-grid"><label>材料类型${stuSelect('material_type', type || 'StudentPassport', STU_MATERIALS.map(([v, l]) => [v, l]))}</label><label>文件名称<input type="text" name="file_name" value="${esc(type ? (STU_MATERIALS.find((x) => x[0] === type) || [type, type])[1] : '学生护照') + '.pdf'}" required></label><label class="wide">上传文件（演示）<input type="file" name="file"></label><label class="wide">备注<textarea name="note" placeholder="例如：家长补充材料"></textarea></label></div></form>`;
+  stuDialog('上传申请材料', body, `<button class="btn primary" type="submit" form="stu-form">上传</button>`, '支持多文件 / ZIP；演示环境仅记录文件元数据。');
+}
+function stuDocListDialog(s, type) {
+  const docs = (STU_DETAILS[s.id].documents || []).filter((d) => !type || d.type === type);
+  const body = docs.length ? `<div class="table-wrap"><table><thead><tr><th>文件</th><th>版本</th><th>上传时间</th><th>状态</th><th>操作</th></tr></thead><tbody>${docs.map((d) => `<tr><td>${esc(d.name)}</td><td>${esc(d.version)}</td><td>${esc(stuIsoToAu(d.uploaded_at))}</td><td>${stuBadge(d.status)}</td><td>${stuBtn(d.status === '已确认' ? '查看' : '确认通过', 'doc-review', 'small', `data-id="${s.id}" data-key="${d.id}"`)}</td></tr>`).join('')}</tbody></table></div>` : stuEmpty('该材料尚未上传文件。');
+  stuDialog('材料文件', body, `${stuBtn('继续上传', 'material-upload', 'primary', `data-id="${s.id}" data-type="${esc(type || '')}"`)}`);
+}
+
+/* ---------------- contracts ---------------- */
+function stuContractDialog(s) {
+  const types = [['NewInternationalStudentContract', '新留学生合同'], ['LocalStudentApplicationContract', '本地生申请合同']];
+  if (s.lifecycle === 'transfer') types.unshift(['TransferApplicationContract', '转学申请合同']);
+  const body = `<form id="stu-form" data-stu-form="contract-save" data-id="${s.id}"><div class="form-grid"><fieldset class="stu-radio wide"><legend>合同类型</legend><div class="stu-option-row">${types.map(([v, l], i) => `<label class="stu-option"><input type="radio" name="contract_type" value="${v}" ${i === 0 ? 'checked' : ''} required> ${l}</label>`).join('')}</div></fieldset><label>服务费（元）<input type="text" name="fee" value="2400.00" required></label><label>优惠（元）<input type="text" name="discount" value="0.00"></label><label>付款方式${stuSelect('payment_method', '支付宝', STU_CONTRACT_PAYMENT_METHODS.map((x) => [x, x]))}</label><label>合同文件名称<input type="text" name="file_name" value="Study_Contract_${s.id}.pdf"></label></div><h3 class="stu-subtitle">服务范围</h3><div class="stu-scope-check">${STU_SERVICE_SCOPES.map(([v, l], i) => `<label class="stu-option"><input type="checkbox" name="scopes" value="${v}" ${i < 5 ? 'checked' : ''}> ${esc(l)}</label>`).join('')}</div></form>`;
+  stuDialog('新建合同', body, `<button class="btn primary" type="submit" form="stu-form">创建合同</button>`, '合同创建后进入草稿 / 发送 / 签署流程；费用与付款方式按合同独立保存。');
+}
+function stuContractDeleteDialog(s, c) {
+  const body = `<form id="stu-form" data-stu-form="contract-delete" data-id="${s.id}" data-key="${c.id}"><div class="form-grid"><label class="wide">删除原因${stuSelect('reason', 'content_error', [['content_error', '合同内容错误'], ['parent_info_error', '家长信息错误'], ['regenerate_contract', '重新生成合同'], ['wrong_signature', '家长签错'], ['other', '其他']])}</label><label class="wide">补充说明<textarea name="note" placeholder="记录删除原因，便于后续审计"></textarea></label></div></form>`;
+  stuDialog('删除合同', body, `<button class="btn danger" type="submit" form="stu-form">确认删除</button>`, '删除会保留审计记录；家长端已签署文件不会自动失效。');
+}
+
+/* ---------------- school plans ---------------- */
+function stuPlanDialog(s, plan) {
+  const schools = plan ? plan.confirmed_schools.map((x) => x.school_name).join('\n') : '';
+  const body = `<form id="stu-form" data-stu-form="plan-save" data-id="${s.id}" data-key="${plan ? plan.id : ''}"><div class="form-grid"><label>城市<input type="text" name="city" value="${esc(plan ? plan.city : s.city)}" required></label><label>方案类别${stuSelect('sector', plan ? plan.sector : 'private', [['private', '私校'], ['public', '公校'], ['unclassified', '待分类']])}</label><label>版本<input type="number" name="version" value="${plan ? plan.version : 1}" min="1"></label><label>方案状态${stuSelect('status', plan ? plan.status : 'draft', [['draft', '草稿'], ['confirmed', '家长已确认']])}</label><label class="wide">确认递交学校（每行一所）<textarea name="schools" placeholder="Northfield College（虚构）&#10;Westhaven School（虚构）">${esc(schools)}</textarea></label></div><p class="form-hint">公校方案可多校排序递交；私校方案保留家长选择结果。历史版本不会被覆盖。</p></form>`;
+  stuDialog(plan ? '查看 / 编辑学校方案' : '新建学校方案', body, `<button class="btn primary" type="submit" form="stu-form">保存方案</button>`, '方案报告与家长确认、正式递交分别记录。');
+}
+function stuPlanResultDialog(s, plan, school) {
+  const offers = STU_DETAILS[s.id].offers || [];
+  const body = `<form id="stu-form" data-stu-form="plan-result-save" data-id="${s.id}" data-key="${plan.id}" data-type="${school.id}"><div class="form-grid"><label class="wide">学校<strong>${esc(school.school_name)}</strong></label><label>结果状态${stuSelect('result_status', school.result_status, STU_PLAN_RESULT_OPTIONS)}</label><label>关联正式 Offer${stuSelect('offer_id', school.offer_id || '', [['', '不关联']].concat(offers.map((o) => [o.id, o.school_name + ' · ' + o.offer_date])))}</label><label class="wide">结果备注<textarea name="result_note" placeholder="例如：学校要求补充成绩单">${esc(school.result_note || '')}</textarea></label></div><div class="stu-scope-check"><label class="stu-option"><input type="checkbox" name="is_offer_received" ${school.is_offer_received ? 'checked' : ''}> 已收到 Offer</label><label class="stu-option"><input type="checkbox" name="is_offer_accepted" ${school.is_offer_accepted ? 'checked' : ''}> 已接受 Offer</label><label class="stu-option"><input type="checkbox" name="is_final_school" ${school.is_final_school ? 'checked' : ''}> 最终入读学校</label></div></form>`;
+  stuDialog('更新学校结果', body, `<button class="btn primary" type="submit" form="stu-form">保存结果</button>`, '最终入读学校仅保留一所；结果会同步到方案报告与学生摘要。');
+}
+function stuPlanLinkDialog(s, plan) {
+  const url = 'https://demo.aaie.example/parent/school-plan/' + s.id + '/' + plan.id;
+  const body = `<div class="form-grid"><label class="wide">家长方案报告链接<input type="text" readonly value="${esc(url)}"></label></div><div class="info-strip">${ico('link')} 链接用于家长查看并确认方案；演示环境不会真实发送。</div>`;
+  stuDialog('学校方案链接', body, `${stuBtn('复制链接', 'copy-link', 'primary', `data-url="${esc(url)}"`)}`);
+}
+
+/* ---------------- offers ---------------- */
+function stuOfferDialog(s, offer) {
+  const o = offer || { document_type: 'Offer', deposit_currency: 'AUD', status: 'received' };
+  const body = `<form id="stu-form" data-stu-form="offer-save" data-id="${s.id}" data-key="${offer ? offer.id : ''}"><div class="form-grid"><label>学校<input type="text" name="school_name" value="${esc(o.school_name || '')}" required></label><label>发 Offer 时间<input type="text" name="offer_date" value="${esc(o.offer_date || '')}" placeholder="DD/MM/YYYY"></label><label>语言学校<input type="text" name="language_school_name" value="${esc(o.language_school_name || '')}" placeholder="待确认"></label><label>课程开学日期<input type="text" name="course_start_date" value="${esc(o.course_start_date || '')}" placeholder="DD/MM/YYYY"></label><label>有效期<input type="text" name="offer_expiry_date" value="${esc(o.offer_expiry_date || '')}" placeholder="DD/MM/YYYY"></label><label>接收定金<input type="text" name="deposit_amount" value="${esc(o.deposit_amount || '')}"></label><label>币种${stuSelect('deposit_currency', o.deposit_currency || 'AUD', ['AUD', 'CNY', 'USD'].map((x) => [x, x]))}</label><label>状态${stuSelect('status', o.status || 'received', Object.entries(STU_OFFER_STATUS))}</label><label>文件类型${stuSelect('document_type', o.document_type || 'Offer', [['Offer', 'Offer'], ['SignedOffer', 'Signed Offer'], ['OfferAcceptance', 'Offer Acceptance']])}</label><label>Offer 文件名称<input type="text" name="file_name" value="${esc(o.file_name || '')}"></label></div><p class="form-hint">手动新增时需同时确认文件类型与学校名称；保存后可在列表中设为已接受。</p></form>`;
+  stuDialog(offer ? '编辑 Offer' : '手动新增 Offer', body, `<button class="btn primary" type="submit" form="stu-form">保存全部修改</button>`, 'Offer 信息与文件记录独立保存；接受前请核对有效期与定金。');
+}
+function stuOfferWithdrawDialog(s, offer) {
+  const body = `<form id="stu-form" data-stu-form="offer-withdraw-save" data-id="${s.id}" data-key="${offer.id}"><div class="form-grid"><label class="wide">撤回原因<textarea name="reason" required placeholder="记录家长撤回接受的原因"></textarea></label></div></form>`;
+  stuDialog('撤回 Offer 接受', body, `<button class="btn primary" type="submit" form="stu-form">确认撤回</button>`, '撤回后 Offer 状态变为已取消，付款记录不会自动冲销。');
+}
+
+/* ---------------- payments ---------------- */
+function stuPaymentDialog(s) {
+  const transfer = s.lifecycle === 'transfer';
+  const body = `<form id="stu-form" data-stu-form="payment-save" data-id="${s.id}"><div class="form-grid"><label>类别${stuSelect('category', 'Offer Deposit', STU_PAYMENT_CATEGORIES.map((x) => [x, x]))}</label><label>金额<input type="text" name="amount" placeholder="0.00" required></label><label>币种${stuSelect('currency', 'AUD', STU_PAYMENT_CURRENCIES.map((x) => [x, x]))}</label><label>支付方式${stuSelect('method', 'Bank Transfer', STU_PAYMENT_METHODS.map((x) => [x, x]))}</label><label>支付日期<input type="text" name="paid_date" value="${stuToday()}" required></label><label>付款人<input type="text" name="payer_name" value="家长（虚构）" required></label><label>收款人<input type="text" name="receiver_name" value="${esc(s.school === '待确认' ? '待确认' : s.school)}" required></label><label class="wide">付款凭证（可多选）<input type="file" name="proof" multiple></label>${transfer ? `<label class="stu-option"><input type="checkbox" name="transfer_confirmed" checked> 转学付款已确认</label>` : ''}<label class="wide">备注<textarea name="note"></textarea></label></div></form>`;
+  stuDialog('新增付款记录', body, `<button class="btn primary" type="submit" form="stu-form">保存付款</button>`, '金额与币种按记录保存；付款凭证支持多个文件。');
+}
+
+/* ---------------- COE / OSHC ---------------- */
+function stuCoeDialog(s, record) {
+  const r = record || { kind: 'COE', file_name: 'COE_' + s.id + '.pdf' };
+  const body = `<form id="stu-form" data-stu-form="coe-save" data-id="${s.id}" data-key="${record ? record.id : ''}"><div class="form-grid"><label>文件类型${stuSelect('kind', r.kind, STU_COE_KINDS)}</label><label class="wide">文件名称<input type="text" name="file_name" value="${esc(r.file_name || '')}"></label><label>Provider<input type="text" name="coe_provider" value="${esc(r.coe_provider || '')}"></label><label>Course<input type="text" name="coe_course" value="${esc(r.coe_course || '')}"></label><label>Course Start Date<input type="text" name="coe_start_date" value="${esc(r.coe_start_date || '')}" placeholder="DD/MM/YYYY"></label><label>Course End Date<input type="text" name="coe_end_date" value="${esc(r.coe_end_date || '')}" placeholder="DD/MM/YYYY"></label><label>Nominated Welfare Period Start Date<input type="text" name="caaw_welfare_start_date" value="${esc(r.caaw_welfare_start_date || '')}" placeholder="DD/MM/YYYY"></label><label>Nominated Welfare Period End Date<input type="text" name="caaw_welfare_end_date" value="${esc(r.caaw_welfare_end_date || '')}" placeholder="DD/MM/YYYY"></label><label>OSHC Company Name<input type="text" name="oshc_company_name" value="${esc(r.oshc_company_name || '')}"></label><label>Policy / Membership Number<input type="text" name="oshc_policy_number" value="${esc(r.oshc_policy_number || '')}"></label><label>OSHC Commencement Date<input type="text" name="oshc_commencement_date" value="${esc(r.oshc_commencement_date || '')}" placeholder="DD/MM/YYYY"></label><label>OSHC Expiry Date<input type="text" name="oshc_expiry_date" value="${esc(r.oshc_expiry_date || '')}" placeholder="DD/MM/YYYY"></label><label>Language Course / English Language Centre<input type="text" name="loc_language_course" value="${esc(r.loc_language_course || '')}"></label><label>Language Course Start Date<input type="text" name="loc_language_start" value="${esc(r.loc_language_start || '')}" placeholder="DD/MM/YYYY"></label><label>Language Course End Date<input type="text" name="loc_language_end" value="${esc(r.loc_language_end || '')}" placeholder="DD/MM/YYYY"></label><label>Year Level<input type="text" name="loc_year_level" value="${esc(r.loc_year_level || '')}"></label><label>Main Course / Host School<input type="text" name="loc_main_course" value="${esc(r.loc_main_course || '')}"></label><label>Main Course Start Date<input type="text" name="loc_main_start" value="${esc(r.loc_main_start || '')}" placeholder="DD/MM/YYYY"></label><label>Main Course End Date<input type="text" name="loc_main_end" value="${esc(r.loc_main_end || '')}" placeholder="DD/MM/YYYY"></label></div><p class="form-hint">按文件类型填写对应字段；不适用的字段可留空。</p></form>`;
+  stuDialog(record ? '编辑 COE / OSHC 记录' : '录入 COE / OSHC 文件信息', body, `<button class="btn primary" type="submit" form="stu-form">保存</button>`, 'COE、CAAW、OSHC 与 Letter of Confirmation 字段与源系统一致。');
+}
+
+/* ---------------- visa ---------------- */
+function stuVisaDialog(s, record, purpose) {
+  const v = record || { visa_type: 'Student Visa Subclass 500', visa_sector: 'Schools Sector', document_type: 'grant_letter', visa_status: purpose === 'existing_evidence' ? 'active' : 'pending' };
+  const body = `<form id="stu-form" data-stu-form="visa-save" data-id="${s.id}" data-key="${record ? record.id : ''}" data-purpose="${esc(purpose || (record && record.existing ? 'existing_evidence' : 'current_application'))}"><div class="form-grid"><fieldset class="stu-radio wide"><legend>录入方式</legend><div class="stu-option-row"><label class="stu-option"><input type="radio" name="visa_record_purpose" value="existing_evidence" ${purpose === 'existing_evidence' ? 'checked' : ''}> 上传已有签证</label><label class="stu-option"><input type="radio" name="visa_record_purpose" value="current_application" ${purpose !== 'existing_evidence' ? 'checked' : ''}> 新增本轮签证记录</label></div></fieldset><label>签证类型<input type="text" name="visa_type" value="${esc(v.visa_type || '')}" required></label><label>Sector${stuSelect('visa_sector', v.visa_sector || 'Schools Sector', STU_VISA_SECTORS.map((x) => [x, x]))}</label><label>文件类型${stuSelect('document_type', v.document_type || 'grant_letter', STU_VISA_DOCUMENT_TYPES)}</label><label>批准日期<input type="text" name="visa_grant_date" value="${esc(v.visa_grant_date || '')}" placeholder="DD/MM/YYYY"></label><label>开始日期<input type="text" name="visa_start_date" value="${esc(v.visa_start_date || '')}" placeholder="DD/MM/YYYY"></label><label>到期日期<input type="text" name="visa_expiry_date" value="${esc(v.visa_expiry_date || '')}" placeholder="DD/MM/YYYY"></label><label>状态${stuSelect('visa_status', v.visa_status || 'pending', STU_VISA_STATUSES.map((x) => [x, STU_VISA_STATUS_LABELS[x]]))}</label><label>Visa 文件名称<input type="text" name="file_name" value="${esc(v.file_name || '')}"></label><label class="wide">签证条件 / 备注<textarea name="visa_conditions">${esc(v.visa_conditions || '')}</textarea></label><label class="stu-option wide"><input type="checkbox" name="staff_confirm" ${v.staff_confirm ? 'checked' : ''}> Staff Confirm official Visa Decision</label></div></form>`;
+  stuDialog(record ? '编辑签证记录' : '新增签证记录', body, `<button class="btn primary" type="submit" form="stu-form">保存签证记录</button>`, '上传已有签证用于记录历史证据；新增本轮签证记录用于当前申请。');
+}
+
+/* ---------------- homestay ---------------- */
+function stuHomestayDialog(s) {
+  const body = `<form id="stu-form" data-stu-form="homestay-save" data-id="${s.id}"><div class="form-grid"><label>文件类型${stuSelect('type', 'HomestayApplication', STU_HOMESTAY_TYPES)}</label><label>文件名称<input type="text" name="file_name" value="Homestay_${s.id}.pdf" required></label><label class="wide">上传文件（演示）<input type="file" name="file"></label></div></form>`;
+  stuDialog('上传住宿 / 接机文件', body, `<button class="btn primary" type="submit" form="stu-form">上传</button>`, '文件按类型归档到学生住宿与接机记录。');
+}
+
+/* ---------------- reminders ---------------- */
+function stuNoteAddDialog(s) {
+  const body = `<form id="stu-form" data-stu-form="note-add" data-id="${s.id}"><div class="form-grid"><label class="wide">留言内容<textarea name="description" required placeholder="例如：跟进家长补充成绩单"></textarea></label><label>提醒日期<input type="date" name="reminder_date" value="2026-11-08" required></label><label>提醒时间<input type="time" name="reminder_time" value="10:00" required></label><label>提醒接收人${stuSelect('recipient_name', s.owner, [...new Set(DEMO.students.map((x) => x.owner))].map((x) => [x, x]))}</label></div></form>`;
+  stuDialog('记录留言与提醒', body, '<button class="btn primary" type="submit" form="stu-form">保存留言</button>', '留言会出现在学生详情与提醒中心。');
+}
+function stuNoteEditDialog(s, note) {
+  const date = String(note.reminder_at).slice(0, 10);
+  const time = String(note.reminder_at).slice(11, 16);
+  const body = `<form id="stu-form" data-stu-form="note-edit-save" data-id="${s.id}" data-key="${note.id}"><div class="form-grid"><label class="wide">留言内容<textarea name="description" required>${esc(note.description)}</textarea></label><label>提醒日期<input type="date" name="reminder_date" value="${esc(date)}" required></label><label>提醒时间<input type="time" name="reminder_time" value="${esc(time)}" required></label><label>提醒接收人${stuSelect('recipient_name', note.recipient_name, [...new Set(DEMO.students.map((x) => x.owner))].map((x) => [x, x]))}</label></div></form>`;
+  stuDialog('编辑留言与提醒', body, `<button class="btn primary" type="submit" form="stu-form">保存修改</button>`);
+}
+function stuNoteSnoozeDialog(s, note) {
+  const body = `<form id="stu-form" data-stu-form="note-snooze-save" data-id="${s.id}" data-key="${note.id}"><div class="form-grid"><label class="wide">稍后提醒${stuSelect('snooze', '30m', [['30m', '30 分钟后'], ['1h', '1 小时后'], ['3h', '3 小时后'], ['tomorrow', '明天']])}</label></div></form>`;
+  stuDialog('稍后提醒', body, `<button class="btn primary" type="submit" form="stu-form">确认</button>`);
+}
+
+/* ---------------- action dispatcher ---------------- */
+function stuAction(action, el) {
+  const id = el.dataset.id;
+  const s = id ? studentById(id) : null;
+  const d = s ? STU_DETAILS[id] : null;
+  const key = el.dataset.key;
+  const type = el.dataset.type;
+  switch (action) {
+    case 'close': closeDialog(); return;
+    case 'new-student': stuStudentForm(); return;
+    case 'edit-student': stuStudentForm(id); return;
+    case 'delete-student':
+      stuConfirm('删除学生', '将删除 ' + (s ? s.name + '（' + s.id + '）' : '该学生') + '，删除后可在“已删除学生”中恢复。', 'delete-confirm', `data-id="${esc(id)}"`);
+      return;
+    case 'delete-confirm': {
+      const idx = DEMO.students.findIndex((x) => x.id === id);
+      if (idx >= 0) {
+        const [removed] = DEMO.students.splice(idx, 1);
+        stuDeleted().unshift({ student: removed, deleted_at: stuIsoToday() + 'T11:00:00', deleted_by: state.role });
+        stuSelected().delete(id);
+        audit('删除学生 ' + removed.name, id);
+        stuClose('学生已软删除，可在已删除学生中恢复');
+      }
+      return;
+    }
+    case 'deleted-students': location.hash = 'students/deleted'; return;
+    case 'restore-student': {
+      const row = stuDeleted().find((x) => x.student.id === id);
+      if (!row) return;
+      DEMO.students.unshift(row.student);
+      state.stuDeleted = stuDeleted().filter((x) => x.student.id !== id);
+      toast('学生已恢复：' + row.student.name);
+      render();
+      return;
+    }
+    case 'parent-link': stuParentLinkDialog(); return;
+    case 'from-parent': stuFromParentDialog(); return;
+    case 'parent-create': {
+      const submission = stuParentSubmissions().find((x) => x.key === key);
+      if (!submission) return;
+      state.stuParentSubmissions = stuParentSubmissions().filter((x) => x.key !== key);
+      const newStudent = {
+        id: stuNextStudentId(), name: submission.name, english: submission.english, avatar: submission.name[0],
+        lifecycle: 'initial', stage: '建档', stage_index: 0, school: '待确认', final_school: '待确认',
+        grade: submission.grade, intake: '2027 · 2月入学', owner: submission.owner,
+        updated: stuIsoToday(), created_at: stuIsoToday(), city: submission.city,
+        email: 'parent.form.' + submission.key.toLowerCase() + '@example.test', phone: '0412 000 ' + (800 + DEMO.students.length),
+        parent_form: 'Submitted', type: '中小学申请', offer_course_start: '', visa_grant_date: '', alerts: [],
+      };
+      const nd = stuBuildDetail(newStudent, DEMO.students.length);
+      nd.parent_form_submitted = true;
+      nd.materials_checked = false;
+      nd.alerts = stuBuildAlerts(newStudent, nd);
+      newStudent.alerts = nd.alerts;
+      STU_DETAILS[newStudent.id] = nd;
+      DEMO.students.unshift(newStudent);
+      audit('从家长表单建档 ' + newStudent.name, newStudent.id);
+      closeDialog();
+      location.hash = 'student/' + newStudent.id + '/profile';
+      render();
+      toast('已从家长表单建档：' + newStudent.id);
+      return;
+    }
+    case 'excel-template': {
+      csv('学生导入模板', ['护照姓（拼音）', '护照名（拼音）', '性别', '出生日期', '在读年级', '申请类型', '计划入读年份', '计划入澳学期', '申请年级', '申请意向城市', '学生手机号', '学生Email'], []);
+      toast('Excel 模板已下载（演示）');
+      return;
+    }
+    case 'excel-import': stuExcelImportDialog(); return;
+    case 'reset-filters': state.stuFilters = { ...STU_FILTER_DEFAULTS }; state.stuPage = 1; render(); toast('筛选已重置'); return;
+    case 'page-prev': state.stuPage = Math.max(1, (state.stuPage || 1) - 1); render(); return;
+    case 'page-next': state.stuPage = (state.stuPage || 1) + 1; render(); return;
+    case 'bulk-delete': {
+      const n = stuSelected().size;
+      if (!n) return;
+      stuConfirm('批量删除学生', '将软删除已选择的 ' + n + ' 名学生，删除后可在已删除学生中恢复。', 'bulk-delete-confirm');
+      return;
+    }
+    case 'bulk-delete-confirm': {
+      const ids = [...stuSelected()];
+      ids.forEach((sid) => {
+        const idx = DEMO.students.findIndex((x) => x.id === sid);
+        if (idx >= 0) {
+          const [removed] = DEMO.students.splice(idx, 1);
+          stuDeleted().unshift({ student: removed, deleted_at: stuIsoToday() + 'T11:00:00', deleted_by: state.role });
+        }
+      });
+      state.stuSelected = new Set();
+      stuClose('已软删除 ' + ids.length + ' 名学生');
+      return;
+    }
+    case 'materials-check': {
+      const missing = stuRequiredMaterials(s).filter((t) => !d.documents.some((x) => x.type === t));
+      if (missing.length) { toast('仍有必填材料未上传：' + missing.join('、')); return; }
+      d.materials_checked = true;
+      d.materials_checked_at = stuIsoToday() + 'T16:00:00';
+      d.materials_checker_name = state.role;
+      d.history.unshift({ id: 'LOG-' + id + '-' + Date.now(), changed_at: d.materials_checked_at, user: state.role, section: '申请材料', field: '材料审核', before: '待审核', after: '已完成' });
+      d.alerts = stuBuildAlerts(s, d);
+      s.alerts = d.alerts;
+      toast('材料审核已完成');
+      render();
+      return;
+    }
+    case 'material-upload': stuMaterialDialog(s, type); return;
+    case 'material-view': stuDocListDialog(s, type); return;
+    case 'doc-review': {
+      const doc = d.documents.find((x) => x.id === key);
+      if (!doc) return;
+      doc.status = '已确认';
+      d.history.unshift({ id: 'LOG-' + id + '-' + Date.now(), changed_at: stuIsoToday() + 'T15:00:00', user: state.role, section: '申请材料', field: doc.name, before: '待审核', after: '已确认' });
+      toast('材料已确认');
+      render();
+      return;
+    }
+    case 'contract-new': stuContractDialog(s); return;
+    case 'contract-preview': {
+      const c = d.contracts.find((x) => x.id === key);
+      if (c) stuFileDialog('合同预览', c.file_name, STU_CONTRACT_TYPES[c.contract_type] + ' · ' + (STU_CONTRACT_STATUS[c.status] || c.status));
+      return;
+    }
+    case 'contract-download': toast('合同下载已开始（演示）'); return;
+    case 'contract-delete': {
+      const c = d.contracts.find((x) => x.id === key);
+      if (c) stuContractDeleteDialog(s, c);
+      return;
+    }
+    case 'new-plan': stuPlanDialog(s); return;
+    case 'plan-edit': {
+      const p = d.plans.find((x) => x.id === key);
+      if (p) stuPlanDialog(s, p);
+      return;
+    }
+    case 'plan-preview': {
+      const p = d.plans.find((x) => x.id === key);
+      if (!p) return;
+      const rows = p.confirmed_schools.length ? p.confirmed_schools.map((x) => `<li>${esc(x.decision_mode === 'ranked' ? '第 ' + x.rank_order + ' 顺位 · ' : '')}${esc(x.school_name)} · ${esc(STU_PLAN_RESULT_LABELS[x.result_status] || x.result_status)}</li>`).join('') : '<li>尚未确认递交学校</li>';
+      stuDialog('学校方案预览', `<div class="stu-plan-preview"><h2>学校方案报告 · v${esc(p.version)}</h2><p>${esc(p.city)} · ${esc(STU_PLAN_SECTOR_LABELS[p.sector] || p.sector)}</p><ul>${rows}</ul><p class="muted">更新 ${esc(stuIsoToAu(p.updated_at))} · 状态 ${esc(p.status)}</p></div>`, `${stuBtn('下载报告', 'plan-download', 'primary', `data-id="${s.id}" data-key="${p.id}"`)}`);
+      return;
+    }
+    case 'plan-download': toast('学校方案报告下载已开始（演示）'); return;
+    case 'plan-link': {
+      const p = d.plans.find((x) => x.id === key);
+      if (p) stuPlanLinkDialog(s, p);
+      return;
+    }
+    case 'copy-link': {
+      const url = el.dataset.url;
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).catch(() => {});
+      toast('链接已复制（演示）');
+      return;
+    }
+    case 'plan-result': {
+      const p = d.plans.find((x) => x.id === key);
+      const school = p && p.confirmed_schools.find((x) => x.id === type);
+      if (p && school) stuPlanResultDialog(s, p, school);
+      return;
+    }
+    case 'plan-submit-public': {
+      const p = d.plans.find((x) => x.id === key);
+      if (!p) return;
+      p.confirmed_schools.forEach((x) => { x.submission_status = 'submitted'; x.submitted_at = stuIsoToday(); x.submitted_by_name = state.role; });
+      toast('已记录递交全部公校申请');
+      render();
+      return;
+    }
+    case 'offer-add': stuOfferDialog(s); return;
+    case 'offer-edit': {
+      const o = d.offers.find((x) => x.id === key);
+      if (o) stuOfferDialog(s, o);
+      return;
+    }
+    case 'offer-accept': {
+      const o = d.offers.find((x) => x.id === key);
+      if (!o) return;
+      o.accepted = true; o.status = 'signed_received';
+      d.history.unshift({ id: 'LOG-' + id + '-' + Date.now(), changed_at: stuIsoToday() + 'T14:00:00', user: state.role, section: '录取通知', field: 'Offer 状态', before: '已收到', after: '已接受' });
+      stuApplyStudentSummary(s);
+      toast('Offer 已设为已接受');
+      render();
+      return;
+    }
+    case 'offer-withdraw': {
+      const o = d.offers.find((x) => x.id === key);
+      if (o) stuOfferWithdrawDialog(s, o);
+      return;
+    }
+    case 'offer-file': {
+      const o = d.offers.find((x) => x.id === key);
+      if (o) stuFileDialog('Offer 文件', o.file_name, o.school_name);
+      return;
+    }
+    case 'payment-add': stuPaymentDialog(s); return;
+    case 'payment-proof': {
+      const p = d.payments.find((x) => x.id === key);
+      if (p) stuFileDialog('付款凭证', p.proof, p.category + ' · ' + p.currency + ' ' + p.amount);
+      return;
+    }
+    case 'coe-add': stuCoeDialog(s); return;
+    case 'coe-edit': {
+      const c = d.coe.find((x) => x.id === key);
+      if (c) stuCoeDialog(s, c);
+      return;
+    }
+    case 'coe-file': {
+      const c = d.coe.find((x) => x.id === key);
+      if (c) stuFileDialog('COE / OSHC 文件', c.file_name, c.kind);
+      return;
+    }
+    case 'visa-add': stuVisaDialog(s, null, el.dataset.purpose || 'current_application'); return;
+    case 'visa-edit': {
+      const v = d.visas.find((x) => x.id === key);
+      if (v) stuVisaDialog(s, v, v.existing ? 'existing_evidence' : 'current_application');
+      return;
+    }
+    case 'visa-grant': {
+      const v = d.visas.find((x) => x.id === key);
+      if (!v) return;
+      v.visa_status = 'granted';
+      v.visa_grant_date = stuToday();
+      v.visa_start_date = stuToday();
+      v.visa_expiry_date = '15/03/2030';
+      v.document_type = 'grant_letter';
+      v.file_name = 'Visa_Grant_' + s.id + '.pdf';
+      d.history.unshift({ id: 'LOG-' + id + '-' + Date.now(), changed_at: stuIsoToday() + 'T17:00:00', user: state.role, section: '签证', field: '签证状态', before: '待审批', after: '已获签' });
+      stuApplyStudentSummary(s);
+      toast('签证已记录为获签');
+      render();
+      return;
+    }
+    case 'visa-file': {
+      const v = d.visas.find((x) => x.id === key);
+      if (v) stuFileDialog('签证文件', v.file_name, v.visa_type + ' · ' + v.visa_sector);
+      return;
+    }
+    case 'homestay-add': stuHomestayDialog(s); return;
+    case 'note-add': stuNoteAddDialog(s); return;
+    case 'homestay-view': {
+      const doc = d.homestay.find((x) => x.id === key);
+      if (doc) stuFileDialog('住宿 / 接机文件', doc.name, (STU_HOMESTAY_TYPES.find((x) => x[0] === doc.type) || [doc.type, doc.type])[1]);
+      return;
+    }
+    case 'note-done': {
+      const n = d.notes.find((x) => x.id === key);
+      if (n) { n.status = 'Completed'; toast('留言已标记完成'); render(); }
+      return;
+    }
+    case 'note-dismiss': {
+      const n = d.notes.find((x) => x.id === key);
+      if (n) { n.status = 'Dismissed'; toast('留言已忽略'); render(); }
+      return;
+    }
+    case 'note-snooze': {
+      const n = d.notes.find((x) => x.id === key);
+      if (n) stuNoteSnoozeDialog(s, n);
+      return;
+    }
+    case 'note-edit': {
+      const n = d.notes.find((x) => x.id === key);
+      if (n) stuNoteEditDialog(s, n);
+      return;
+    }
+    case 'note-delete': {
+      const n = d.notes.find((x) => x.id === key);
+      if (!n) return;
+      stuConfirm('删除留言', '确认删除这条留言与提醒？', 'note-delete-confirm', `data-id="${s.id}" data-key="${n.id}"`);
+      return;
+    }
+    case 'note-delete-confirm': {
+      d.notes = d.notes.filter((x) => x.id !== key);
+      stuClose('留言已删除');
+      return;
+    }
+    case 'docx-download': toast('StudentInfo.docx 下载已开始（演示）'); return;
+    case 'docx-regenerate': {
+      d.docx.updated_at = stuIsoToday();
+      d.docx.file_name = 'StudentInfo_' + s.id + '.docx';
+      toast('StudentInfo.docx 已重新生成');
+      render();
+      return;
+    }
+    case 'download-demo': toast('演示文件下载已开始：' + (el.dataset.name || 'demo.pdf')); return;
+    default: toast('演示操作：' + action);
+  }
+}
+
+/* ---------------- submit router ---------------- */
+function stuSubmit(kind, form, fd) {
+  const id = form.dataset.id;
+  const s = id ? studentById(id) : null;
+  const d = s ? STU_DETAILS[id] : null;
+  switch (kind) {
+    case 'filters': {
+      const f = stuFilters();
+      Object.keys(STU_FILTER_DEFAULTS).forEach((k) => { f[k] = String(fd.get(k) || ''); });
+      state.stuPage = 1;
+      render();
+      toast('筛选已应用');
+      return;
+    }
+    case 'student-save': stuSaveStudent(form, fd); return;
+    case 'parent-link': {
+      const links = stuParentLinks();
+      const sid = String(fd.get('student') || '');
+      const link = { id: 'LINK-2026-' + String(links.length + 1).padStart(3, '0'), student: sid, type: String(fd.get('type') || '学生资料'), status: 'Pending', expires: String(fd.get('expires') || ''), visits: 0 };
+      links.unshift(link);
+      const stu = studentById(sid);
+      if (stu) stu.parent_form = 'Pending';
+      closeDialog(); render();
+      toast('家长表单链接已生成：' + link.id + '（演示）');
+      return;
+    }
+    case 'excel-import': {
+      closeDialog();
+      toast('已解析演示文件：成功 10 行，2 行待修正；未写入真实数据');
+      return;
+    }
+    case 'material-save': {
+      const type = String(fd.get('material_type') || form.dataset.type || 'Others');
+      const name = String(fd.get('file_name') || '演示材料.pdf');
+      d.documents.unshift({ id: 'DOC-' + s.id + '-' + type + '-' + Date.now(), type, name, version: 'v1', uploaded_at: stuIsoToday(), status: '待审核' });
+      d.history.unshift({ id: 'LOG-' + s.id + '-' + Date.now(), changed_at: stuIsoToday() + 'T12:00:00', user: state.role, section: '申请材料', field: name, before: '未上传', after: '待审核' });
+      d.alerts = stuBuildAlerts(s, d);
+      s.alerts = d.alerts;
+      stuClose('材料已上传（演示）');
+      return;
+    }
+    case 'contract-save': {
+      const scopes = fd.getAll('scopes');
+      if (!scopes.length) { toast('请至少选择一个服务范围'); return; }
+      const type = String(fd.get('contract_type'));
+      d.contracts.unshift({ id: 'CON-' + s.id + '-' + Date.now(), contract_type: type, status: 'Draft', version: 'v1', service_scopes: scopes, fee: String(fd.get('fee') || '2400.00'), discount: String(fd.get('discount') || '0.00'), payment_method: String(fd.get('payment_method') || '支付宝'), file_name: String(fd.get('file_name') || 'Contract.pdf'), created_at: stuIsoToday(), signed_at: '' });
+      stuClose('合同已创建（演示）');
+      return;
+    }
+    case 'contract-delete': {
+      const c = d.contracts.find((x) => x.id === form.dataset.key);
+      if (c) {
+        c.status = 'Deleted';
+        c.delete_reason = String(fd.get('reason') || '');
+        c.delete_note = String(fd.get('note') || '');
+      }
+      stuClose('合同已删除（演示）');
+      return;
+    }
+    case 'plan-save': {
+      const key = form.dataset.key;
+      const schools = String(fd.get('schools') || '').split(/\n+/).map((x) => x.trim()).filter(Boolean);
+      let p = key ? d.plans.find((x) => x.id === key) : null;
+      if (!p) {
+        p = { id: 'PLAN-' + s.id + '-' + Date.now(), city: '', sector: 'private', version: 1, status: 'draft', updated_at: stuIsoToday(), is_current: true, report_title: '学校方案报告', confirmed_schools: [] };
+        d.plans.unshift(p);
+      }
+      p.city = String(fd.get('city') || s.city);
+      p.sector = String(fd.get('sector') || 'private');
+      p.version = Number(fd.get('version') || p.version);
+      p.status = String(fd.get('status') || 'draft');
+      p.updated_at = stuIsoToday();
+      p.confirmed_schools = schools.map((name, i) => {
+        const old = p.confirmed_schools.find((x) => x.school_name === name) || {};
+        return { id: old.id || 'PLANSCH-' + s.id + '-' + Date.now() + '-' + i, school_name: name, decision_mode: old.decision_mode || (p.sector === 'public' ? 'ranked' : 'selected'), rank_order: i + 1, submission_status: old.submission_status || (p.status === 'confirmed' ? 'submitted' : 'unsubmitted'), submitted_at: old.submitted_at || (p.status === 'confirmed' ? stuIsoToday() : ''), submitted_by_name: old.submitted_by_name || (p.status === 'confirmed' ? '家长（虚构）' : ''), result_status: old.result_status || 'pending', is_offer_accepted: !!old.is_offer_accepted, is_offer_received: !!old.is_offer_received, is_final_school: !!old.is_final_school, result_note: old.result_note || '', result_at: old.result_at || '', result_by_name: old.result_by_name || '', offer_id: old.offer_id || '' };
+      });
+      stuClose('学校方案已保存（演示）');
+      return;
+    }
+    case 'plan-result-save': {
+      const p = d.plans.find((x) => x.id === form.dataset.key);
+      const sch = p && p.confirmed_schools.find((x) => x.id === form.dataset.type);
+      if (!p || !sch) return;
+      sch.result_status = String(fd.get('result_status') || 'pending');
+      sch.offer_id = String(fd.get('offer_id') || '');
+      sch.result_note = String(fd.get('result_note') || '');
+      sch.is_offer_received = fd.get('is_offer_received') === 'on';
+      sch.is_offer_accepted = fd.get('is_offer_accepted') === 'on';
+      sch.is_final_school = fd.get('is_final_school') === 'on';
+      sch.result_at = stuIsoToday();
+      sch.result_by_name = state.role;
+      if (sch.is_final_school) p.confirmed_schools.forEach((x) => { if (x.id !== sch.id) x.is_final_school = false; });
+      p.updated_at = stuIsoToday();
+      stuClose('学校结果已更新（演示）');
+      return;
+    }
+    case 'offer-save': {
+      const key = form.dataset.key;
+      let o = key ? d.offers.find((x) => x.id === key) : null;
+      if (!o) {
+        o = { id: 'OFF-' + s.id + '-' + Date.now(), accepted: false, uploaded_at: stuIsoToday() };
+        d.offers.unshift(o);
+      }
+      ['school_name', 'offer_date', 'language_school_name', 'course_start_date', 'offer_expiry_date', 'deposit_amount', 'deposit_currency', 'status', 'document_type', 'file_name'].forEach((k) => { o[k] = String(fd.get(k) || ''); });
+      o.accepted = o.status === 'signed_received' || o.status === 'signed';
+      d.alerts = stuBuildAlerts(s, d);
+      stuApplyStudentSummary(s);
+      stuClose('Offer 已保存（演示）');
+      return;
+    }
+    case 'offer-withdraw-save': {
+      const o = d.offers.find((x) => x.id === form.dataset.key);
+      if (o) { o.accepted = false; o.status = 'cancelled'; o.withdraw_reason = String(fd.get('reason') || ''); }
+      stuApplyStudentSummary(s);
+      stuClose('Offer 接受已撤回（演示）');
+      return;
+    }
+    case 'payment-save': {
+      const category = String(fd.get('category'));
+      d.payments.unshift({ id: 'PAY-' + s.id + '-' + Date.now(), category, amount: String(fd.get('amount') || '0.00'), currency: String(fd.get('currency') || 'AUD'), paid_date: String(fd.get('paid_date') || stuToday()), method: String(fd.get('method') || 'Bank Transfer'), payer_name: String(fd.get('payer_name') || ''), receiver_name: String(fd.get('receiver_name') || ''), transfer_confirmed: fd.get('transfer_confirmed') === 'on' ? '已确认' : '', proof: 'Payment_Receipt_' + Date.now() + '.pdf' });
+      stuClose('付款记录已保存（演示）');
+      return;
+    }
+    case 'coe-save': {
+      const key = form.dataset.key;
+      let r = key ? d.coe.find((x) => x.id === key) : null;
+      if (!r) { r = { id: 'COE-' + s.id + '-' + Date.now(), uploaded_at: stuIsoToday() }; d.coe.unshift(r); }
+      ['kind', 'file_name', 'coe_provider', 'coe_course', 'coe_start_date', 'coe_end_date', 'caaw_welfare_start_date', 'caaw_welfare_end_date', 'oshc_company_name', 'oshc_policy_number', 'oshc_commencement_date', 'oshc_expiry_date', 'loc_language_course', 'loc_language_start', 'loc_language_end', 'loc_year_level', 'loc_main_course', 'loc_main_start', 'loc_main_end'].forEach((k) => { r[k] = String(fd.get(k) || ''); });
+      stuClose('COE / OSHC 记录已保存（演示）');
+      return;
+    }
+    case 'visa-save': {
+      const key = form.dataset.key;
+      let v = key ? d.visas.find((x) => x.id === key) : null;
+      if (!v) { v = { id: 'VISA-' + s.id + '-' + Date.now(), created_at: stuIsoToday(), existing: String(fd.get('visa_record_purpose')) === 'existing_evidence' }; d.visas.unshift(v); }
+      ['visa_type', 'visa_sector', 'document_type', 'visa_grant_date', 'visa_start_date', 'visa_expiry_date', 'visa_status', 'visa_conditions', 'file_name'].forEach((k) => { v[k] = String(fd.get(k) || ''); });
+      v.staff_confirm = fd.get('staff_confirm') === 'on';
+      d.alerts = stuBuildAlerts(s, d);
+      stuApplyStudentSummary(s);
+      stuClose('签证记录已保存（演示）');
+      return;
+    }
+    case 'homestay-save': {
+      const type = String(fd.get('type'));
+      d.homestay.unshift({ id: 'HOM-' + s.id + '-' + Date.now(), type, name: String(fd.get('file_name') || 'Homestay.pdf'), uploaded_at: stuIsoToday(), status: '待审核' });
+      stuClose('住宿 / 接机文件已上传（演示）');
+      return;
+    }
+    case 'note-add': {
+      const date = String(fd.get('reminder_date') || stuIsoToday());
+      const time = String(fd.get('reminder_time') || '10:00');
+      d.notes.unshift({ id: 'NOTE-' + s.id + '-' + Date.now(), description: String(fd.get('description') || ''), reminder_at: date + 'T' + time + ':00', recipient_name: String(fd.get('recipient_name') || s.owner), status: 'Pending', priority: 'Normal', source_type: 'manual', created_by: state.role, creator_name: state.role, created_at: stuIsoToday() });
+      closeDialog(); render();
+      toast('留言与提醒已添加（演示）');
+      return;
+    }
+    case 'note-snooze-save': {
+      const n = d.notes.find((x) => x.id === form.dataset.key);
+      if (n) { n.status = 'Snoozed'; n.snoozed_to = String(fd.get('snooze') || '30m'); }
+      stuClose('已设置稍后提醒（演示）');
+      return;
+    }
+    case 'note-edit-save': {
+      const n = d.notes.find((x) => x.id === form.dataset.key);
+      if (n) {
+        n.description = String(fd.get('description') || n.description);
+        n.reminder_at = String(fd.get('reminder_date') || '') + 'T' + String(fd.get('reminder_time') || '10:00') + ':00';
+        n.recipient_name = String(fd.get('recipient_name') || n.recipient_name);
+      }
+      stuClose('留言已更新（演示）');
+      return;
+    }
+    default: toast('演示表单已提交：' + kind);
+  }
+}
+
+/* ---------------- event wiring ---------------- */
+document.addEventListener('click', (e) => {
+  const el = e.target.closest('[data-stu]');
+  if (!el) return;
+  e.preventDefault();
+  e.stopPropagation();
+  stuAction(el.dataset.stu, el);
+}, true);
+
+document.addEventListener('change', (e) => {
+  const all = e.target.closest('[data-stu-select-all]');
+  if (all) {
+    const selected = stuSelected();
+    document.querySelectorAll('[data-stu-select]').forEach((x) => {
+      x.checked = all.checked;
+      if (all.checked) selected.add(x.dataset.stuSelect); else selected.delete(x.dataset.stuSelect);
+    });
+    render();
+    return;
+  }
+  const one = e.target.closest('[data-stu-select]');
+  if (one) {
+    const selected = stuSelected();
+    if (one.checked) selected.add(one.dataset.stuSelect); else selected.delete(one.dataset.stuSelect);
+    render();
+  }
+}, true);
+
+document.addEventListener('submit', (e) => {
+  const f = e.target.closest('form[data-stu-form]');
+  if (!f) return;
+  e.preventDefault();
+  e.stopPropagation();
+  if (!f.reportValidity()) return;
+  stuSubmit(f.dataset.stuForm, f, new FormData(f));
+}, true);
+
+function studentForm(id) { stuStudentForm(id); }
+
 render();
 
 </script></body></html>

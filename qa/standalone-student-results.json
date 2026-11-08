@@ -1,0 +1,95 @@
+{
+  "results": [
+    {
+      "name": "no external script/link assets",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "standalone list renders",
+      "ok": true,
+      "details": "{\"rows\":10,\"tools\":6,\"cards\":4,\"resources\":[],\"scripts\":[]}"
+    },
+    {
+      "name": "standalone loads no external resources",
+      "ok": true,
+      "details": "[]"
+    },
+    {
+      "name": "standalone tab profile",
+      "ok": true,
+      "details": "{\"tabs\":12,\"len\":2714,\"denied\":false}"
+    },
+    {
+      "name": "standalone tab applications",
+      "ok": true,
+      "details": "{\"tabs\":12,\"len\":1983,\"denied\":false}"
+    },
+    {
+      "name": "standalone tab contracts",
+      "ok": true,
+      "details": "{\"tabs\":12,\"len\":887,\"denied\":false}"
+    },
+    {
+      "name": "standalone tab school_plans",
+      "ok": true,
+      "details": "{\"tabs\":12,\"len\":905,\"denied\":false}"
+    },
+    {
+      "name": "standalone tab offer",
+      "ok": true,
+      "details": "{\"tabs\":12,\"len\":950,\"denied\":false}"
+    },
+    {
+      "name": "standalone tab payments",
+      "ok": true,
+      "details": "{\"tabs\":12,\"len\":986,\"denied\":false}"
+    },
+    {
+      "name": "standalone tab coe",
+      "ok": true,
+      "details": "{\"tabs\":12,\"len\":1247,\"denied\":false}"
+    },
+    {
+      "name": "standalone tab visa",
+      "ok": true,
+      "details": "{\"tabs\":12,\"len\":740,\"denied\":false}"
+    },
+    {
+      "name": "standalone tab homestay",
+      "ok": true,
+      "details": "{\"tabs\":12,\"len\":1108,\"denied\":false}"
+    },
+    {
+      "name": "standalone tab history",
+      "ok": true,
+      "details": "{\"tabs\":12,\"len\":1147,\"denied\":false}"
+    },
+    {
+      "name": "standalone tab reminders",
+      "ok": true,
+      "details": "{\"tabs\":12,\"len\":1047,\"denied\":false}"
+    },
+    {
+      "name": "standalone tab revenue",
+      "ok": true,
+      "details": "{\"tabs\":12,\"len\":826,\"denied\":false}"
+    },
+    {
+      "name": "standalone CAAW shows Provider",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "standalone contract version has single v",
+      "ok": true,
+      "details": ""
+    },
+    {
+      "name": "standalone no runtime exceptions",
+      "ok": true,
+      "details": ""
+    }
+  ],
+  "runtimeErrors": []
+}
