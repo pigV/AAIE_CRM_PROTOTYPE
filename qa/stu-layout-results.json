@@ -2,7 +2,7 @@
   {
     "name": "desktop list no page overflow",
     "ok": true,
-    "details": "{\"w\":1425,\"sw\":1425,\"rows\":10,\"summaries\":4,\"filters\":4}"
+    "details": "{\"w\":1440,\"sw\":1440,\"rows\":10,\"summaries\":4,\"filters\":0}"
   },
   {
     "name": "desktop list rows",
@@ -10,24 +10,34 @@
     "details": "rows=10"
   },
   {
+    "name": "desktop advanced filters open",
+    "ok": true,
+    "details": "cols=4"
+  },
+  {
     "name": "desktop profile no page overflow",
     "ok": true,
-    "details": "{\"w\":1425,\"sw\":1425,\"tabsVisible\":\"flex\",\"picker\":\"none\",\"facts\":4}"
+    "details": "{\"w\":1440,\"sw\":1440,\"tabsVisible\":\"flex\",\"picker\":\"none\",\"facts\":4}"
   },
   {
     "name": "desktop applications no page overflow",
     "ok": true,
-    "details": "{\"w\":1425,\"sw\":1425,\"tables\":2}"
+    "details": "{\"w\":1440,\"sw\":1440,\"tables\":2}"
   },
   {
     "name": "mobile list no page overflow",
     "ok": true,
-    "details": "{\"w\":390,\"sw\":390,\"rows\":10,\"summaries\":1,\"filters\":1}"
+    "details": "{\"w\":390,\"sw\":390,\"rows\":10,\"summaries\":2,\"filters\":0}"
   },
   {
     "name": "mobile list rows",
     "ok": true,
     "details": "rows=10"
+  },
+  {
+    "name": "mobile advanced filters open",
+    "ok": true,
+    "details": "cols=1"
   },
   {
     "name": "mobile profile no page overflow",

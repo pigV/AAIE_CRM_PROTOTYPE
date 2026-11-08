@@ -476,15 +476,45 @@ dialog::backdrop { background:#24183965; backdrop-filter:blur(3px); }
 
 /* ---------- student management module ---------- */
 .stu-crumb { margin-bottom:14px; align-items:center; }
-.stu-toolbar { display:flex; flex-wrap:wrap; gap:9px; margin-bottom:16px; }
-.stu-toolbar .btn { min-height:38px; padding:8px 13px; font-size:13px; }
-.stu-filter-card { margin-bottom:16px; }
-.stu-filter-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+.stu-toolbar { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
+.stu-toolbar .btn { min-height:38px; padding:8px 13px; font-size:13px; color:#57516a; border-color:#e2ddec; }
+.stu-toolbar .btn:hover { background:#fbfaff; border-color:#c9bce0; }
+.stu-toolbar .btn.primary { color:#fff; background:var(--brand); border-color:var(--brand); }
+.stu-toolbar .btn.primary:hover { background:var(--brand-hover); border-color:var(--brand-hover); }
+
+/* filter shell */
+.stu-filter-card { margin-bottom:14px; }
+.stu-searchrow { display:grid; grid-template-columns:minmax(200px,1fr) 156px auto auto; align-items:center; gap:9px; padding:14px 16px; }
+.stu-search { min-width:0; }
+.stu-sort { display:block; min-width:0; }
+.stu-sort select { width:100%; min-height:44px; padding:8px 30px 8px 12px; border:1px solid #ddd6e9; border-radius:8px; background:#fff; color:#51465f; font-size:13px; }
+.stu-filter-toggle { min-height:44px; padding:8px 13px; font-size:13px; }
+.stu-filter-toggle.is-open { background:#faf7ff; border-color:#cbb8ea; color:var(--brand-deep); }
+.stu-filter-count { display:inline-grid; place-items:center; min-width:17px; height:17px; padding:0 4px; border-radius:9px; background:var(--brand); color:#fff; font-size:11px; font-weight:650; line-height:1; }
+.stu-submit { min-height:44px; padding:8px 20px; }
+.stu-advanced-panel { border-top:1px dashed #e7e2f1; padding:2px 16px 14px; }
+.stu-filter-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px 16px; padding-top:14px; }
 .stu-filter-grid label { font-size:12px; font-weight:600; color:#514b60; }
 .stu-filter-grid label.wide { grid-column:span 2; }
 .stu-filter-grid input,.stu-filter-grid select { margin-top:6px; }
-.stu-filter-actions { display:flex; align-items:center; gap:10px; margin-top:16px; padding-top:15px; border-top:1px solid var(--line); }
+.stu-filter-actions { display:flex; align-items:center; gap:10px; margin-top:14px; }
 .stu-filter-actions .muted { font-size:12px; }
+.stu-chips { display:flex; flex-wrap:wrap; gap:7px; padding:0 16px 14px; }
+.stu-chip { display:inline-flex; align-items:center; gap:7px; min-height:30px; padding:4px 10px; border:1px solid #e0d7f0; border-radius:15px; background:#faf7ff; color:#5a3f86; font-size:12px; }
+.stu-chip:hover { border-color:#cbb8ea; background:#f4edfd; }
+.stu-chip-x { color:#9a86b8; font-size:14px; line-height:1; }
+
+/* stage rail */
+.stu-stagebar { display:flex; gap:1px; overflow-x:auto; padding:9px 11px 11px; border-top:1px solid var(--line); scrollbar-width:thin; scrollbar-color:#cdbfe2 transparent; }
+.stu-stage { display:inline-flex; align-items:center; gap:7px; flex:none; min-height:34px; padding:6px 9px; border:0; border-radius:7px; background:none; color:#6b6579; font-size:12.5px; white-space:nowrap; }
+.stu-stage:hover { background:#f6f2fc; color:var(--brand-deep); }
+.stu-stage.is-active { background:var(--brand-soft); color:var(--brand-deep); font-weight:650; }
+.stu-stage-order { font-size:10.5px; font-variant-numeric:tabular-nums; letter-spacing:.04em; color:#a9a2b8; }
+.stu-stage.is-active .stu-stage-order { color:var(--brand); }
+.stu-stage-n { display:inline-grid; place-items:center; min-width:20px; height:18px; padding:0 5px; border-radius:9px; background:#f0ecf7; color:#6f6482; font-size:10.5px; font-weight:650; }
+.stu-stage.is-active .stu-stage-n { background:#fff; color:var(--brand); }
+
+/* summary */
 .stu-summary { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-bottom:16px; }
 .stu-detail-summary { grid-template-columns:repeat(5,minmax(0,1fr)); }
 .stu-summary-card { display:flex; flex-direction:column; gap:5px; padding:15px 17px; background:#fff; border:1px solid var(--line); border-radius:10px; min-width:0; }
@@ -494,22 +524,68 @@ dialog::backdrop { background:#24183965; backdrop-filter:blur(3px); }
 .stu-summary-card.accent { border-top:3px solid var(--brand); }
 .stu-summary-card.warn { border-top:3px solid #b98217; }
 .stu-summary-card.danger { border-top:3px solid var(--red); }
+.stu-list-summary { grid-template-columns:repeat(4,minmax(0,1fr)); gap:0; background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+.stu-list-summary .stu-summary-card { display:grid; grid-template-columns:minmax(0,1fr) auto; grid-template-areas:"label value" "foot value"; align-content:center; align-items:center; gap:3px 12px; min-width:0; padding:13px 18px; border:0; border-left:1px solid var(--line); border-radius:0; background:#fff; text-align:left; }
+.stu-list-summary .stu-summary-card:first-child { border-left:0; }
+.stu-list-summary .stu-summary-card.accent,
+.stu-list-summary .stu-summary-card.warn,
+.stu-list-summary .stu-summary-card.danger { border-top:0; border-left:1px solid var(--line); }
+.stu-list-summary .stu-summary-card:first-child { border-left:0; }
+.stu-list-summary .stu-summary-card>small { grid-area:label; display:flex; align-items:center; gap:6px; }
+.stu-list-summary .stu-summary-card>small::before { content:''; width:6px; height:6px; border-radius:50%; background:#c9c2d6; flex:none; }
+.stu-list-summary .stu-summary-card.warn>small::before { background:#c08a1a; }
+.stu-list-summary .stu-summary-card.danger>small::before { background:var(--red); }
+.stu-list-summary .stu-summary-card.accent>small::before { background:var(--brand); }
+.stu-list-summary .stu-summary-card strong { grid-area:value; font-size:26px; font-weight:650; letter-spacing:-.02em; line-height:1.1; color:var(--ink); }
+.stu-list-summary .stu-summary-card span { grid-area:foot; font-size:11px; color:var(--muted); }
+button.stu-summary-card { cursor:pointer; }
+button.stu-summary-card:hover { background:#fbf9ff; }
+.stu-list-summary .stu-summary-card.is-active { background:#f7f2fe; }
+.stu-list-summary .stu-summary-card.is-active strong { color:var(--brand-deep); }
+
+/* list card */
 .stu-list-card { padding-bottom:0; }
-.stu-bulk { display:flex; align-items:center; flex-wrap:wrap; gap:12px; padding:13px 18px; border-bottom:1px solid var(--line); background:#fbf9fe; }
-.stu-bulk .result-count { font-size:13px; font-weight:600; color:var(--brand-deep); }
-.stu-bulk-actions { display:flex; gap:7px; flex-wrap:wrap; }
-.stu-bulk small { margin-left:auto; }
+.stu-bulk { display:flex; align-items:center; flex-wrap:wrap; gap:10px 14px; padding:11px 16px; border-bottom:1px solid var(--line); background:#fbfaff; }
+.stu-bulk .result-count { font-size:12px; font-weight:600; color:var(--brand-deep); }
+.stu-bulk-actions { display:flex; gap:6px; flex-wrap:wrap; }
+.stu-bulk-actions .btn { min-height:30px; padding:4px 9px; font-size:12px; }
+.stu-bulk-note { display:inline-flex; margin-left:auto; color:#8f879d; }
+.stu-bulk-note .icon { width:16px; height:16px; }
 .stu-check { display:inline-flex; align-items:center; gap:7px; font-size:12px; color:#514b60; }
 .stu-check input { min-height:auto; width:16px; height:16px; }
-.stu-list-table th { white-space:nowrap; }
-.stu-list-table td { vertical-align:middle; }
-.stu-col-check { width:38px; }
-.stu-id-link { color:var(--brand); text-decoration:none; font-weight:600; }
-.stu-row-actions { display:flex; gap:5px; flex-wrap:wrap; align-items:center; }
-.stu-row-actions .btn { min-height:30px; padding:4px 9px; font-size:12px; }
-.stu-pager { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:15px 18px; border-top:1px solid var(--line); font-size:12px; color:var(--muted); }
+.stu-list-table th { padding:11px 12px; font-size:11.5px; font-weight:600; letter-spacing:.04em; background:#fbfafe; color:#766e86; white-space:nowrap; }
+.stu-list-table td { padding:12px; border-bottom:1px solid #f1eef6; vertical-align:middle; }
+.stu-list-table tbody tr:last-child td { border-bottom:0; }
+.stu-list-table tbody tr:hover { background:#fbf9ff; }
+.stu-list-table thead tr:last-child { border:0; }
+.stu-list-table .stu-col-check { width:34px; padding-right:4px; }
+.stu-list-table .stu-col-ops { text-align:right; }
+.stu-id-link { color:#7b6a96; font-size:12.5px; font-weight:600; letter-spacing:.01em; white-space:nowrap; text-decoration:none; }
+.stu-id-link:hover { color:var(--brand); text-decoration:none; }
+.stu-td-name .student-cell { gap:10px; }
+.stu-td-name .avatar { width:34px; height:34px; font-size:13px; }
+.stu-name-line { display:flex; align-items:center; gap:7px; }
+.stu-flag { display:inline-grid; place-items:center; min-width:16px; height:16px; padding:0 4px; border-radius:8px; font-size:10.5px; font-weight:700; line-height:1; font-variant-numeric:tabular-nums; }
+.stu-flag.risk { background:#fbe9ec; color:#a33243; }
+.stu-flag.waiting { background:#fbf0da; color:#8a6213; }
+.stu-stage-tag { display:inline-flex; align-items:center; gap:7px; font-size:12.5px; color:#4f4860; white-space:nowrap; }
+.stu-stage-tag i { width:6px; height:6px; border-radius:50%; background:var(--brand); opacity:.5; flex:none; }
+.stu-school { display:inline-block; max-width:196px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; vertical-align:bottom; color:#4a4358; }
+.stu-date { font-size:12.5px; color:#6f6879; font-variant-numeric:tabular-nums; }
+.stu-td-ops { text-align:right; }
+.stu-row-actions { display:flex; gap:2px; justify-content:flex-end; align-items:center; }
+.stu-op { min-height:30px; padding:5px 7px; border:0; background:none; color:var(--brand-hover); font-size:12.5px; font-weight:550; border-radius:6px; }
+.stu-op:hover { background:var(--brand-soft); text-decoration:none; }
+.stu-op.danger { color:#a33243; }
+.stu-op.danger:hover { background:#fbeef0; }
+.stu-pager { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:12px 16px; border-top:1px solid var(--line); font-size:12px; color:#6f6879; }
 .stu-pager > div { display:flex; gap:8px; }
-.stu-pager .btn { min-height:32px; padding:5px 11px; font-size:12px; }
+.stu-pager .btn { min-height:34px; padding:5px 11px; font-size:12px; }
+.stu-empty { display:flex; flex-direction:column; align-items:center; gap:6px; padding:38px 20px; color:var(--muted); text-align:center; white-space:normal; }
+.stu-empty .icon { width:28px; height:28px; color:#a294b8; }
+.stu-empty strong { font-size:14px; color:var(--ink); font-weight:600; }
+.stu-empty p { font-size:12px; }
+.stu-empty .btn { margin-top:6px; }
 .stu-hero .student-facts { grid-template-columns:repeat(4,minmax(0,1fr)); }
 .stu-hero-title { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
 .stu-alert-list { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:16px; }
@@ -632,6 +708,146 @@ dialog::backdrop { background:#24183965; backdrop-filter:blur(3px); }
   .stu-actionbar-note { margin-left:0; }
   .stu-bulk small { margin-left:0; }
 }
+
+/* ---------- student list: responsive ---------- */
+@media (max-width:1180px) {
+  .stu-list-table th,.stu-list-table td { padding-left:9px; padding-right:9px; }
+  .stu-school { max-width:150px; }
+}
+@media (max-width:900px) {
+  .stu-searchrow { grid-template-columns:minmax(0,1fr) 136px auto auto; padding:12px; }
+  .stu-searchrow .stu-search { grid-column:1/-1; }
+  .stu-search { min-width:0; width:100%; }
+  .stu-stagebar { padding:8px 9px 10px; }
+  .stu-bulk { gap:8px 12px; }
+  .stu-bulk-note { display:none; }
+}
+@media (max-width:620px) {
+  .stu-toolbar { gap:7px; }
+  .stu-toolbar .btn { min-height:38px; padding:7px 11px; font-size:12.5px; }
+  .stu-searchrow { grid-template-columns:minmax(0,1fr) auto auto; }
+  .stu-searchrow .stu-search { grid-column:1/-1; }
+  .stu-sort { grid-column:1/2; }
+  .stu-filter-toggle { grid-column:2/3; padding:8px 11px; }
+  .stu-submit { grid-column:3/4; padding:8px 15px; }
+  .stu-sort select { font-size:13px; padding-left:10px; }
+  .stu-advanced-panel { padding:0 12px 12px; }
+  .stu-chips { padding:0 12px 12px; }
+  .stu-stage { min-height:32px; padding:6px 8px; font-size:12px; }
+  .stu-list-summary { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .stu-list-summary .stu-summary-card { padding:12px 14px; }
+  .stu-list-summary .stu-summary-card:nth-child(3) { border-left:0; }
+  .stu-list-summary .stu-summary-card:nth-child(n+3) { border-top:1px solid var(--line); }
+  .stu-list-summary .stu-summary-card strong { font-size:23px; }
+  .stu-bulk { padding:11px 12px; }
+  .stu-bulk-actions { width:100%; }
+  .stu-bulk-actions .btn { flex:1 1 auto; min-height:34px; }
+  /* each row becomes a case card: check · number / identity / stage / school / facts / actions */
+  .stu-list-table { overflow:visible; }
+  .stu-list-table table,.stu-list-table tbody { display:block; width:100%; }
+  .stu-list-table thead { display:none; }
+  .stu-list-table tbody tr { display:grid; grid-template-columns:auto 1fr; grid-template-areas:"check id" "name name" "stage stage" "school school" "grade created" "offer visa" "ops ops"; gap:7px 10px; padding:14px 13px 12px; border-bottom:1px solid var(--line); }
+  .stu-list-table tbody tr:hover { background:#fff; }
+  .stu-list-table td { padding:0; border:0; }
+  .stu-td-check { grid-area:check; display:flex; align-items:center; }
+  .stu-td-id { grid-area:id; align-self:center; }
+  .stu-td-name { grid-area:name; }
+  .stu-td-stage { grid-area:stage; }
+  .stu-td-school { grid-area:school; }
+  .stu-td-grade { grid-area:grade; }
+  .stu-td-created { grid-area:created; }
+  .stu-td-offer { grid-area:offer; }
+  .stu-td-visa { grid-area:visa; }
+  .stu-td-ops { grid-area:ops; text-align:left; border-top:1px dashed #efeaf6; padding-top:8px; }
+  .stu-td-grade::before,.stu-td-created::before,.stu-td-offer::before,.stu-td-visa::before { content:attr(data-label); display:block; font-size:10.5px; color:#9a92a8; letter-spacing:.02em; }
+  .stu-td-school .stu-school { max-width:100%; }
+  .stu-row-actions { justify-content:flex-start; gap:6px; }
+  .stu-op { min-height:34px; padding:7px 9px; }
+  .stu-pager { padding:12px 13px; }
+}
+
+/* ---------- student list: fixed table layout & wrapping stage rail ---------- */
+.stu-stagebar { flex-wrap:wrap; row-gap:2px; }
+.stu-list-table table { table-layout:fixed; width:100%; }
+.stu-list-table th:nth-child(1) { width:30px; }
+.stu-list-table th:nth-child(2) { width:92px; }
+.stu-list-table th:nth-child(3) { width:176px; }
+.stu-list-table th:nth-child(4) { width:132px; }
+.stu-list-table th:nth-child(5) { width:180px; }
+.stu-list-table th:nth-child(6) { width:64px; }
+.stu-list-table th:nth-child(7) { width:92px; }
+.stu-list-table th:nth-child(8) { width:100px; }
+.stu-list-table th:nth-child(9) { width:92px; }
+.stu-list-table th:nth-child(10) { width:158px; }
+.stu-td-name,.stu-td-stage,.stu-td-school,.stu-td-ops { overflow:hidden; }
+.stu-td-name .student-cell>div { min-width:0; overflow:hidden; }
+.stu-td-name .student-cell small { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.stu-td-stage .stu-stage-tag { max-width:100%; }
+.stu-td-stage .stu-stage-tag { overflow:hidden; text-overflow:ellipsis; }
+.stu-school { max-width:100%; }
+@media (max-width:900px) {
+  .stu-stagebar { flex-wrap:nowrap; overflow-x:auto; }
+}
+
+/* ---------- student list: final proportions ---------- */
+.stu-list-table th:nth-child(1) { width:30px; }
+.stu-list-table th:nth-child(2) { width:86px; }
+.stu-list-table th:nth-child(3) { width:200px; }
+.stu-list-table th:nth-child(4) { width:132px; }
+.stu-list-table th:nth-child(5) { width:190px; }
+.stu-list-table th:nth-child(6) { width:58px; }
+.stu-list-table th:nth-child(7) { width:88px; }
+.stu-list-table th:nth-child(8) { width:96px; }
+.stu-list-table th:nth-child(9) { width:88px; }
+.stu-list-table th:nth-child(10) { width:148px; }
+.stu-flag:empty { min-width:8px; width:8px; height:8px; padding:0; }
+@media (min-width:901px) {
+  .stu-stagebar { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:2px 4px; }
+  .stu-stage { justify-content:flex-start; min-width:0; overflow:hidden; }
+  .stu-stage>span:last-child:not(.stu-stage-order) { margin-left:auto; }
+}
+.stu-list-table th:nth-child(2) { width:84px; }
+.stu-list-table th:nth-child(3) { width:192px; }
+.stu-list-table th:nth-child(4) { width:138px; }
+.stu-list-table th:nth-child(6) { width:66px; }
+.stu-list-table th:nth-child(10) { width:144px; }
+.stu-list-table td { white-space:nowrap; }
+.stu-school { font-size:12.5px; }
+.stu-list-table th:nth-child(5) { width:180px; }
+.stu-list-table th:nth-child(10) { width:154px; }
+.stu-row-actions { gap:0; }
+.stu-op { padding:5px 3px; }
+@media (max-width:620px) { .stu-op { padding:6px 8px; } }
+
+.stu-filter-ico { flex:none; margin-right:1px; }
+
+/* ---------- advanced filter panel ---------- */
+.stu-filter-grid label { display:grid; gap:6px; align-content:start; font-size:12px; font-weight:550; color:#746c82; }
+.stu-filter-grid select,
+.stu-filter-grid input[type="date"] {
+  width:100%; min-width:0; height:40px; border:1px solid #e6e1ef; border-radius:9px;
+  background:#fff; padding:0 10px; font:inherit; font-size:13px; color:var(--ink);
+  box-shadow:none; appearance:none;
+}
+.stu-filter-grid select {
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M2.5 4.5 6 8l3.5-3.5' stroke='%23837b90' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right 11px center; padding-right:28px;
+}
+.stu-filter-grid input[type="date"] { padding:0 8px; }
+.stu-filter-grid select:focus-visible,
+.stu-filter-grid input:focus-visible { outline:2px solid rgba(109,60,207,.3); outline-offset:1px; border-color:var(--brand); }
+.stu-filter-actions { align-items:center; }
+.stu-filter-actions .muted { font-size:12px; }
+@media (max-width:620px) {
+  .stu-filter-grid select, .stu-filter-grid input[type="date"] { height:44px; }
+}
+.stu-flag.risk:empty { background:#b4485c; }
+.stu-flag.waiting:empty { background:#bd8a2e; }
+@media (max-width:900px) {
+  .stu-stagebar { -webkit-mask-image:linear-gradient(to right,#000 94%,transparent); mask-image:linear-gradient(to right,#000 94%,transparent); }
+}
+.stu-chip-clear { align-self:center; border:0; background:none; padding:3px 4px; margin-left:2px; font-size:12px; color:#7a7288; border-radius:6px; }
+.stu-chip-clear:hover { color:var(--brand); background:var(--brand-soft); }
 
 </style></head>
 <body><a class="skip" href="#main">跳到内容</a><div id="app"></div><dialog id="dialog" aria-labelledby="dialog-title"></dialog><div id="toast" role="status" aria-live="polite"></div><script>
@@ -1776,7 +1992,7 @@ const STU_TAB_ORDER = ['profile', 'applications', 'contracts', 'school_plans', '
 const STU_PROFILE_ORDER = ['basic', 'contact', 'siblings', 'father', 'mother', 'accommodation', 'health', 'visa', 'study', 'emergency', 'notes'];
 const STU_FILTER_DEFAULTS = {
   q: '', sort: 'recent', stage: '', lifecycle_type: '', consultant: '', year_level: '',
-  alert: '', contract_status: '', created_from: '', created_to: '', updated_from: '', updated_to: '',
+  alert: '', contract_status: '', parent_form: '', created_from: '', created_to: '', updated_from: '', updated_to: '',
 };
 const STU_SORT_OPTIONS = [
   ['recent', '最近更新'], ['created', '创建时间'], ['student_name', '学生姓名'], ['student_id', 'Student ID'],
@@ -1879,6 +2095,7 @@ function stuFilteredStudents() {
     if (f.year_level && s.grade !== f.year_level) return false;
     if (f.alert && !stuHasAlert(s, f.alert)) return false;
     if (f.contract_status && !stuContractStatuses(s).includes(f.contract_status)) return false;
+    if (f.parent_form === 'pending' && s.parent_form !== 'Pending') return false;
     if (!stuWithin(s.created_at, f.created_from, f.created_to)) return false;
     if (!stuWithin(s.updated, f.updated_from, f.updated_to)) return false;
     return true;
@@ -1998,6 +2215,41 @@ function stuMaterialsLabel(s) {
 }
 
 /* ---------------- student list ---------------- */
+function stuStageCounts() {
+  const counts = {};
+  DEMO.students.forEach((s) => { counts[s.stage] = (counts[s.stage] || 0) + 1; });
+  return counts;
+}
+function stuAdvancedCount(f) {
+  return ['lifecycle_type', 'consultant', 'year_level', 'alert', 'contract_status', 'created_from', 'created_to', 'updated_from', 'updated_to'].filter((k) => f[k]).length;
+}
+function stuCaptureFilters() {
+  const form = document.querySelector('#stu-filter-form');
+  if (!form) return;
+  const fd = new FormData(form);
+  const f = stuFilters();
+  Object.keys(STU_FILTER_DEFAULTS).forEach((k) => { const v = fd.get(k); if (v !== null) f[k] = String(v); });
+}
+function stuFilterChips(f) {
+  const chips = [];
+  const push = (label, key) => chips.push({ label, key });
+  if (f.q) push('搜索：' + f.q, 'q');
+  if (f.stage) push('阶段：' + f.stage, 'stage');
+  if (f.parent_form) push('表单待提交', 'parent_form');
+  if (f.alert) push((STU_ALERT_OPTIONS.find((x) => x[0] === f.alert) || ['', f.alert])[1], 'alert');
+  if (f.lifecycle_type) push('业务：' + ({ initial: '新申请', transfer: '转学', progression: '升学' }[f.lifecycle_type] || f.lifecycle_type), 'lifecycle_type');
+  if (f.consultant) push('顾问：' + f.consultant, 'consultant');
+  if (f.year_level) push('年级：' + f.year_level, 'year_level');
+  if (f.contract_status) push('合同：' + (STU_CONTRACT_STATUS[f.contract_status] || f.contract_status), 'contract_status');
+  if (f.created_from) push('建档 ≥ ' + f.created_from, 'created_from');
+  if (f.created_to) push('建档 ≤ ' + f.created_to, 'created_to');
+  if (f.updated_from) push('更新 ≥ ' + f.updated_from, 'updated_from');
+  if (f.updated_to) push('更新 ≤ ' + f.updated_to, 'updated_to');
+  return chips;
+}
+function stuSummaryAction(label, value, foot, tone, key, val, active) {
+  return `<button type="button" class="stu-summary-card ${tone} ${active ? 'is-active' : ''}" data-stu="stu-quick" data-key="${key}" data-value="${val}" aria-pressed="${active}"><small>${esc(label)}</small><strong>${value}</strong><span>${esc(foot)}</span></button>`;
+}
 function students() {
   if (route().split('/')[1] === 'deleted') return stuDeletedPage();
   const f = stuFilters();
@@ -2010,6 +2262,10 @@ function students() {
   const risk = rows.filter((s) => stuHasAlert(s, 'risk')).length;
   const pendingForm = rows.filter((s) => s.parent_form === 'Pending').length;
   const selected = stuSelected();
+  const activeAdvanced = stuAdvancedCount(f);
+  const advOpen = !!state.stuAdvOpen;
+  const stageCounts = stuStageCounts();
+  const chips = stuFilterChips(f);
   const toolbar = `<div class="stu-toolbar">
     ${stuBtn(ico('plus') + ' 新建学生', 'new-student', 'primary', !stuWritable() ? 'disabled' : '')}
     ${stuBtn('生成家长表单链接', 'parent-link')}
@@ -2018,13 +2274,9 @@ function students() {
     ${stuBtn('已删除学生', 'deleted-students')}
     ${stuBtn('Excel 导入', 'excel-import')}
   </div>`;
-  const filter = `<section class="card card-pad stu-filter-card">
-    <form id="stu-filter-form" data-stu-form="filters">
+  const advanced = `<div class="stu-advanced-panel" id="stu-advanced-panel">
       <div class="stu-filter-grid">
-        <label class="wide">搜索学生<input name="q" value="${esc(f.q)}" placeholder="学生姓名、Student ID、学校、顾问、邮箱或手机"></label>
-        <label>排序${stuSelect('sort', f.sort, STU_SORT_OPTIONS)}</label>
-        <label>申请阶段${stuSelect('stage', f.stage, [['', '全部阶段']].concat(STU_STAGES.map((x) => [x, x])))}</label>
-        <label>业务类型${stuSelect('lifecycle_type', f.lifecycle_type, [['', '全部 Lifecycle'], ['initial', 'Initial'], ['transfer', 'Transfer'], ['progression', 'Progression']])}</label>
+        <label>业务类型${stuSelect('lifecycle_type', f.lifecycle_type, [['', '全部业务类型'], ['initial', '新申请'], ['transfer', '转学'], ['progression', '升学']])}</label>
         <label>负责顾问${stuSelect('consultant', f.consultant, [['', '全部顾问']].concat([...new Set(DEMO.students.map((s) => s.owner))].map((x) => [x, x])))}</label>
         <label>申请年级${stuSelect('year_level', f.year_level, [['', '全部年级']].concat([...new Set(DEMO.students.map((s) => s.grade))].map((x) => [x, x])))}</label>
         <label>提醒筛选${stuSelect('alert', f.alert, STU_ALERT_OPTIONS)}</label>
@@ -2035,17 +2287,34 @@ function students() {
         <label>更新时间到<input type="date" name="updated_to" value="${esc(f.updated_to)}"></label>
       </div>
       <div class="stu-filter-actions">
-        <button class="btn primary" type="submit">查询</button>
+        <button class="btn primary" type="submit">应用筛选</button>
         <button class="btn" type="button" data-stu="reset-filters">重置筛选</button>
-        <span class="muted">排序与筛选组合后即时生效；数据为虚构演示。</span>
+        <span class="muted">筛选条件可组合使用，结果即时更新。</span>
       </div>
+    </div>`;
+  const filter = `<section class="card stu-filter-card">
+    <form id="stu-filter-form" data-stu-form="filters">
+      <input type="hidden" name="stage" value="${esc(f.stage)}">
+      <input type="hidden" name="parent_form" value="${esc(f.parent_form)}">
+      <div class="stu-searchrow">
+        <label class="search-field stu-search">${ico('search')}<input name="q" type="text" enterkeyhint="search" value="${esc(f.q)}" placeholder="搜索学生姓名、编号、学校或顾问" aria-label="搜索学生"></label>
+        <label class="stu-sort">${stuSelect('sort', f.sort, STU_SORT_OPTIONS, 'data-stu-auto aria-label="排序"')}</label>
+        <button type="button" class="btn stu-filter-toggle ${advOpen ? 'is-open' : ''}" data-stu="stu-adv-toggle" aria-expanded="${advOpen}" aria-controls="stu-advanced-panel"><svg class="stu-filter-ico" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 3.5h12L9.6 8.9v4.1l-3.2 1.6V8.9L2 3.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg> 筛选${activeAdvanced ? `<span class="stu-filter-count">${activeAdvanced}</span>` : ''}</button>
+        <button type="submit" class="btn primary stu-submit">查询</button>
+      </div>
+      ${advOpen ? advanced : ''}
+      ${chips.length ? `<div class="stu-chips">${chips.map((c) => `<button type="button" class="stu-chip" data-stu="stu-chip" data-key="${c.key}" aria-label="移除筛选：${esc(c.label)}">${esc(c.label)}<span class="stu-chip-x" aria-hidden="true">×</span></button>`).join('')}<button type="button" class="stu-chip-clear" data-stu="reset-filters">清除全部</button></div>` : ''}
     </form>
+    <div class="stu-stagebar" role="group" aria-label="按申请阶段筛选">
+      <button type="button" class="stu-stage ${!f.stage ? 'is-active' : ''}" data-stu="stu-stage" data-value="" aria-pressed="${!f.stage}" title="全部 ${DEMO.students.length} 位学生">全部阶段<span class="stu-stage-n">${DEMO.students.length}</span></button>
+      ${STU_STAGES.map((st, i) => `<button type="button" class="stu-stage ${f.stage === st ? 'is-active' : ''}" data-stu="stu-stage" data-value="${esc(st)}" aria-pressed="${f.stage === st}" title="${esc(st)} · ${stageCounts[st] || 0} 位学生"><span class="stu-stage-order">${String(i + 1).padStart(2, '0')}</span>${esc(st)}</button>`).join('')}
+    </div>
   </section>`;
-  const summary = `<div class="stu-summary">
-    ${stuSummaryCard('当前结果', rows.length, '符合当前筛选条件', 'accent')}
-    ${stuSummaryCard('等待家长', waiting, '含等待家长 / 未提交表单', waiting ? 'warn' : '')}
-    ${stuSummaryCard('风险提醒', risk, '缺材料、Offer / 签证到期等', risk ? 'danger' : '')}
-    ${stuSummaryCard('表单待提交', pendingForm, '家长表单尚未提交', pendingForm ? 'warn' : '')}
+  const summary = `<div class="stu-summary stu-list-summary" aria-label="筛选结果摘要">
+    <div class="stu-summary-card accent"><small>当前结果</small><strong>${rows.length}</strong><span>符合当前筛选条件</span></div>
+    ${stuSummaryAction('等待家长', waiting, '含未提交表单或等待家长', 'warn', 'alert', 'waiting', f.alert === 'waiting')}
+    ${stuSummaryAction('风险提醒', risk, '缺材料、签证到期', 'danger', 'alert', 'risk', f.alert === 'risk')}
+    ${stuSummaryAction('表单待提交', pendingForm, '家长表单尚未提交', 'warn', 'parent_form', 'pending', f.parent_form === 'pending')}
   </div>`;
   const bulk = `<div class="stu-bulk">
     <label class="stu-check"><input type="checkbox" data-stu-select-all ${pageRows.length && pageRows.every((s) => selected.has(s.id)) ? 'checked' : ''}> 本页全选</label>
@@ -2056,29 +2325,41 @@ function students() {
       ${stuBtn('标记等待/提醒', 'bulk-remind', 'small', 'disabled')}
       ${stuBtn('批量删除', 'bulk-delete', 'small danger', selected.size ? '' : 'disabled')}
     </div>
-    <small class="muted">Admin / Manager 可批量软删除；删除后可在已删除学生中恢复。</small>
+    <span class="stu-bulk-note" title="Admin / Manager 可批量软删除；删除后可在已删除学生中恢复">${ico('info')}</span>
   </div>`;
   const table = `<div class="table-wrap stu-list-table" tabindex="0" aria-label="学生列表，可横向滚动">
     <table><thead><tr>
       <th class="stu-col-check"><input type="checkbox" data-stu-select-all ${pageRows.length && pageRows.every((s) => selected.has(s.id)) ? 'checked' : ''} aria-label="选择本页学生"></th>
-      <th>学生号</th><th>学生名</th><th>申请阶段</th><th>最终确认学校</th><th>申请年级</th><th>建档时间</th><th>Offer开学时间</th><th>下签时间</th><th>操作</th>
-    </tr></thead><tbody>${pageRows.length ? pageRows.map((s) => `<tr>
-      <td><input type="checkbox" data-stu-select="${esc(s.id)}" ${selected.has(s.id) ? 'checked' : ''} aria-label="选择 ${esc(s.name)}"></td>
-      <td><a class="mono stu-id-link" href="#student/${esc(s.id)}/profile">${esc(s.id)}</a></td>
-      <td><div class="student-cell"><span class="avatar">${esc(s.avatar || s.name[0])}</span><div><strong>${esc(s.name)}</strong><small>${esc(s.english)} · ${esc(stuLifecycleLabel(s.lifecycle))}</small></div></div></td>
-      <td>${stuBadge(s.stage)}</td>
-      <td>${esc(stuFinalSchool(s))}</td>
-      <td>${esc(s.grade)}</td>
-      <td>${esc(stuIsoToAu(s.created_at))}</td>
-      <td>${esc(s.offer_course_start || '—')}</td>
-      <td>${esc(s.visa_grant_date || '—')}</td>
-      <td><div class="stu-row-actions">${stuLink('查看档案', 'student/' + s.id + '/profile', 'small')}${stuBtn('编辑', 'edit-student', 'small', `data-id="${s.id}"`)}${stuBtn('删除', 'delete-student', 'small danger', `data-id="${s.id}"`)}</div></td>
-    </tr>`).join('') : `<tr><td colspan="10">${stuEmpty('没有符合条件的学生，请调整筛选。')}</td></tr>`}</tbody></table>
+      <th>学生号</th><th>学生名</th><th>申请阶段</th><th>最终确认学校</th><th>申请年级</th><th>建档时间</th><th>Offer开学时间</th><th>下签时间</th><th class="stu-col-ops">操作</th>
+    </tr></thead><tbody>${pageRows.length ? pageRows.map((s, idx) => {
+      const alerts = stuAlerts(s);
+      const riskN = alerts.filter((a) => a.level === 'risk').length;
+      const waitN = alerts.filter((a) => a.level === 'waiting').length;
+      const flag = riskN
+        ? `<span class="stu-flag risk" title="${riskN} 项风险提醒" aria-label="${riskN} 项风险提醒">${riskN > 1 ? riskN : ''}</span>`
+        : waitN
+          ? `<span class="stu-flag waiting" title="${waitN} 项等待家长提醒" aria-label="${waitN} 项等待家长提醒">${waitN > 1 ? waitN : ''}</span>`
+          : '';
+      const school = stuFinalSchool(s);
+      const tone = ['', 'sage', 'blue', 'rose'][idx % 4];
+      return `<tr data-id="${esc(s.id)}">
+      <td class="stu-td-check"><input type="checkbox" data-stu-select="${esc(s.id)}" ${selected.has(s.id) ? 'checked' : ''} aria-label="选择 ${esc(s.name)}"></td>
+      <td class="stu-td-id" data-label="学生号"><a class="stu-id-link" href="#student/${esc(s.id)}/profile">${esc(s.id)}</a></td>
+      <td class="stu-td-name" data-label="学生"><div class="student-cell"><span class="avatar ${tone}">${esc(s.avatar || s.name[0])}</span><div><div class="stu-name-line"><strong>${esc(s.name)}</strong>${flag}</div><small>${esc(s.english)} · ${esc(stuLifecycleLabel(s.lifecycle))}</small></div></div></td>
+      <td class="stu-td-stage" data-label="申请阶段"><span class="stu-stage-tag"><i></i>${esc(s.stage)}</span></td>
+      <td class="stu-td-school" data-label="最终确认学校"><span class="stu-school" title="${esc(school)}">${esc(school.replace('（虚构）', ''))}</span></td>
+      <td class="stu-td-grade" data-label="申请年级">${esc(s.grade)}</td>
+      <td class="stu-td-created" data-label="建档时间"><span class="stu-date">${esc(stuIsoToAu(s.created_at))}</span></td>
+      <td class="stu-td-offer" data-label="Offer开学时间"><span class="stu-date">${esc(s.offer_course_start || '—')}</span></td>
+      <td class="stu-td-visa" data-label="下签时间"><span class="stu-date">${esc(s.visa_grant_date || '—')}</span></td>
+      <td class="stu-td-ops"><div class="stu-row-actions">${stuLink('查看档案', 'student/' + s.id + '/profile', 'stu-op')}${stuBtn('编辑', 'edit-student', 'stu-op', `data-id="${s.id}"`)}${stuBtn('删除', 'delete-student', 'stu-op danger', `data-id="${s.id}"`)}</div></td>
+    </tr>`;
+    }).join('') : `<tr><td colspan="10"><div class="stu-empty">${ico('search')}<strong>没有符合条件的学生</strong><p>换个关键词，或清除当前筛选。</p><button class="btn small" type="button" data-stu="reset-filters">清除筛选</button></div></td></tr>`}</tbody></table>
   </div>`;
   const pager = `<div class="stu-pager"><span>共 ${rows.length} 条 · 第 ${state.stuPage} / ${pages} 页</span><div>${stuBtn('上一页', 'page-prev', 'small', state.stuPage <= 1 ? 'disabled' : '')}${stuBtn('下一页', 'page-next', 'small', state.stuPage >= pages ? 'disabled' : '')}</div></div>`;
-  return head('学生管理', '统一管理学生档案、申请阶段、材料、录取、签证与后续服务；列表字段与源系统保持一致。', '', 'STUDENTS / 学生全生命周期')
+  return head('学生管理', '查找学生，查看办理进度，直接推进下一步。', '', 'STUDENTS / 学生全生命周期')
     + toolbar + filter + summary + `<section class="card stu-list-card">${bulk}${table}${pager}</section>`
-    + `<p class="demo-note">共 13 名虚构学生，覆盖 13 个办理阶段与 Initial / Transfer / Progression 三类业务。</p>`;
+    + `<p class="demo-note">13 名虚构学生，覆盖全部 13 个办理阶段；刷新页面恢复初始数据。</p>`;
 }
 
 function stuDeletedPage() {
@@ -2649,6 +2930,37 @@ function stuAction(action, el) {
     }
     case 'excel-import': stuExcelImportDialog(); return;
     case 'reset-filters': state.stuFilters = { ...STU_FILTER_DEFAULTS }; state.stuPage = 1; render(); toast('筛选已重置'); return;
+    case 'stu-stage': {
+      stuCaptureFilters();
+      const f = stuFilters();
+      f.stage = el.dataset.value || '';
+      state.stuPage = 1;
+      render();
+      return;
+    }
+    case 'stu-quick': {
+      stuCaptureFilters();
+      const f = stuFilters();
+      f[key] = f[key] === el.dataset.value ? '' : el.dataset.value;
+      state.stuPage = 1;
+      render();
+      return;
+    }
+    case 'stu-chip': {
+      stuCaptureFilters();
+      const f = stuFilters();
+      f[key] = '';
+      state.stuPage = 1;
+      render();
+      return;
+    }
+    case 'stu-adv-toggle': {
+            stuCaptureFilters();
+const f = stuFilters();
+      state.stuAdvOpen = !state.stuAdvOpen;
+      render();
+      return;
+    }
     case 'page-prev': state.stuPage = Math.max(1, (state.stuPage || 1) - 1); render(); return;
     case 'page-next': state.stuPage = (state.stuPage || 1) + 1; render(); return;
     case 'bulk-delete': {
@@ -3051,6 +3363,13 @@ document.addEventListener('click', (e) => {
 }, true);
 
 document.addEventListener('change', (e) => {
+  const auto = e.target.closest('[data-stu-auto]');
+  if (auto) {
+    stuCaptureFilters();
+    state.stuPage = 1;
+    render();
+    return;
+  }
   const all = e.target.closest('[data-stu-select-all]');
   if (all) {
     const selected = stuSelected();

@@ -20,7 +20,7 @@ const STU_TAB_ORDER = ['profile', 'applications', 'contracts', 'school_plans', '
 const STU_PROFILE_ORDER = ['basic', 'contact', 'siblings', 'father', 'mother', 'accommodation', 'health', 'visa', 'study', 'emergency', 'notes'];
 const STU_FILTER_DEFAULTS = {
   q: '', sort: 'recent', stage: '', lifecycle_type: '', consultant: '', year_level: '',
-  alert: '', contract_status: '', created_from: '', created_to: '', updated_from: '', updated_to: '',
+  alert: '', contract_status: '', parent_form: '', created_from: '', created_to: '', updated_from: '', updated_to: '',
 };
 const STU_SORT_OPTIONS = [
   ['recent', '最近更新'], ['created', '创建时间'], ['student_name', '学生姓名'], ['student_id', 'Student ID'],
@@ -123,6 +123,7 @@ function stuFilteredStudents() {
     if (f.year_level && s.grade !== f.year_level) return false;
     if (f.alert && !stuHasAlert(s, f.alert)) return false;
     if (f.contract_status && !stuContractStatuses(s).includes(f.contract_status)) return false;
+    if (f.parent_form === 'pending' && s.parent_form !== 'Pending') return false;
     if (!stuWithin(s.created_at, f.created_from, f.created_to)) return false;
     if (!stuWithin(s.updated, f.updated_from, f.updated_to)) return false;
     return true;
@@ -242,6 +243,41 @@ function stuMaterialsLabel(s) {
 }
 
 /* ---------------- student list ---------------- */
+function stuStageCounts() {
+  const counts = {};
+  DEMO.students.forEach((s) => { counts[s.stage] = (counts[s.stage] || 0) + 1; });
+  return counts;
+}
+function stuAdvancedCount(f) {
+  return ['lifecycle_type', 'consultant', 'year_level', 'alert', 'contract_status', 'created_from', 'created_to', 'updated_from', 'updated_to'].filter((k) => f[k]).length;
+}
+function stuCaptureFilters() {
+  const form = document.querySelector('#stu-filter-form');
+  if (!form) return;
+  const fd = new FormData(form);
+  const f = stuFilters();
+  Object.keys(STU_FILTER_DEFAULTS).forEach((k) => { const v = fd.get(k); if (v !== null) f[k] = String(v); });
+}
+function stuFilterChips(f) {
+  const chips = [];
+  const push = (label, key) => chips.push({ label, key });
+  if (f.q) push('搜索：' + f.q, 'q');
+  if (f.stage) push('阶段：' + f.stage, 'stage');
+  if (f.parent_form) push('表单待提交', 'parent_form');
+  if (f.alert) push((STU_ALERT_OPTIONS.find((x) => x[0] === f.alert) || ['', f.alert])[1], 'alert');
+  if (f.lifecycle_type) push('业务：' + ({ initial: '新申请', transfer: '转学', progression: '升学' }[f.lifecycle_type] || f.lifecycle_type), 'lifecycle_type');
+  if (f.consultant) push('顾问：' + f.consultant, 'consultant');
+  if (f.year_level) push('年级：' + f.year_level, 'year_level');
+  if (f.contract_status) push('合同：' + (STU_CONTRACT_STATUS[f.contract_status] || f.contract_status), 'contract_status');
+  if (f.created_from) push('建档 ≥ ' + f.created_from, 'created_from');
+  if (f.created_to) push('建档 ≤ ' + f.created_to, 'created_to');
+  if (f.updated_from) push('更新 ≥ ' + f.updated_from, 'updated_from');
+  if (f.updated_to) push('更新 ≤ ' + f.updated_to, 'updated_to');
+  return chips;
+}
+function stuSummaryAction(label, value, foot, tone, key, val, active) {
+  return `<button type="button" class="stu-summary-card ${tone} ${active ? 'is-active' : ''}" data-stu="stu-quick" data-key="${key}" data-value="${val}" aria-pressed="${active}"><small>${esc(label)}</small><strong>${value}</strong><span>${esc(foot)}</span></button>`;
+}
 function students() {
   if (route().split('/')[1] === 'deleted') return stuDeletedPage();
   const f = stuFilters();
@@ -254,6 +290,10 @@ function students() {
   const risk = rows.filter((s) => stuHasAlert(s, 'risk')).length;
   const pendingForm = rows.filter((s) => s.parent_form === 'Pending').length;
   const selected = stuSelected();
+  const activeAdvanced = stuAdvancedCount(f);
+  const advOpen = !!state.stuAdvOpen;
+  const stageCounts = stuStageCounts();
+  const chips = stuFilterChips(f);
   const toolbar = `<div class="stu-toolbar">
     ${stuBtn(ico('plus') + ' 新建学生', 'new-student', 'primary', !stuWritable() ? 'disabled' : '')}
     ${stuBtn('生成家长表单链接', 'parent-link')}
@@ -262,13 +302,9 @@ function students() {
     ${stuBtn('已删除学生', 'deleted-students')}
     ${stuBtn('Excel 导入', 'excel-import')}
   </div>`;
-  const filter = `<section class="card card-pad stu-filter-card">
-    <form id="stu-filter-form" data-stu-form="filters">
+  const advanced = `<div class="stu-advanced-panel" id="stu-advanced-panel">
       <div class="stu-filter-grid">
-        <label class="wide">搜索学生<input name="q" value="${esc(f.q)}" placeholder="学生姓名、Student ID、学校、顾问、邮箱或手机"></label>
-        <label>排序${stuSelect('sort', f.sort, STU_SORT_OPTIONS)}</label>
-        <label>申请阶段${stuSelect('stage', f.stage, [['', '全部阶段']].concat(STU_STAGES.map((x) => [x, x])))}</label>
-        <label>业务类型${stuSelect('lifecycle_type', f.lifecycle_type, [['', '全部 Lifecycle'], ['initial', 'Initial'], ['transfer', 'Transfer'], ['progression', 'Progression']])}</label>
+        <label>业务类型${stuSelect('lifecycle_type', f.lifecycle_type, [['', '全部业务类型'], ['initial', '新申请'], ['transfer', '转学'], ['progression', '升学']])}</label>
         <label>负责顾问${stuSelect('consultant', f.consultant, [['', '全部顾问']].concat([...new Set(DEMO.students.map((s) => s.owner))].map((x) => [x, x])))}</label>
         <label>申请年级${stuSelect('year_level', f.year_level, [['', '全部年级']].concat([...new Set(DEMO.students.map((s) => s.grade))].map((x) => [x, x])))}</label>
         <label>提醒筛选${stuSelect('alert', f.alert, STU_ALERT_OPTIONS)}</label>
@@ -279,17 +315,34 @@ function students() {
         <label>更新时间到<input type="date" name="updated_to" value="${esc(f.updated_to)}"></label>
       </div>
       <div class="stu-filter-actions">
-        <button class="btn primary" type="submit">查询</button>
+        <button class="btn primary" type="submit">应用筛选</button>
         <button class="btn" type="button" data-stu="reset-filters">重置筛选</button>
-        <span class="muted">排序与筛选组合后即时生效；数据为虚构演示。</span>
+        <span class="muted">筛选条件可组合使用，结果即时更新。</span>
       </div>
+    </div>`;
+  const filter = `<section class="card stu-filter-card">
+    <form id="stu-filter-form" data-stu-form="filters">
+      <input type="hidden" name="stage" value="${esc(f.stage)}">
+      <input type="hidden" name="parent_form" value="${esc(f.parent_form)}">
+      <div class="stu-searchrow">
+        <label class="search-field stu-search">${ico('search')}<input name="q" type="text" enterkeyhint="search" value="${esc(f.q)}" placeholder="搜索学生姓名、编号、学校或顾问" aria-label="搜索学生"></label>
+        <label class="stu-sort">${stuSelect('sort', f.sort, STU_SORT_OPTIONS, 'data-stu-auto aria-label="排序"')}</label>
+        <button type="button" class="btn stu-filter-toggle ${advOpen ? 'is-open' : ''}" data-stu="stu-adv-toggle" aria-expanded="${advOpen}" aria-controls="stu-advanced-panel"><svg class="stu-filter-ico" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 3.5h12L9.6 8.9v4.1l-3.2 1.6V8.9L2 3.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg> 筛选${activeAdvanced ? `<span class="stu-filter-count">${activeAdvanced}</span>` : ''}</button>
+        <button type="submit" class="btn primary stu-submit">查询</button>
+      </div>
+      ${advOpen ? advanced : ''}
+      ${chips.length ? `<div class="stu-chips">${chips.map((c) => `<button type="button" class="stu-chip" data-stu="stu-chip" data-key="${c.key}" aria-label="移除筛选：${esc(c.label)}">${esc(c.label)}<span class="stu-chip-x" aria-hidden="true">×</span></button>`).join('')}<button type="button" class="stu-chip-clear" data-stu="reset-filters">清除全部</button></div>` : ''}
     </form>
+    <div class="stu-stagebar" role="group" aria-label="按申请阶段筛选">
+      <button type="button" class="stu-stage ${!f.stage ? 'is-active' : ''}" data-stu="stu-stage" data-value="" aria-pressed="${!f.stage}" title="全部 ${DEMO.students.length} 位学生">全部阶段<span class="stu-stage-n">${DEMO.students.length}</span></button>
+      ${STU_STAGES.map((st, i) => `<button type="button" class="stu-stage ${f.stage === st ? 'is-active' : ''}" data-stu="stu-stage" data-value="${esc(st)}" aria-pressed="${f.stage === st}" title="${esc(st)} · ${stageCounts[st] || 0} 位学生"><span class="stu-stage-order">${String(i + 1).padStart(2, '0')}</span>${esc(st)}</button>`).join('')}
+    </div>
   </section>`;
-  const summary = `<div class="stu-summary">
-    ${stuSummaryCard('当前结果', rows.length, '符合当前筛选条件', 'accent')}
-    ${stuSummaryCard('等待家长', waiting, '含等待家长 / 未提交表单', waiting ? 'warn' : '')}
-    ${stuSummaryCard('风险提醒', risk, '缺材料、Offer / 签证到期等', risk ? 'danger' : '')}
-    ${stuSummaryCard('表单待提交', pendingForm, '家长表单尚未提交', pendingForm ? 'warn' : '')}
+  const summary = `<div class="stu-summary stu-list-summary" aria-label="筛选结果摘要">
+    <div class="stu-summary-card accent"><small>当前结果</small><strong>${rows.length}</strong><span>符合当前筛选条件</span></div>
+    ${stuSummaryAction('等待家长', waiting, '含未提交表单或等待家长', 'warn', 'alert', 'waiting', f.alert === 'waiting')}
+    ${stuSummaryAction('风险提醒', risk, '缺材料、签证到期', 'danger', 'alert', 'risk', f.alert === 'risk')}
+    ${stuSummaryAction('表单待提交', pendingForm, '家长表单尚未提交', 'warn', 'parent_form', 'pending', f.parent_form === 'pending')}
   </div>`;
   const bulk = `<div class="stu-bulk">
     <label class="stu-check"><input type="checkbox" data-stu-select-all ${pageRows.length && pageRows.every((s) => selected.has(s.id)) ? 'checked' : ''}> 本页全选</label>
@@ -300,29 +353,41 @@ function students() {
       ${stuBtn('标记等待/提醒', 'bulk-remind', 'small', 'disabled')}
       ${stuBtn('批量删除', 'bulk-delete', 'small danger', selected.size ? '' : 'disabled')}
     </div>
-    <small class="muted">Admin / Manager 可批量软删除；删除后可在已删除学生中恢复。</small>
+    <span class="stu-bulk-note" title="Admin / Manager 可批量软删除；删除后可在已删除学生中恢复">${ico('info')}</span>
   </div>`;
   const table = `<div class="table-wrap stu-list-table" tabindex="0" aria-label="学生列表，可横向滚动">
     <table><thead><tr>
       <th class="stu-col-check"><input type="checkbox" data-stu-select-all ${pageRows.length && pageRows.every((s) => selected.has(s.id)) ? 'checked' : ''} aria-label="选择本页学生"></th>
-      <th>学生号</th><th>学生名</th><th>申请阶段</th><th>最终确认学校</th><th>申请年级</th><th>建档时间</th><th>Offer开学时间</th><th>下签时间</th><th>操作</th>
-    </tr></thead><tbody>${pageRows.length ? pageRows.map((s) => `<tr>
-      <td><input type="checkbox" data-stu-select="${esc(s.id)}" ${selected.has(s.id) ? 'checked' : ''} aria-label="选择 ${esc(s.name)}"></td>
-      <td><a class="mono stu-id-link" href="#student/${esc(s.id)}/profile">${esc(s.id)}</a></td>
-      <td><div class="student-cell"><span class="avatar">${esc(s.avatar || s.name[0])}</span><div><strong>${esc(s.name)}</strong><small>${esc(s.english)} · ${esc(stuLifecycleLabel(s.lifecycle))}</small></div></div></td>
-      <td>${stuBadge(s.stage)}</td>
-      <td>${esc(stuFinalSchool(s))}</td>
-      <td>${esc(s.grade)}</td>
-      <td>${esc(stuIsoToAu(s.created_at))}</td>
-      <td>${esc(s.offer_course_start || '—')}</td>
-      <td>${esc(s.visa_grant_date || '—')}</td>
-      <td><div class="stu-row-actions">${stuLink('查看档案', 'student/' + s.id + '/profile', 'small')}${stuBtn('编辑', 'edit-student', 'small', `data-id="${s.id}"`)}${stuBtn('删除', 'delete-student', 'small danger', `data-id="${s.id}"`)}</div></td>
-    </tr>`).join('') : `<tr><td colspan="10">${stuEmpty('没有符合条件的学生，请调整筛选。')}</td></tr>`}</tbody></table>
+      <th>学生号</th><th>学生名</th><th>申请阶段</th><th>最终确认学校</th><th>申请年级</th><th>建档时间</th><th>Offer开学时间</th><th>下签时间</th><th class="stu-col-ops">操作</th>
+    </tr></thead><tbody>${pageRows.length ? pageRows.map((s, idx) => {
+      const alerts = stuAlerts(s);
+      const riskN = alerts.filter((a) => a.level === 'risk').length;
+      const waitN = alerts.filter((a) => a.level === 'waiting').length;
+      const flag = riskN
+        ? `<span class="stu-flag risk" title="${riskN} 项风险提醒" aria-label="${riskN} 项风险提醒">${riskN > 1 ? riskN : ''}</span>`
+        : waitN
+          ? `<span class="stu-flag waiting" title="${waitN} 项等待家长提醒" aria-label="${waitN} 项等待家长提醒">${waitN > 1 ? waitN : ''}</span>`
+          : '';
+      const school = stuFinalSchool(s);
+      const tone = ['', 'sage', 'blue', 'rose'][idx % 4];
+      return `<tr data-id="${esc(s.id)}">
+      <td class="stu-td-check"><input type="checkbox" data-stu-select="${esc(s.id)}" ${selected.has(s.id) ? 'checked' : ''} aria-label="选择 ${esc(s.name)}"></td>
+      <td class="stu-td-id" data-label="学生号"><a class="stu-id-link" href="#student/${esc(s.id)}/profile">${esc(s.id)}</a></td>
+      <td class="stu-td-name" data-label="学生"><div class="student-cell"><span class="avatar ${tone}">${esc(s.avatar || s.name[0])}</span><div><div class="stu-name-line"><strong>${esc(s.name)}</strong>${flag}</div><small>${esc(s.english)} · ${esc(stuLifecycleLabel(s.lifecycle))}</small></div></div></td>
+      <td class="stu-td-stage" data-label="申请阶段"><span class="stu-stage-tag"><i></i>${esc(s.stage)}</span></td>
+      <td class="stu-td-school" data-label="最终确认学校"><span class="stu-school" title="${esc(school)}">${esc(school.replace('（虚构）', ''))}</span></td>
+      <td class="stu-td-grade" data-label="申请年级">${esc(s.grade)}</td>
+      <td class="stu-td-created" data-label="建档时间"><span class="stu-date">${esc(stuIsoToAu(s.created_at))}</span></td>
+      <td class="stu-td-offer" data-label="Offer开学时间"><span class="stu-date">${esc(s.offer_course_start || '—')}</span></td>
+      <td class="stu-td-visa" data-label="下签时间"><span class="stu-date">${esc(s.visa_grant_date || '—')}</span></td>
+      <td class="stu-td-ops"><div class="stu-row-actions">${stuLink('查看档案', 'student/' + s.id + '/profile', 'stu-op')}${stuBtn('编辑', 'edit-student', 'stu-op', `data-id="${s.id}"`)}${stuBtn('删除', 'delete-student', 'stu-op danger', `data-id="${s.id}"`)}</div></td>
+    </tr>`;
+    }).join('') : `<tr><td colspan="10"><div class="stu-empty">${ico('search')}<strong>没有符合条件的学生</strong><p>换个关键词，或清除当前筛选。</p><button class="btn small" type="button" data-stu="reset-filters">清除筛选</button></div></td></tr>`}</tbody></table>
   </div>`;
   const pager = `<div class="stu-pager"><span>共 ${rows.length} 条 · 第 ${state.stuPage} / ${pages} 页</span><div>${stuBtn('上一页', 'page-prev', 'small', state.stuPage <= 1 ? 'disabled' : '')}${stuBtn('下一页', 'page-next', 'small', state.stuPage >= pages ? 'disabled' : '')}</div></div>`;
-  return head('学生管理', '统一管理学生档案、申请阶段、材料、录取、签证与后续服务；列表字段与源系统保持一致。', '', 'STUDENTS / 学生全生命周期')
+  return head('学生管理', '查找学生，查看办理进度，直接推进下一步。', '', 'STUDENTS / 学生全生命周期')
     + toolbar + filter + summary + `<section class="card stu-list-card">${bulk}${table}${pager}</section>`
-    + `<p class="demo-note">共 13 名虚构学生，覆盖 13 个办理阶段与 Initial / Transfer / Progression 三类业务。</p>`;
+    + `<p class="demo-note">13 名虚构学生，覆盖全部 13 个办理阶段；刷新页面恢复初始数据。</p>`;
 }
 
 function stuDeletedPage() {
@@ -893,6 +958,37 @@ function stuAction(action, el) {
     }
     case 'excel-import': stuExcelImportDialog(); return;
     case 'reset-filters': state.stuFilters = { ...STU_FILTER_DEFAULTS }; state.stuPage = 1; render(); toast('筛选已重置'); return;
+    case 'stu-stage': {
+      stuCaptureFilters();
+      const f = stuFilters();
+      f.stage = el.dataset.value || '';
+      state.stuPage = 1;
+      render();
+      return;
+    }
+    case 'stu-quick': {
+      stuCaptureFilters();
+      const f = stuFilters();
+      f[key] = f[key] === el.dataset.value ? '' : el.dataset.value;
+      state.stuPage = 1;
+      render();
+      return;
+    }
+    case 'stu-chip': {
+      stuCaptureFilters();
+      const f = stuFilters();
+      f[key] = '';
+      state.stuPage = 1;
+      render();
+      return;
+    }
+    case 'stu-adv-toggle': {
+            stuCaptureFilters();
+const f = stuFilters();
+      state.stuAdvOpen = !state.stuAdvOpen;
+      render();
+      return;
+    }
     case 'page-prev': state.stuPage = Math.max(1, (state.stuPage || 1) - 1); render(); return;
     case 'page-next': state.stuPage = (state.stuPage || 1) + 1; render(); return;
     case 'bulk-delete': {
@@ -1295,6 +1391,13 @@ document.addEventListener('click', (e) => {
 }, true);
 
 document.addEventListener('change', (e) => {
+  const auto = e.target.closest('[data-stu-auto]');
+  if (auto) {
+    stuCaptureFilters();
+    state.stuPage = 1;
+    render();
+    return;
+  }
   const all = e.target.closest('[data-stu-select-all]');
   if (all) {
     const selected = stuSelected();

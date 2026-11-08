@@ -31,11 +31,17 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   for (const [label, width, height] of [['desktop', 1440, 1100], ['mobile', 390, 844]]) {
     await send('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: label === 'mobile' });
     await goto('students');
-    let m = await evalJs(`(() => ({ w: document.documentElement.clientWidth, sw: document.documentElement.scrollWidth, rows: document.querySelectorAll('.stu-list-table tbody tr').length, summaries: getComputedStyle(document.querySelector('.stu-summary')).gridTemplateColumns.split(' ').length, filters: getComputedStyle(document.querySelector('.stu-filter-grid')).gridTemplateColumns.split(' ').length }))()`);
+    let m = await evalJs(`(() => { const g = document.querySelector('.stu-filter-grid'); return { w: document.documentElement.clientWidth, sw: document.documentElement.scrollWidth, rows: document.querySelectorAll('.stu-list-table tbody tr').length, summaries: getComputedStyle(document.querySelector('.stu-summary')).gridTemplateColumns.split(' ').length, filters: g ? getComputedStyle(g).gridTemplateColumns.split(' ').length : 0 }; })()`);
     check(label + ' list no page overflow', m.sw <= m.w + 1, JSON.stringify(m));
     check(label + ' list rows', m.rows === 10, 'rows=' + m.rows);
     if (label === 'desktop') await shot('stu-layout-desktop-list.png');
     else await shot('stu-layout-mobile-list.png');
+    await evalJs(`document.querySelector('.stu-filter-toggle').click()`);
+    await sleep(180);
+    m.filters = await evalJs(`(() => { const g = document.querySelector('.stu-filter-grid'); return g ? getComputedStyle(g).gridTemplateColumns.split(' ').length : 0; })()`);
+    check(label + ' advanced filters open', m.filters > 0, 'cols=' + m.filters);
+    await evalJs(`document.querySelector('.stu-filter-toggle').click()`);
+    await sleep(120);
 
     await goto('student/D2026003/profile');
     m = await evalJs(`(() => ({ w: document.documentElement.clientWidth, sw: document.documentElement.scrollWidth, tabsVisible: getComputedStyle(document.querySelector('.student-tabs')).display, picker: getComputedStyle(document.querySelector('.section-picker')).display, facts: getComputedStyle(document.querySelector('.student-facts')).gridTemplateColumns.split(' ').length }))()`);
